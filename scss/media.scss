@@ -1,0 +1,51 @@
+// responsive setting
+// 0px ~ 360px (작은 스마트폰)
+// 360px ~ 480px (큰 스마트폰)
+// 480px ~ 768px (작은 태블릿)
+// 768px ~ 990px (큰 태블릿)
+// 990px ~ 1200px (작은 데스크탑)
+// 1200px ~ (큰 데스크탑)
+
+//이항목은 두개로 분류되어 있음
+//1.공통으로 적용될 것 max로만 표시된 항목
+//2.그 색션에서만 적용이 될 것 min-max로 표시되어 있음
+
+/* 스마트폰*/
+@media screen and (max-width:480px){
+  header .subNav .inner{
+    width:100% !important;
+  }
+  
+}
+/* 작은태블릿 */
+@media screen and (min-width:481px) and (max-width:768px){
+  header .subNav .inner{
+    width:70% !important;
+  }
+}
+/* 큰태블릿 */
+@media screen and (min-width:769px) and (max-width:990px){ 
+}
+
+/* 큰타블릿까지 가져야할 공통사항 */
+@media screen and (max-width:990px){
+  header div.top,header div.bottom{
+    padding:0 2em;
+  }
+}
+/* 작은모니터까지 가져야할 공통사항*/
+@media screen and (max-width:1200px){
+  header{font-size: 17rem;}
+  header div.right,
+  header div.left{
+    display: none;
+  }
+  header div.top ul.pc-menu{display: none;}
+  header div.top .hamberger-menu{
+    display: block;
+  }
+
+  section .rel{
+    width:100%;
+  }
+}
