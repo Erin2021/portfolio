@@ -18,30 +18,10 @@ body {
 }
 
 /*🎉✨header-setting____________________ */
-header {
-  width: 100%;
-  height: 100vh;
-  font-size: min(1.3em, 20rem);
-  position: fixed;
-}
-header > div {
-  position: absolute;
+header .top {
   border: 1rem solid #888;
-}
-header > div.cursor {
-  border: none;
-  background: radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
-  box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-header > div.top {
+  z-index: 100;
+  position: fixed;
   left: 0;
   padding: 0 min(4em, 80rem);
   width: 100vw;
@@ -52,20 +32,20 @@ header > div.top {
   justify-content: space-between;
   top: 0;
 }
-header > div.top .top-left {
+header .top .top-left {
   display: flex;
   align-items: end;
   justify-content: baseline;
   column-gap: 45rem;
 }
-header > div.top .top-left p:nth-of-type(2) {
+header .top .top-left p:nth-of-type(2) {
   background-color: #000;
   color: #fff;
   padding: 1rem 30rem;
   border-radius: 20rem;
   position: relative;
 }
-header > div.top .top-left p:nth-of-type(2):before {
+header .top .top-left p:nth-of-type(2):before {
   content: "";
   position: absolute;
   top: 50%;
@@ -79,13 +59,13 @@ header > div.top .top-left p:nth-of-type(2):before {
   opacity: 0;
   animation: work-ani 1s infinite alternate;
 }
-header > div.top .hamberger-menu {
+header .top .hamberger-menu {
   display: none;
   width: 28rem;
   height: 18rem;
   position: relative;
 }
-header > div.top .hamberger-menu span {
+header .top .hamberger-menu span {
   display: block;
   width: 100%;
   height: 3rem;
@@ -96,32 +76,32 @@ header > div.top .hamberger-menu span {
   transition: 0.3s;
   translate: 0 -50%;
 }
-header > div.top .hamberger-menu span:nth-child(1) {
+header .top .hamberger-menu span:nth-child(1) {
   top: 0;
 }
-header > div.top .hamberger-menu span:nth-child(2) {
+header .top .hamberger-menu span:nth-child(2) {
   top: 50%;
   width: 50%;
   right: 0;
 }
-header > div.top .hamberger-menu span:nth-child(3) {
+header .top .hamberger-menu span:nth-child(3) {
   top: 100%;
 }
-header > div.top .hamberger-menu.active span:nth-child(1) {
+header .top .hamberger-menu.active span:nth-child(1) {
   rotate: 45deg;
   top: 50%;
 }
-header > div.top .hamberger-menu.active span:nth-child(2) {
+header .top .hamberger-menu.active span:nth-child(2) {
   opacity: 0;
 }
-header > div.top .hamberger-menu.active span:nth-child(3) {
+header .top .hamberger-menu.active span:nth-child(3) {
   rotate: -45deg;
   top: 50%;
 }
-header > div.top .hamberger-menu:hover span:nth-child(2) {
+header .top .hamberger-menu:hover span:nth-child(2) {
   width: 100%;
 }
-header > div.top .subNav {
+header .top .subNav {
   position: absolute;
   width: 100%;
   height: 0;
@@ -132,13 +112,13 @@ header > div.top .subNav {
   transition: 0.3s;
   overflow: hidden;
 }
-header > div.top .subNav.active {
+header .top .subNav.active {
   height: calc(100vh - 60rem);
 }
-header > div.top .subNav.active .inner {
+header .top .subNav.active .inner {
   right: 0;
 }
-header > div.top .subNav .inner {
+header .top .subNav .inner {
   background: #fff;
   width: 50%;
   height: calc(100vh - 60rem);
@@ -148,41 +128,66 @@ header > div.top .subNav .inner {
   transition: 0.5s;
   transition-delay: 0.3s;
 }
-header > div.top .subNav .inner ul {
+header .top .subNav .inner ul {
   display: flex;
   flex-direction: column;
   height: inherit;
   justify-content: space-around;
 }
-header > div.top .subNav .inner ul li a {
+header .top .subNav .inner ul li a {
   font-size: 2.5em;
   padding-left: 40rem;
 }
-header > div.top .pc-menu {
+header .top .pc-menu {
   display: flex;
   justify-content: center;
   align-items: center;
   height: inherit;
 }
-header > div.top .pc-menu li {
+header .top .pc-menu li {
   height: inherit;
   padding: 15rem 0rem;
 }
-header > div.top .pc-menu li a {
+header .top .pc-menu li a {
   display: inline-block;
   padding: 5rem 30rem;
   border-radius: 30rem;
 }
-header > div.top .pc-menu li.active a {
+header .top .pc-menu li.active a {
   background-color: #000;
   color: #fff;
   text-align: center;
 }
-header > div.top .pc-menu li:hover a {
+header .top .pc-menu li:hover a {
   font-style: italic;
   text-decoration: underline;
 }
-header > div.left {
+
+#layout {
+  width: 100%;
+  height: 100vh;
+  font-size: min(1.3em, 20rem);
+  position: fixed;
+}
+#layout > div {
+  position: absolute;
+  border: 1rem solid #888;
+}
+#layout > div.cursor {
+  border: none;
+  background: radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
+  width: 200rem;
+  height: 200rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+#layout > div.left {
+  pointer-events: none;
   top: 0;
   padding: 60rem 0;
   width: 60rem;
@@ -194,20 +199,21 @@ header > div.left {
   justify-content: space-between;
   left: 0;
 }
-header > div.left p {
+#layout > div.left p {
   rotate: -90deg;
 }
-header > div.left p:nth-child(1) {
+#layout > div.left p:nth-child(1) {
   width: 300rem;
   height: 30rem;
   text-align: right;
   margin-top: 150rem;
 }
-header > div.left p:nth-child(3) {
+#layout > div.left p:nth-child(3) {
   width: 130rem;
   margin-bottom: 60rem;
 }
-header > div.right {
+#layout > div.right {
+  pointer-events: none;
   top: 0;
   padding: 60rem 0;
   width: 60rem;
@@ -219,26 +225,26 @@ header > div.right {
   justify-content: space-between;
   right: 0;
 }
-header > div.right p {
+#layout > div.right p {
   rotate: 90deg;
 }
-header > div.right p:nth-child(1) {
+#layout > div.right p:nth-child(1) {
   width: 300rem;
   height: 30rem;
   text-align: right;
   margin-top: 150rem;
 }
-header > div.right p:nth-child(3) {
+#layout > div.right p:nth-child(3) {
   width: 130rem;
   margin-bottom: 60rem;
 }
-header > div.right p:nth-child(1) {
+#layout > div.right p:nth-child(1) {
   text-align: left;
 }
-header > div.right p:nth-child(3) {
+#layout > div.right p:nth-child(3) {
   text-align: right;
 }
-header > div.bottom {
+#layout > div.bottom {
   left: 0;
   padding: 0 min(4em, 80rem);
   width: 100vw;
@@ -251,24 +257,28 @@ header > div.bottom {
   justify-content: flex-end;
   transition: 0.5s;
 }
-header > div.bottom a {
+#layout > div.bottom a {
   display: none;
   padding: 0 10rem;
 }
-header > div.bottom a i {
+#layout > div.bottom a i {
   margin-left: 10rem;
 }
-header > div.bottom a:hover, header > div.bottom a:hover i {
+#layout > div.bottom a:hover, #layout > div.bottom a:hover i {
   font-style: italic;
   text-decoration: underline;
 }
-header > div.bottom.active {
+#layout > div.bottom.active {
   transition: 0.5s;
   background-color: #231E1A;
   color: #fff;
 }
-header > div.bottom.active a {
+#layout > div.bottom.active a {
   display: block;
+}
+
+header, #layout {
+  transition: 0.7s;
 }
 
 /*🎉✨common section-setting____________________ */
@@ -278,7 +288,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -1;
 }
 section .rel {
   width: calc(100% - 120rem);
@@ -320,12 +329,12 @@ section .rel > p {
   row-gap: 50rem;
 }
 #section2 .rel .publishing-con {
-  overflow: hidden;
   position: relative;
   width: 100%;
   height: 100%;
 }
 #section2 .rel .publishing-con .preview {
+  translate: -10% -140%;
   width: 480rem;
   height: 280rem;
   background: gray;

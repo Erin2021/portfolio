@@ -29,23 +29,30 @@
 
 /* 큰타블릿까지 가져야할 공통사항 */
 @media screen and (max-width:990px){
-  header div.top,header div.bottom{
+  div.top, div.bottom{
     padding:0 2em;
   }
 }
 /* 작은모니터까지 가져야할 공통사항*/
 @media screen and (max-width:1200px){
-  header{font-size: 17rem;}
-  header div.right,
-  header div.left{
-    display: none;
+  header, #layout{
+    font-size: 17rem;
+    div{
+      &.right,
+      &.left,
+      &.bottom{
+        display: none;
+      }
+      &.top{
+        ul.pc-menu{display: none;}
+        .hamberger-menu{
+          display: block;
+        }
+      }
+    }
   }
-  header div.top ul.pc-menu{display: none;}
-  header div.top .hamberger-menu{
-    display: block;
-  }
-
   section .rel{
     width:100%;
+    height: auto;
   }
 }

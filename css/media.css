@@ -14,26 +14,26 @@
 /* 큰태블릿 */
 /* 큰타블릿까지 가져야할 공통사항 */
 @media screen and (max-width: 990px) {
-  header div.top, header div.bottom {
+  div.top, div.bottom {
     padding: 0 2em;
   }
 }
 /* 작은모니터까지 가져야할 공통사항*/
 @media screen and (max-width: 1200px) {
-  header {
+  header, #layout {
     font-size: 17rem;
   }
-  header div.right,
-  header div.left {
+  header div.right, header div.left, header div.bottom, #layout div.right, #layout div.left, #layout div.bottom {
     display: none;
   }
-  header div.top ul.pc-menu {
+  header div.top ul.pc-menu, #layout div.top ul.pc-menu {
     display: none;
   }
-  header div.top .hamberger-menu {
+  header div.top .hamberger-menu, #layout div.top .hamberger-menu {
     display: block;
   }
   section .rel {
     width: 100%;
+    height: auto;
   }
 }
