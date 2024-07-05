@@ -295,11 +295,11 @@ section .rel {
   z-index: 1;
   padding: 10rem;
 }
-section .rel h2 {
-  font-size: min(13em, 120rem);
+section .rel .sec-title h2 {
+  font-size: min(6em, 120rem);
 }
-section .rel > p {
-  font-size: min(3.7em, 28rem);
+section .rel .sec-title p {
+  font-size: min(6em, 28rem);
 }
 
 /*🎉✨section0-opening____________________ */
@@ -327,17 +327,17 @@ section .rel > p {
   display: flex;
   flex-direction: column;
   row-gap: 50rem;
-}
-#section2 .rel .publishing-con {
   position: relative;
-  width: 100%;
-  height: 100%;
 }
-#section2 .rel .publishing-con .preview {
-  translate: -10% -140%;
+#section2 .rel .preview {
+  translate: -10% -10%;
   width: 480rem;
   height: 280rem;
   background: gray;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.3s, translate 1s;
   border: 15rem solid #fff;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -348,12 +348,19 @@ section .rel > p {
   pointer-events: none;
   display: none;
 }
+#section2 .rel .publishing-con {
+  width: 100%;
+  height: 100%;
+}
 #section2 .rel .publishing-con ul {
   height: inherit;
 }
 #section2 .rel .publishing-con ul li {
   transition: 0.3s;
   font-size: 100rem;
+}
+#section2 .rel .publishing-con ul li img {
+  display: none;
 }
 #section2 .rel .publishing-con ul li a {
   display: inline-block;
