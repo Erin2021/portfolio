@@ -33,7 +33,43 @@
     display: block;
   }
   section .rel {
-    width: 100%;
+    width: 90%;
     height: auto;
+  }
+  #section2 .publishing-con.mob-only ul {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+  }
+  #section2 .publishing-con.mob-only ul li {
+    overflow: hidden;
+    translate: 0% !important;
+    padding: 10rem;
+    background-color: #fff;
+    border-radius: 0.2em;
+    width: inherit;
+    height: inherit;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.23);
+  }
+  #section2 .publishing-con.mob-only ul li a {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  #section2 .publishing-con.mob-only ul li a .thumbnail {
+    flex: 7;
+    display: inline;
+    overflow: hidden;
+  }
+  #section2 .publishing-con.mob-only ul li a .thumbnail img {
+    display: inline-block;
+  }
+  #section2 .publishing-con.mob-only ul li a p {
+    flex: 5;
+    display: block;
+    border: none;
+    font-size: 3em;
   }
 }

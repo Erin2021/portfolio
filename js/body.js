@@ -113,9 +113,9 @@ $(document).ready(()=>{
 
   /*브라우저 창 사이즈 변경___________ */
   $(window).resize(function(){
-    location.reload();
+    // location.reload();
     let wh = $(window).height();
-    $("html,body").stop().animate({ scrollTop:wh*a },100);
+    // $("html,body").stop().animate({ scrollTop:wh*a },100);
   });
 
   /* 메뉴클릭______________________ */
@@ -125,24 +125,24 @@ $(document).ready(()=>{
   });
 
   /* 컴퓨터스크린일때만-풀페이지 마우스휠__________________________ */
-  if(wv>=1200){
-  $(".area").on("wheel",function(event) {
-    const delta = event.originalEvent.deltaY / Math.abs(event.originalEvent.deltaY);
-    if (wheel) {
-      let n = $(this).index()-2;
-      if(delta < 0) { //휠을 위로 돌렸다면
-        a = n-1;
-      }else{ //휠을 아래로 돌렸다면
-        a = n+1;
-      }
+//   if(wv>=1200){
+//   $(".area").on("wheel",function(event) {
+//     const delta = event.originalEvent.deltaY / Math.abs(event.originalEvent.deltaY);
+//     if (wheel) {
+//       let n = $(this).index()-2;
+//       if(delta < 0) { //휠을 위로 돌렸다면
+//         a = n-1;
+//       }else{ //휠을 아래로 돌렸다면
+//         a = n+1;
+//       }
 
-      if ( a <= 0 ) { a = 0; }
-      if ( a >= area_n-1 ) { a = area_n-1; }
+//       if ( a <= 0 ) { a = 0; }
+//       if ( a >= area_n-1 ) { a = area_n-1; }
 
-      $("html,body").stop().animate({ scrollTop:wh*a },100); 
-    };
-  });
-}
+//       $("html,body").stop().animate({ scrollTop:wh*a },100); 
+//     };
+//   });
+// }
 
 
   //🎈스크롤 레이아웃 변화 이벤트

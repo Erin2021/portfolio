@@ -4,15 +4,17 @@ const pbList = document.querySelectorAll('.publishing-con li')
 
 //리스트에 올리면 preview 등장
 pbList.forEach(list =>{
-  list.addEventListener('mousemove',(e)=>{
-    preview.style.display = "block";
-    //그타겟의 데이터 셋을 받아옴
-    preview.style.backgroundImage=`url(img/${list.dataset.preview})`;
+  if(window.innerWidth>=1200){
+    list.addEventListener('mousemove',(e)=>{
+      preview.style.display = "block";
+      //그타겟의 데이터 셋을 받아옴
+      preview.style.backgroundImage=`url(../img/${list.dataset.preview})`;
 
-  });
-  list.addEventListener('mouseleave',()=>{
-    preview.style.display = "none";
-  });
+    });
+    list.addEventListener('mouseleave',()=>{
+      preview.style.display = "none";
+    });
+  }
 })
 
 let x = 0;
@@ -52,6 +54,19 @@ loop();
 
 
 
+
+
+//🎈Design-마우스가 돌아다니는 방향대로 스크롤 되기
+const Dbox=document.querySelector('.design-con');
+let Dx,Dy;
+
+Dbox.addEventListener("mousemove",(e)=>{
+  if (Dx && Dy) {
+    Dbox.scrollBy(e.clientX - Dx, e.clientY - Dy);
+  }
+  Dx = e.clientX;
+  Dy = e.clientY;
+});
 
 
 
