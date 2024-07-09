@@ -303,6 +303,54 @@ section{
 }
 
 /*🎉✨section1-profile____________________ */
+#section1 .rel{
+  border:1px solid green;
+  overflow:hidden;
+  @include contents;
+  justify-content: center;
+  align-items: center;
+  .porfile-inner{
+    border: 1px solid #000;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    .about{
+      // display: flex;
+      // flex-flow:wrap;
+      .photo{
+        width: fit-content;
+        border: 1px solid #000;
+        text-align: center;
+      }
+      .profile{
+        flex:9;
+        border: 1px solid #000;
+        .info{
+          border: 1px solid #000;
+        }
+      }
+    }
+    .skills{
+      border: 1px solid #000;
+      h3{font-size: 32rem}
+      .skills-stats{
+        border: 1px solid red;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:20rem;
+        .skill-des{
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+  
+
+}
+
+
+
 
 
 

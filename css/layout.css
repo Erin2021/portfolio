@@ -326,6 +326,50 @@ section .rel .contents {
 }
 
 /*🎉✨section1-profile____________________ */
+#section1 .rel {
+  border: 1px solid green;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50rem;
+  justify-content: center;
+  align-items: center;
+}
+#section1 .rel .porfile-inner {
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#section1 .rel .porfile-inner .about .photo {
+  width: fit-content;
+  border: 1px solid #000;
+  text-align: center;
+}
+#section1 .rel .porfile-inner .about .profile {
+  flex: 9;
+  border: 1px solid #000;
+}
+#section1 .rel .porfile-inner .about .profile .info {
+  border: 1px solid #000;
+}
+#section1 .rel .porfile-inner .skills {
+  border: 1px solid #000;
+}
+#section1 .rel .porfile-inner .skills h3 {
+  font-size: 32rem;
+}
+#section1 .rel .porfile-inner .skills .skills-stats {
+  border: 1px solid red;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20rem;
+}
+#section1 .rel .porfile-inner .skills .skills-stats .skill-des {
+  border: 1px solid #000;
+}
+
 /*🎉✨section2-publishing____________________ */
 #section2 .rel {
   display: flex;
