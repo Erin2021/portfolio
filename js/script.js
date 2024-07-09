@@ -57,17 +57,49 @@ loop();
 
 
 //🎈Design-마우스가 돌아다니는 방향대로 스크롤 되기
-const Dbox=document.querySelector('.design-con');
-let Dx,Dy;
+// const Dbox=document.querySelector('.design-con');
+// const Dboxscroll=document.querySelector('.design-con-inner');
 
-Dbox.addEventListener("mousemove",(e)=>{
-  if (Dx && Dy) {
-    Dbox.scrollBy(e.clientX - Dx, e.clientY - Dy);
-  }
-  Dx = e.clientX;
-  Dy = e.clientY;
-});
+// // const Dcenter = document.querySelector('.d-thumbnail:nth-child(11)');
+// // console.log(Dcenter)
+// // Dcenter.scrollIntoView({block: "center",inline:"center"}) 
 
+
+
+// let Dx,Dy;
+
+// Dbox.addEventListener("mousemove",(e)=>{
+//   if (Dx && Dy) {
+//     Dboxscroll.scrollBy(e.clientX - Dx, e.clientY - Dy);
+//   }
+//   Dx = e.clientX;
+//   Dy = e.clientY;
+// });
+
+//버튼누르면 바뀌기
+const graphicBtn =document.querySelector(".design-btn button:nth-child(1)")
+const uxuiBtn =document.querySelector(".design-btn button:nth-child(2)")
+const DesignBtn = document.querySelectorAll(".design-btn button")
+
+
+DesignBtn.forEach(Btn=>{
+  Btn.addEventListener('click',(e)=>{
+    console.log(e.target);
+    if(!e.target.classList.contains('active')){//토글바꿔
+      DesignBtn.forEach(BtnEvent=>{
+        BtnEvent.classList.remove("active");
+      })
+      e.target.classList.add('active');
+    }
+    if(graphicBtn.classList.contains('active')){
+      document.querySelector('.graphic-part').classList.add('active');
+      document.querySelector('.UXUI-part').classList.remove('active');
+    }else{
+      document.querySelector('.UXUI-part').classList.add('active');
+      document.querySelector('.graphic-part').classList.remove('active');
+    }
+  })
+})
 
 
 

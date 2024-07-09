@@ -279,7 +279,7 @@ section{
     .contents{
       width:100%;
       height: 100%;
-      border: 1px solid #000;//check
+      //border: 1px solid #000;//check
     }
   }
 }
@@ -378,10 +378,46 @@ section{
       }
     }
   }
+
   .design-con{
-    overflow: scroll;
-    display: flex;
+    position:relative;
+    overflow: hidden;
+    
+
+
+    .design-con-inner{
+      overflow: scroll;
+      .design-list{
+        width: fit-content;    
+        .graphic-part,.UXUI-part{
+          display: none;
+          &.active{display: block;} 
+        }     
+        .d-thumbnail-1,.d-thumbnail-2{
+          @include flex;
+          column-gap: 40rem;
+        }
+        .d-thumbnail-1{margin-bottom: 40rem;}
+        .d-thumbnail{
+          border: 1px solid #000;
+          width:472rem;
+          height: 330rem;
+          overflow: hidden;
+          &:hover{
+            img{
+              scale: 1.4;
+          }
+        }
+        img{
+          transition:0.5s ease-in-out;
+        }
+        
+      }
+
+    }
+    
 
     
+  }
   }
 }

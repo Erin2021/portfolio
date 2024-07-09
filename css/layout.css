@@ -304,7 +304,6 @@ section .rel .sec-title p {
 section .rel .contents {
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
 }
 
 /*🎉✨section0-opening____________________ */
@@ -410,6 +409,39 @@ section .rel .contents {
   color: #fff;
 }
 #section3 .rel .design-con {
+  position: relative;
+  overflow: hidden;
+}
+#section3 .rel .design-con .design-con-inner {
   overflow: scroll;
+}
+#section3 .rel .design-con .design-con-inner .design-list {
+  width: fit-content;
+}
+#section3 .rel .design-con .design-con-inner .design-list .graphic-part, #section3 .rel .design-con .design-con-inner .design-list .UXUI-part {
+  display: none;
+}
+#section3 .rel .design-con .design-con-inner .design-list .graphic-part.active, #section3 .rel .design-con .design-con-inner .design-list .UXUI-part.active {
+  display: block;
+}
+#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-1, #section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-2 {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40rem;
+}
+#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-1 {
+  margin-bottom: 40rem;
+}
+#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail {
+  border: 1px solid #000;
+  width: 472rem;
+  height: 330rem;
+  overflow: hidden;
+}
+#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail:hover img {
+  scale: 1.4;
+}
+#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail img {
+  transition: 0.5s ease-in-out;
 }
