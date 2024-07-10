@@ -67,6 +67,7 @@ body{
   font-size: 1.1111111111111112vw;
   background:linear-gradient(0deg,#fcedbe,#afd5fc) ;
 }
+p{font-size: 18rem;}
 
 /*🎉✨header-setting____________________ */
 header .top{
@@ -279,7 +280,6 @@ section{
     .contents{
       width:100%;
       height: 100%;
-      //border: 1px solid #000;//check
     }
   }
 }
@@ -304,43 +304,137 @@ section{
 
 /*🎉✨section1-profile____________________ */
 #section1 .rel{
-  border:1px solid green;
   overflow:hidden;
+  color:#fff;
   @include contents;
   justify-content: center;
   align-items: center;
   .porfile-inner{
-    border: 1px solid #000;
-    width:100%;
+    padding:50rem;
     display: flex;
-    flex-wrap: wrap;
+    column-gap: 50rem;
     .about{
-      // display: flex;
+      flex:1;
+      display: flex;
+      flex-direction: column;
       // flex-flow:wrap;
+      gap:10rem;
       .photo{
         width: fit-content;
-        border: 1px solid #000;
         text-align: center;
       }
       .profile{
-        flex:9;
-        border: 1px solid #000;
-        .info{
-          border: 1px solid #000;
+        padding:10rem 10rem;
+        .info-detail{
+          h4{
+            font-size:32rem;
+            i{
+              margin-left:10rem;
+              font-style: normal;
+              font-size: 18rem;
+              color:#ddd;
+            }
+          }
+          .birth{
+            margin-top:20rem;
+            p{
+              margin-top:5rem;
+            }
+          }
+          
+          .personal{
+            margin-bottom: 30rem;
+          }
+          .site{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li{
+              background: #000;
+              padding:4rem 10rem;
+              border-radius: 35rem;
+              a{
+                display: block;
+                @include flex;
+                
+              }
+            }
+          }
         }
+        
+      }
+    }
+    .info{
+      flex:2;
+      h3{font-size: 28rem;
+        margin-bottom: 10rem;
+      }
+      .education{
+        padding:10rem;
+        margin-bottom: 20rem;
+        .date{
+          display: inline-block;
+          color:#ddd;
+          font-weight: bold;
+          
+        }
+        .edu{
+          padding:0 5rem;
+          margin-bottom: 20rem;
+        }
+      }
+      .interests{
+        ul{
+          margin-bottom: 20rem;
+          display: flex;
+          flex-flow: wrap;
+          padding:10rem;
+          gap: 10rem;
+          li{
+            background: #000;
+            padding:7rem 25rem;
+            border-radius: 30rem;
+            font-size: 18rem;
+          }
+        }
+      }
+      .paper{
+        height: 200rem;
+        background-color: #000;
       }
     }
     .skills{
-      border: 1px solid #000;
-      h3{font-size: 32rem}
+      flex:3;
+      h3{font-size: 28rem;
+        margin-bottom: 10rem;
+      }
       .skills-stats{
-        border: 1px solid red;
+        height: 90%;
+        padding: 10rem;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap:20rem;
         .skill-des{
-          border: 1px solid #000;
+          padding:10rem;
+          border: 1px solid #fff;
+          h4{
+            font-size: 24rem;
+            margin-bottom: 10rem;
+          }
+          ul{
+            padding: 5rem;
+            &.others{
+              display: flex;
+              flex-flow: wrap;
+            }
+            
+            li{
+              list-style-type:"- ";
+              list-style-position: inside;
+              font-size: 18rem;
+            }
+          }
         }
       }
     }
