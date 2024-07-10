@@ -340,6 +340,7 @@ section .rel .contents {
   align-items: center;
 }
 #section1 .rel .porfile-inner {
+  border: 1px solid #000;
   padding: 50rem;
   display: flex;
   column-gap: 50rem;
@@ -380,16 +381,24 @@ section .rel .contents {
   justify-content: space-between;
   align-items: center;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail .site li {
+#section1 .rel .porfile-inner .about .profile .info-detail .site li a {
   background: #000;
+  border: 1rem solid #000;
   padding: 4rem 10rem;
   border-radius: 35rem;
-}
-#section1 .rel .porfile-inner .about .profile .info-detail .site li a {
   display: block;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#section1 .rel .porfile-inner .about .profile .info-detail .site li a svg {
+  width: 32rem;
+}
+#section1 .rel .porfile-inner .about .profile .info-detail .site li a:hover {
+  background: #fff;
+}
+#section1 .rel .porfile-inner .about .profile .info-detail .site li a:hover svg path {
+  fill: #000;
 }
 #section1 .rel .porfile-inner .info {
   flex: 2;
@@ -456,7 +465,16 @@ section .rel .contents {
 }
 #section1 .rel .porfile-inner .skills .skills-stats .skill-des ul.others {
   display: flex;
+  gap: 10rem;
+  column-gap: 15rem;
   flex-flow: wrap;
+  padding-left: 20rem;
+}
+#section1 .rel .porfile-inner .skills .skills-stats .skill-des ul.others li {
+  list-style-type: none;
+}
+#section1 .rel .porfile-inner .skills .skills-stats .skill-des ul.others li img {
+  width: 36rem;
 }
 #section1 .rel .porfile-inner .skills .skills-stats .skill-des ul li {
   list-style-type: "- ";
