@@ -593,8 +593,89 @@ section{
 
 
 /*🎉✨section4-planning____________________ */
-#section5 .rel{
-  display: flex;}
+#section4 .rel{
+  @include contents;
+  border: 1px solid red;
+  .plan-con{
+    padding:30rem 0;
+    overflow: hidden;
+    background: #fff;
+    .plan-con-list{
+      
+      height: inherit;
+      @include flex;
+      column-gap:20rem;
+      .plan-list-inner{
+        overflow:hidden;
+        width:5%;
+        flex:0.05;
+        border: 1px solid #000;
+        height: 60%;
+        height: 100%;
+        div{
+          // display: none;
+          //해야하는것:내용css+ 호버시 등장하는 애니메이션 gsap使う予定
+          transition:all 1s 1s;
+          text-align: center;
+          height: inherit;
+          border: 1px solid green;
+          h3{
+            font-size: 42rem;
+            position: relative;
+            strong{
+              display: block;
+              font-size: 30rem;
+            }
+            &::before{
+              content: 'test';
+              display: block;
+              position:absolute;
+              width:50rem;
+              height: 3rem;
+              background: #000;
+            }
+          }
+
+          ul{
+            @include flex;
+            flex-direction: column;
+            row-gap:10rem;
+            li{
+              width: 50%;
+              a{
+                border: 1px solid #000;
+                display: inline-block;
+                width: 100%;
+                padding:5rem 0;
+              }
+            }
+          }
+
+          
+        }
+        &.test{
+          flex:1;
+          height: 100%;
+        }
+        
+        // &:hover{
+        //   flex:1;
+        //   height: 100%;
+        //   div{
+        //     //background: red;
+        //   }
+        // }
+        // transition: flex 1s, height 0.5s 0.5s;
+        
+
+      }
+      // &:has(li:hover) :not(li:hover){
+      //   translate: 0 20%;
+      // }
+    }
+    
+  }
+}
 
 
 

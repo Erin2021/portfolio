@@ -604,8 +604,73 @@ section .rel .contents {
 }
 
 /*🎉✨section4-planning____________________ */
-#section5 .rel {
+#section4 .rel {
   display: flex;
+  flex-direction: column;
+  row-gap: 50rem;
+  border: 1px solid red;
+}
+#section4 .rel .plan-con {
+  padding: 30rem 0;
+  overflow: hidden;
+  background: #fff;
+}
+#section4 .rel .plan-con .plan-con-list {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20rem;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner {
+  overflow: hidden;
+  width: 5%;
+  flex: 0.05;
+  border: 1px solid #000;
+  height: 60%;
+  height: 100%;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner div {
+  transition: all 1s 1s;
+  text-align: center;
+  height: inherit;
+  border: 1px solid green;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner div h3 {
+  font-size: 42rem;
+  position: relative;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner div h3 strong {
+  display: block;
+  font-size: 30rem;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner div h3::before {
+  content: "test";
+  display: block;
+  position: absolute;
+  width: 50rem;
+  height: 3rem;
+  background: #000;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner div ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10rem;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner div ul li {
+  width: 50%;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner div ul li a {
+  border: 1px solid #000;
+  display: inline-block;
+  width: 100%;
+  padding: 5rem 0;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner.test {
+  flex: 1;
+  height: 100%;
 }
 
 /*🎉✨section5-contact____________________ */
