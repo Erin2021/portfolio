@@ -57,24 +57,28 @@ loop();
 
 
 //🎈Design-마우스가 돌아다니는 방향대로 스크롤 되기
-// const Dbox=document.querySelector('.design-con');
-// const Dboxscroll=document.querySelector('.design-con-inner');
+let holder = document.querySelector('.design-list'),
+    wrapper = document.querySelector('.design-con-inner'),
+    designContent= document.querySelector('.contents.design-con'),
+    overflowX, mapPositionX
 
-// // const Dcenter = document.querySelector('.d-thumbnail:nth-child(11)');
-// // console.log(Dcenter)
-// // Dcenter.scrollIntoView({block: "center",inline:"center"}) 
+function onResize(e) {
+  overflowX = holder.offsetWidth - (window.innerWidth/1.2);
+  mapPositionX = gsap.utils.mapRange(0, window.innerWidth, overflowX / 2, overflowX / -2);
+}
 
+function onMouseMove(e) {
+  if (overflowX > 0) {
+    let x = e.clientX || (e.changedTouches && e.changedTouches[0].clientX) || 0;
+    gsap.to(holder, {duration: 1, overwrite: true, ease: "power3", x: mapPositionX(x)});
+  }
+}
 
-
-// let Dx,Dy;
-
-// Dbox.addEventListener("mousemove",(e)=>{
-//   if (Dx && Dy) {
-//     Dboxscroll.scrollBy(e.clientX - Dx, e.clientY - Dy);
-//   }
-//   Dx = e.clientX;
-//   Dy = e.clientY;
-// });
+window.addEventListener("resize", onResize);
+designContent.addEventListener("mousemove", onMouseMove);
+designContent.addEventListener("touchmove", onMouseMove);
+designContent.addEventListener("pointermove", onMouseMove);
+onResize();
 
 //버튼누르면 바뀌기
 const graphicBtn =document.querySelector(".design-btn button:nth-child(1)")
@@ -100,6 +104,9 @@ DesignBtn.forEach(Btn=>{
     }
   })
 })
+
+
+
 
 
 

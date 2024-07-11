@@ -340,7 +340,6 @@ section .rel .contents {
   align-items: center;
 }
 #section1 .rel .porfile-inner {
-  border: 1px solid #000;
   padding: 50rem;
   display: flex;
   column-gap: 50rem;
@@ -569,7 +568,9 @@ section .rel .contents {
   overflow: hidden;
 }
 #section3 .rel .design-con .design-con-inner {
-  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #section3 .rel .design-con .design-con-inner .design-list {
   width: fit-content;
@@ -591,8 +592,8 @@ section .rel .contents {
 }
 #section3 .rel .design-con .design-con-inner .design-list .d-thumbnail {
   border: 1px solid #000;
-  width: 472rem;
-  height: 330rem;
+  width: 360rem;
+  height: 240rem;
   overflow: hidden;
 }
 #section3 .rel .design-con .design-con-inner .design-list .d-thumbnail:hover img {
@@ -600,4 +601,42 @@ section .rel .contents {
 }
 #section3 .rel .design-con .design-con-inner .design-list .d-thumbnail img {
   transition: 0.5s ease-in-out;
+}
+
+/*🎉✨section4-planning____________________ */
+#section5 .rel {
+  display: flex;
+}
+
+/*🎉✨section5-contact____________________ */
+#section5 .rel {
+  display: flex;
+}
+#section5 .rel .greeting {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10rem;
+}
+#section5 .rel .greeting h1 {
+  font-size: min(13em, 100rem);
+}
+#section5 .rel .greeting p {
+  font-size: min(5em, 40rem);
+}
+#section5 .rel .greeting ul {
+  margin-top: 50rem;
+  display: flex;
+}
+#section5 .rel .greeting ul li a {
+  background-color: #000;
+  border: 2px solid #000;
+  border-radius: 50rem;
+  color: #fff;
+  font-size: 42rem;
+  padding: 10rem 30rem;
+  text-align: center;
+  display: inline-block;
+  margin: 0 10rem;
+  cursor: pointer;
 }

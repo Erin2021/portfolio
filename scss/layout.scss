@@ -310,7 +310,6 @@ section{
   justify-content: center;
   align-items: center;
   .porfile-inner{
-    border: 1px solid #000;
     padding:50rem;
     display: flex;
     column-gap: 50rem;
@@ -552,11 +551,15 @@ section{
 
 
     .design-con-inner{
-      overflow: scroll;
+      // overflow: scroll;
+      @include flex;
+      // background: #000;
       .design-list{
-        width: fit-content;    
+        width: fit-content; 
+        // background: pink;  
         .graphic-part,.UXUI-part{
           display: none;
+          
           &.active{display: block;} 
         }     
         .d-thumbnail-1,.d-thumbnail-2{
@@ -566,8 +569,8 @@ section{
         .d-thumbnail-1{margin-bottom: 40rem;}
         .d-thumbnail{
           border: 1px solid #000;
-          width:472rem;
-          height: 330rem;
+          width:360rem;
+          height: 240rem;
           overflow: hidden;
           &:hover{
             img{
@@ -585,5 +588,47 @@ section{
 
     
   }
+  }
+}
+
+
+/*🎉✨section4-planning____________________ */
+#section5 .rel{
+  display: flex;}
+
+
+
+
+
+/*🎉✨section5-contact____________________ */
+#section5 .rel{
+  display: flex;
+  .greeting{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:10rem;
+    h1{
+      font-size: min(13em,100rem);
+    }
+    p{font-size: min(5em,40rem);}
+    ul{
+      margin-top: 50rem;
+      display: flex;
+      li{
+        a{
+          background-color: #000;
+          border: 2px solid #000;
+          border-radius: 50rem;
+          color: #fff;
+          font-size: 42rem;
+          padding: 10rem 30rem;
+          text-align: center;
+          display: inline-block;
+          margin: 0 10rem;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
