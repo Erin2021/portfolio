@@ -1,4 +1,5 @@
-//🎈publishing-마우스호버시 이미지 나오게하기
+(function(){
+  //🎈publishing-마우스호버시 이미지 나오게하기
 const preview = document.querySelector('.preview');
 const pbList = document.querySelectorAll('.publishing-con li')
 
@@ -109,11 +110,6 @@ DesignBtn.forEach(Btn=>{
 
 
 
-
-
-
-
-
 //🔥Jquery 부분
 $(document).ready(function(){
   //🎈모바일 햄버거 메뉴 눌렀을 때
@@ -132,3 +128,5 @@ $(document).ready(function(){
   });
 
 });
+
+})()

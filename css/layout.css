@@ -15,6 +15,7 @@ body {
   /* 반응형폰트변화수치 */
   font-size: 1.1111111111vw;
   background: linear-gradient(0deg, #fcedbe, #afd5fc);
+  position: relative;
 }
 
 p {
@@ -248,7 +249,16 @@ header .top .pc-menu li:hover a {
 #layout > div.right p:nth-child(3) {
   text-align: right;
 }
-#layout > div.bottom {
+
+footer {
+  font-size: min(1.3em, 20rem);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  border: 1rem solid #888;
+}
+footer .bottom {
   left: 0;
   padding: 0 min(4em, 80rem);
   width: 100vw;
@@ -261,23 +271,23 @@ header .top .pc-menu li:hover a {
   justify-content: flex-end;
   transition: 0.5s;
 }
-#layout > div.bottom a {
+footer .bottom a {
   display: none;
   padding: 0 10rem;
 }
-#layout > div.bottom a i {
+footer .bottom a i {
   margin-left: 10rem;
 }
-#layout > div.bottom a:hover, #layout > div.bottom a:hover i {
+footer .bottom a:hover, footer .bottom a:hover i {
   font-style: italic;
   text-decoration: underline;
 }
-#layout > div.bottom.active {
+footer .bottom.active {
   transition: 0.5s;
-  background-color: #231E1A;
+  background-color: #000;
   color: #fff;
 }
-#layout > div.bottom.active a {
+footer .bottom.active a {
   display: block;
 }
 
@@ -608,12 +618,10 @@ section .rel .contents {
   display: flex;
   flex-direction: column;
   row-gap: 50rem;
-  border: 1px solid red;
 }
 #section4 .rel .plan-con {
   padding: 30rem 0;
   overflow: hidden;
-  background: #fff;
 }
 #section4 .rel .plan-con .plan-con-list {
   height: inherit;
@@ -628,26 +636,38 @@ section .rel .contents {
   flex: 0.05;
   border: 1px solid #000;
   height: 60%;
-  height: 100%;
+  transition: flex 1s, height 0.5s 0.5s;
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner div {
-  transition: all 1s 1s;
+  display: flex;
   text-align: center;
-  height: inherit;
-  border: 1px solid green;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 60rem;
+  background: url(../img/cat.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  filter: grayscale(100%);
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner div h3 {
+  display: inline-block;
   font-size: 42rem;
   position: relative;
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner div h3 strong {
   display: block;
-  font-size: 30rem;
+  font-size: 24rem;
+  margin-bottom: 30rem;
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner div h3::before {
-  content: "test";
+  content: "";
   display: block;
   position: absolute;
+  top: 40%;
+  left: 50%;
+  translate: -50% -50%;
   width: 50rem;
   height: 3rem;
   background: #000;
@@ -666,11 +686,23 @@ section .rel .contents {
   border: 1px solid #000;
   display: inline-block;
   width: 100%;
-  padding: 5rem 0;
+  padding: 7rem 0;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner.test {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner div h3, #section4 .rel .plan-con .plan-con-list .plan-list-inner div ul {
+  opacity: 0;
+  transition: opacity 1ms 0s;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover {
   flex: 1;
   height: 100%;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div {
+  filter: grayscale(0%);
+  transition: filter 0.7s;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div h3, #section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div ul {
+  opacity: 1;
+  transition: opacity 1s 1s;
 }
 
 /*🎉✨section5-contact____________________ */

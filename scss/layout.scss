@@ -66,6 +66,7 @@ body{
   /* 반응형폰트변화수치 */
   font-size: 1.1111111111111112vw;
   background:linear-gradient(0deg,#fcedbe,#afd5fc) ;
+  position: relative;
 }
 p{font-size: 18rem;}
 
@@ -234,32 +235,40 @@ header .top{
         }
       }
     }
-    &.bottom{
-      @include headerTB;
-      bottom:0;
-      justify-content: flex-end;
-      transition: 0.5s;
-      a{
-        display: none;
-        padding:0 10rem;
-        i{margin-left:10rem;}
-        &:hover,&:hover i{
-          font-style: italic;
-          text-decoration: underline;
-        }
+  }
+}
+footer{
+  font-size: min(1.3em, 20rem);
+  position:fixed;
+  bottom:0;
+  left:0;
+  z-index: 10;
+  border: 1rem solid $color-gray;
+  .bottom{
+    @include headerTB;
+    bottom:0;
+    justify-content: flex-end;
+    transition: 0.5s;
+    a{
+      display: none;
+      padding:0 10rem;
+      i{margin-left:10rem;}
+      &:hover,&:hover i{
+        font-style: italic;
+        text-decoration: underline;
       }
-      &.active{
-        transition: 0.5s;
-        background-color:#231E1A;
-        color:#fff;
-        a{
-          display:block;
-        }
+    }
+    &.active{
+      transition: 0.5s;
+      background-color:#000;
+      color:#fff;
+      a{
+        display:block;
       }
     }
   }
 }
-header,#layout{transition: 0.7s;}
+header, #layout{transition: 0.7s;}
 
 /*🎉✨common section-setting____________________ */
 section{
@@ -283,8 +292,6 @@ section{
     }
   }
 }
-
-
 
 
 /*🎉✨section0-opening____________________ */
@@ -466,11 +473,6 @@ section{
 
 }
 
-
-
-
-
-
 /*🎉✨section2-publishing____________________ */
 #section2 .rel{
   @include contents;
@@ -591,15 +593,12 @@ section{
   }
 }
 
-
 /*🎉✨section4-planning____________________ */
 #section4 .rel{
   @include contents;
-  border: 1px solid red;
   .plan-con{
     padding:30rem 0;
     overflow: hidden;
-    background: #fff;
     .plan-con-list{
       
       height: inherit;
@@ -611,31 +610,41 @@ section{
         flex:0.05;
         border: 1px solid #000;
         height: 60%;
-        height: 100%;
         div{
-          // display: none;
-          //해야하는것:내용css+ 호버시 등장하는 애니메이션 gsap使う予定
-          transition:all 1s 1s;
+          display: flex;
           text-align: center;
-          height: inherit;
-          border: 1px solid green;
+          height: 100%;
+          flex-direction: column;
+          justify-content: center;
+          row-gap: 60rem;
+          background: url(../img/cat.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size:120%;
+          
+          //CONTENT-BEGINS
           h3{
+            display: inline-block;
             font-size: 42rem;
             position: relative;
             strong{
               display: block;
-              font-size: 30rem;
+              font-size: 24rem;
+              margin-bottom: 30rem;
+
             }
             &::before{
-              content: 'test';
+              content: '';
               display: block;
               position:absolute;
+              top:40%;
+              left:50%;
+              translate:-50% -50%;
               width:50rem;
               height: 3rem;
               background: #000;
             }
           }
-
           ul{
             @include flex;
             flex-direction: column;
@@ -646,40 +655,36 @@ section{
                 border: 1px solid #000;
                 display: inline-block;
                 width: 100%;
-                padding:5rem 0;
+                padding:7rem 0;
               }
             }
           }
-
-          
-        }
-        &.test{
+          h3,ul{
+            opacity: 0;
+            transition:opacity 1ms 0s;  
+          }
+          //CONTENT-ENDS
+          filter:grayscale(100%); 
+        }        
+        &:hover{
           flex:1;
           height: 100%;
+          div{
+            filter:grayscale(0%);
+            transition:filter 0.7s; 
+            h3,ul{
+            opacity:1;
+            transition:opacity 1s 1s;
+            }
+          }
+          
         }
-        
-        // &:hover{
-        //   flex:1;
-        //   height: 100%;
-        //   div{
-        //     //background: red;
-        //   }
-        // }
-        // transition: flex 1s, height 0.5s 0.5s;
-        
-
+        transition: flex 1s, height 0.5s 0.5s;
       }
-      // &:has(li:hover) :not(li:hover){
-      //   translate: 0 20%;
-      // }
     }
     
   }
 }
-
-
-
-
 
 /*🎉✨section5-contact____________________ */
 #section5 .rel{

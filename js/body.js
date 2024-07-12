@@ -1,4 +1,5 @@
-const bgColor = document.body
+(function(){
+  const bgColor = document.body
 let rotate=0;
 //시작배경
 let color1 ="rgb(252, 237, 190)";
@@ -113,9 +114,8 @@ $(document).ready(()=>{
 
   /*브라우저 창 사이즈 변경___________ */
   $(window).resize(function(){
-    // location.reload();
     let wh = $(window).height();
-    // $("html,body").stop().animate({ scrollTop:wh*a },100);
+    $("html,body").stop().animate({ scrollTop:wh*a },100);
   });
 
   /* 메뉴클릭______________________ */
@@ -125,24 +125,25 @@ $(document).ready(()=>{
   });
 
   /* 컴퓨터스크린일때만-풀페이지 마우스휠__________________________ */
-//   if(wv>=1200){
-//   $(".area").on("wheel",function(event) {
-//     const delta = event.originalEvent.deltaY / Math.abs(event.originalEvent.deltaY);
-//     if (wheel) {
-//       let n = $(this).index()-2;
-//       if(delta < 0) { //휠을 위로 돌렸다면
-//         a = n-1;
-//       }else{ //휠을 아래로 돌렸다면
-//         a = n+1;
-//       }
+  if(wv>=1200){
+  $(".area").on("wheel",function(event) {
+    const delta = event.originalEvent.deltaY / Math.abs(event.originalEvent.deltaY);
+    if (wheel) {
+      let n = $(this).index()-2;
+      console.log(n);
+      if(delta < 0) { //휠을 위로 돌렸다면
+        a = n-2;
+      }else{ //휠을 아래로 돌렸다면
+        a = n;
+      }
 
-//       if ( a <= 0 ) { a = 0; }
-//       if ( a >= area_n-1 ) { a = area_n-1; }
+      if ( a <= 0 ) { a = 0; }
+      if ( a >= area_n-1 ) { a = area_n-1; }
 
-//       $("html,body").stop().animate({ scrollTop:wh*a },100); 
-//     };
-//   });
-// }
+      $("html,body").stop().animate({ scrollTop:wh*a },100); 
+    };
+  });
+}
 
 
   //🎈스크롤 레이아웃 변화 이벤트
@@ -189,9 +190,9 @@ $(document).ready(()=>{
       title='웹기획'
       titleEng='Web Planning'
       menuSelect();
-      $("#layout div.bottom").removeClass("active")
+      $("footer .bottom").removeClass("active")
       if($(window).width()<=1200){
-        $("#layout div.bottom").css({"display":"none"})
+        $("footer .bottom").css({"display":"none"})
       }
     };
     if(sc>wh*5-1){  
@@ -200,10 +201,10 @@ $(document).ready(()=>{
       titleEng='Contact'
       menuSelect();
       if($(window).width()<=1200){
-        $("#layout div.bottom").css({"display":"flex"})
+        $("footer .bottom").css({"display":"flex"})
       }
       
-      $("#layout div.bottom").addClass("active")
+      $("footer .bottom").addClass("active")
     };
   });
 
@@ -229,3 +230,6 @@ light.addEventListener("mousemove",(e)=>{
   light.style.top=`${e.clientY}px`;
   light.style.left=`${e.clientX}px`;
 })
+
+
+})()
