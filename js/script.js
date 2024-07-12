@@ -1,3 +1,4 @@
+//파트별 이벤트
 (function(){
   //🎈publishing-마우스호버시 이미지 나오게하기
 const preview = document.querySelector('.preview');
@@ -9,7 +10,7 @@ pbList.forEach(list =>{
     list.addEventListener('mousemove',(e)=>{
       preview.style.display = "block";
       //그타겟의 데이터 셋을 받아옴
-      preview.style.backgroundImage=`url(../img/${list.dataset.preview})`;
+      preview.style.backgroundImage=`url(img/${list.dataset.preview})`;
 
     });
     list.addEventListener('mouseleave',()=>{

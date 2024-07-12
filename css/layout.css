@@ -9,6 +9,7 @@
 }
 html {
   scroll-behavior: smooth;
+  height: 100vh;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   font-size: 1.1111111111vw;
   background: linear-gradient(0deg, #fcedbe, #afd5fc);
   position: relative;
+  color: #1E1E1A;
 }
 
 p {
@@ -44,8 +46,8 @@ header .top .top-left {
   column-gap: 45rem;
 }
 header .top .top-left p:nth-of-type(2) {
-  background-color: #000;
-  color: #fff;
+  background-color: #1E1E1A;
+  color: #fffff0;
   padding: 1rem 30rem;
   border-radius: 20rem;
   position: relative;
@@ -74,7 +76,7 @@ header .top .hamberger-menu span {
   display: block;
   width: 100%;
   height: 3rem;
-  background-color: #000;
+  background-color: #1E1E1A;
   border-radius: 8rem;
   text-indent: -9999px;
   position: absolute;
@@ -124,7 +126,7 @@ header .top .subNav.active .inner {
   right: 0;
 }
 header .top .subNav .inner {
-  background: #fff;
+  background: #fffff0;
   width: 50%;
   height: calc(100vh - 60rem);
   position: absolute;
@@ -159,8 +161,8 @@ header .top .pc-menu li a {
   border-radius: 30rem;
 }
 header .top .pc-menu li.active a {
-  background-color: #000;
-  color: #fff;
+  background-color: #1E1E1A;
+  color: #fffff0;
   text-align: center;
 }
 header .top .pc-menu li:hover a {
@@ -284,8 +286,8 @@ footer .bottom a:hover, footer .bottom a:hover i {
 }
 footer .bottom.active {
   transition: 0.5s;
-  background-color: #000;
-  color: #fff;
+  background-color: #1E1E1A;
+  color: #fffff0;
 }
 footer .bottom.active a {
   display: block;
@@ -310,9 +312,12 @@ section .rel {
   padding: 10rem;
 }
 section .rel .sec-title h2 {
+  translate: 0 -10%;
   font-size: min(6em, 120rem);
+  font-family: "Playfair Display", serif;
 }
 section .rel .sec-title p {
+  font-family: "Pretendard-Regular", sans-serif;
   font-size: min(6em, 28rem);
 }
 section .rel .contents {
@@ -328,21 +333,22 @@ section .rel .contents {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: end;
+  align-items: start;
   flex-direction: column;
 }
 #section0 .rel .greeting h1 {
-  font-size: min(13em, 128rem);
-  margin-bottom: 40rem;
+  font-family: "LeferiPoint-SpecialItalicA", sans-serif;
+  font-size: min(13em, 120rem);
 }
 #section0 .rel .greeting p {
+  padding-left: 20rem;
   font-size: min(5em, 40rem);
 }
 
 /*🎉✨section1-profile____________________ */
 #section1 .rel {
   overflow: hidden;
-  color: #fff;
+  color: #fffff0;
   display: flex;
   flex-direction: column;
   row-gap: 50rem;
@@ -391,8 +397,8 @@ section .rel .contents {
   align-items: center;
 }
 #section1 .rel .porfile-inner .about .profile .info-detail .site li a {
-  background: #000;
-  border: 1rem solid #000;
+  background: #1E1E1A;
+  border: 1rem solid #1E1E1A;
   padding: 4rem 10rem;
   border-radius: 35rem;
   display: block;
@@ -404,10 +410,10 @@ section .rel .contents {
   width: 32rem;
 }
 #section1 .rel .porfile-inner .about .profile .info-detail .site li a:hover {
-  background: #fff;
+  background: #fffff0;
 }
 #section1 .rel .porfile-inner .about .profile .info-detail .site li a:hover svg path {
-  fill: #000;
+  fill: #1E1E1A;
 }
 #section1 .rel .porfile-inner .info {
   flex: 2;
@@ -437,14 +443,14 @@ section .rel .contents {
   gap: 10rem;
 }
 #section1 .rel .porfile-inner .info .interests ul li {
-  background: #000;
+  background: #1E1E1A;
   padding: 7rem 25rem;
   border-radius: 30rem;
   font-size: 18rem;
 }
 #section1 .rel .porfile-inner .info .paper {
   height: 200rem;
-  background-color: #000;
+  background-color: #1E1E1A;
 }
 #section1 .rel .porfile-inner .skills {
   flex: 3;
@@ -463,7 +469,7 @@ section .rel .contents {
 }
 #section1 .rel .porfile-inner .skills .skills-stats .skill-des {
   padding: 10rem;
-  border: 1px solid #fff;
+  border: 1px solid #fffff0;
 }
 #section1 .rel .porfile-inner .skills .skills-stats .skill-des h4 {
   font-size: 24rem;
@@ -507,7 +513,7 @@ section .rel .contents {
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.3s, translate 1s;
-  border: 15rem solid #fff;
+  border: 15rem solid #fffff0;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: absolute;
@@ -528,7 +534,7 @@ section .rel .contents {
 }
 #section2 .rel .publishing-con ul li p {
   display: inline-block;
-  border-bottom: 5rem solid #000;
+  border-bottom: 5rem solid #1E1E1A;
   font-size: min(6em, 100rem);
 }
 #section2 .rel .publishing-con ul li:nth-of-type(1) {
@@ -558,10 +564,10 @@ section .rel .contents {
   align-self: center;
 }
 #section3 .rel .sec-title .design-btn button {
-  background-color: #fff; /* Green */
-  border: 2px solid #000;
+  background-color: #fffff0;
+  border: 2px solid #1E1E1A;
   border-radius: 32rem;
-  color: #000;
+  color: #1E1E1A;
   font-size: 30rem;
   padding: 10px 20px;
   text-align: center;
@@ -570,8 +576,8 @@ section .rel .contents {
   cursor: pointer;
 }
 #section3 .rel .sec-title .design-btn button.active {
-  background-color: #000;
-  color: #fff;
+  background-color: #1E1E1A;
+  color: #fffff0;
 }
 #section3 .rel .design-con {
   position: relative;
@@ -601,10 +607,14 @@ section .rel .contents {
   margin-bottom: 40rem;
 }
 #section3 .rel .design-con .design-con-inner .design-list .d-thumbnail {
-  border: 1px solid #000;
+  cursor: pointer;
+  border: 1px solid #1E1E1A;
   width: 360rem;
   height: 240rem;
   overflow: hidden;
+}
+#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail::before {
+  content: "test";
 }
 #section3 .rel .design-con .design-con-inner .design-list .d-thumbnail:hover img {
   scale: 1.4;
@@ -634,7 +644,7 @@ section .rel .contents {
   overflow: hidden;
   width: 5%;
   flex: 0.05;
-  border: 1px solid #000;
+  border: 1px solid #1E1E1A;
   height: 60%;
   transition: flex 1s, height 0.5s 0.5s;
 }
@@ -653,10 +663,12 @@ section .rel .contents {
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner div h3 {
   display: inline-block;
-  font-size: 42rem;
+  font-size: 60rem;
+  font-family: "Playfair Display", serif;
   position: relative;
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner div h3 strong {
+  font-family: "Pretendard-Regular", sans-serif;
   display: block;
   font-size: 24rem;
   margin-bottom: 30rem;
@@ -670,7 +682,7 @@ section .rel .contents {
   translate: -50% -50%;
   width: 50rem;
   height: 3rem;
-  background: #000;
+  background: #1E1E1A;
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner div ul {
   display: flex;
@@ -683,7 +695,7 @@ section .rel .contents {
   width: 50%;
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner div ul li a {
-  border: 1px solid #000;
+  border: 1px solid #1E1E1A;
   display: inline-block;
   width: 100%;
   padding: 7rem 0;
@@ -715,21 +727,24 @@ section .rel .contents {
   flex-direction: column;
   gap: 10rem;
 }
-#section5 .rel .greeting h1 {
-  font-size: min(13em, 100rem);
+#section5 .rel .greeting h2 {
+  font-family: "LeferiPoint-SpecialItalicA", sans-serif;
+  font-size: min(13em, 80rem);
 }
 #section5 .rel .greeting p {
+  padding-left: 20rem;
   font-size: min(5em, 40rem);
 }
 #section5 .rel .greeting ul {
-  margin-top: 50rem;
+  padding-left: 20rem;
+  margin-top: 20rem;
   display: flex;
 }
 #section5 .rel .greeting ul li a {
-  background-color: #000;
-  border: 2px solid #000;
+  background-color: #1E1E1A;
+  border: 2px solid #1E1E1A;
   border-radius: 50rem;
-  color: #fff;
+  color: #fffff0;
   font-size: 42rem;
   padding: 10rem 30rem;
   text-align: center;

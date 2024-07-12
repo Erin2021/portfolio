@@ -6,7 +6,13 @@
 
 //Variables
 $color-gray:#888;
+$color-black:#1E1E1A;
+$color-white:#fffff0;
 $size-header:60rem;
+$font-BigEng:"Playfair Display", serif;
+$font-MiddleEng:"Playfair Display", serif;
+$font-titleBigKor:'LeferiPoint-SpecialItalicA',sans-serif;
+$font-titleMiddleKor:'Pretendard-Regular',sans-serif;
 
 @keyframes work-ani {
   0%{opacity:0}
@@ -58,15 +64,15 @@ $size-header:60rem;
   row-gap: 50rem;
 }
 
-
-
-html{scroll-behavior: smooth;}
+html{scroll-behavior: smooth;
+height: 100vh;}
 
 body{
   /* 반응형폰트변화수치 */
   font-size: 1.1111111111111112vw;
   background:linear-gradient(0deg,#fcedbe,#afd5fc) ;
   position: relative;
+  color:$color-black;
 }
 p{font-size: 18rem;}
 
@@ -84,8 +90,8 @@ header .top{
     column-gap: 45rem;
 
     p:nth-of-type(2){
-      background-color: #000;
-      color:#fff;
+      background-color: $color-black;
+      color:$color-white;
       padding:1rem 30rem;
       border-radius: 20rem;
       position:relative;
@@ -114,7 +120,7 @@ header .top{
       display: block;
       width:100%;
       height: 3rem;
-      background-color:#000;
+      background-color:$color-black;
       border-radius: 8rem;
       text-indent: -9999px;
       position:absolute;
@@ -149,7 +155,7 @@ header .top{
       }
     }
     .inner{
-      background: #fff;
+      background: $color-white;
       width:50%;
       height:calc(100vh - $size-header);
       position:absolute;
@@ -181,8 +187,8 @@ header .top{
         border-radius: 30rem;
       }
       &.active a{
-        background-color: #000;
-        color:#fff;
+        background-color: $color-black;
+        color:$color-white;
         text-align: center;
       }
       &:hover a{
@@ -260,8 +266,8 @@ footer{
     }
     &.active{
       transition: 0.5s;
-      background-color:#000;
-      color:#fff;
+      background-color:$color-black;
+      color:$color-white;
       a{
         display:block;
       }
@@ -282,9 +288,12 @@ section{
     padding:10rem;
     .sec-title{
       h2{
+        translate:0 -10%;
         font-size: min(6em,120rem);
+        font-family: $font-BigEng;
       }
-      p{font-size: min(6em,28rem);}
+      p{font-family: $font-titleMiddleKor;
+        font-size: min(6em,28rem);}
     } 
     .contents{
       width:100%;
@@ -299,20 +308,22 @@ section{
   display: flex;
   .greeting{
     @include flex;
-    justify-content: end;
+    align-items: start;
     flex-direction: column;
     h1{
-      font-size: min(13em,128rem);
-      margin-bottom: 40rem;
+      font-family: $font-titleBigKor;
+      font-size: min(13em,120rem);
     }
-    p{font-size: min(5em,40rem);}
+    p{
+      padding-left: 20rem;
+      font-size: min(5em,40rem);}
   }
 }
 
 /*🎉✨section1-profile____________________ */
 #section1 .rel{
   overflow:hidden;
-  color:#fff;
+  color:$color-white;
   @include contents;
   justify-content: center;
   align-items: center;
@@ -358,8 +369,8 @@ section{
             align-items: center;
             li{
               a{
-                background: #000;
-                border: 1rem solid #000;
+                background: $color-black;
+                border: 1rem solid $color-black;
                 padding:4rem 10rem;
                 border-radius: 35rem;
                 display: block;
@@ -368,10 +379,10 @@ section{
                   width:32rem;
                 }
                 &:hover{
-                  background:#fff;
+                  background:$color-white;
                   svg{
                     path{
-                      fill: #000;
+                      fill: $color-black;
                     }
                     
                   }
@@ -412,7 +423,7 @@ section{
           padding:10rem;
           gap: 10rem;
           li{
-            background: #000;
+            background: $color-black;
             padding:7rem 25rem;
             border-radius: 30rem;
             font-size: 18rem;
@@ -421,7 +432,7 @@ section{
       }
       .paper{
         height: 200rem;
-        background-color: #000;
+        background-color: $color-black;
       }
     }
     .skills{
@@ -438,7 +449,7 @@ section{
         gap:20rem;
         .skill-des{
           padding:10rem;
-          border: 1px solid #fff;
+          border: 1px solid $color-white;
           h4{
             font-size: 24rem;
             margin-bottom: 10rem;
@@ -486,7 +497,7 @@ section{
     background-repeat: no-repeat;
     background-size:  cover;
     transition: 0.3s,translate 1s;
-    border: 15rem solid #fff;
+    border: 15rem solid $color-white;
     box-shadow:5px 10px 20px rgb(0 0 0 /.3);
     overflow: hidden;
     position:absolute;
@@ -504,7 +515,7 @@ section{
         img{display: none;}
         p{
           display: inline-block;
-          border-bottom: 5rem solid #000;
+          border-bottom: 5rem solid $color-black;
           font-size: min(6em, 100rem);
         }
         &:nth-of-type(1){translate:20%}
@@ -529,10 +540,10 @@ section{
     display: flex;
     align-self: center;
     button{
-      background-color: #fff; /* Green */
-      border: 2px solid #000;
+      background-color: $color-white;
+      border: 2px solid $color-black;
       border-radius: 32rem;
-      color: #000;
+      color: $color-black;
       font-size: 30rem;
       padding: 10px 20px;
       text-align: center;
@@ -540,8 +551,8 @@ section{
       margin: 0 10rem;
       cursor: pointer;
       &.active{
-        background-color: #000;
-        color: #fff; 
+        background-color: $color-black;
+        color: $color-white; 
       }
     }
   }
@@ -555,13 +566,10 @@ section{
     .design-con-inner{
       // overflow: scroll;
       @include flex;
-      // background: #000;
       .design-list{
         width: fit-content; 
-        // background: pink;  
         .graphic-part,.UXUI-part{
           display: none;
-          
           &.active{display: block;} 
         }     
         .d-thumbnail-1,.d-thumbnail-2{
@@ -570,10 +578,14 @@ section{
         }
         .d-thumbnail-1{margin-bottom: 40rem;}
         .d-thumbnail{
-          border: 1px solid #000;
+          cursor: pointer;
+          border: 1px solid $color-black;
           width:360rem;
           height: 240rem;
           overflow: hidden;
+          &::before{
+            content: 'test';
+          }
           &:hover{
             img{
               scale: 1.4;
@@ -608,7 +620,7 @@ section{
         overflow:hidden;
         width:5%;
         flex:0.05;
-        border: 1px solid #000;
+        border: 1px solid $color-black;
         height: 60%;
         div{
           display: flex;
@@ -625,9 +637,11 @@ section{
           //CONTENT-BEGINS
           h3{
             display: inline-block;
-            font-size: 42rem;
+            font-size: 60rem;
+            font-family: $font-MiddleEng;
             position: relative;
             strong{
+              font-family: $font-titleMiddleKor;
               display: block;
               font-size: 24rem;
               margin-bottom: 30rem;
@@ -642,7 +656,7 @@ section{
               translate:-50% -50%;
               width:50rem;
               height: 3rem;
-              background: #000;
+              background: $color-black;
             }
           }
           ul{
@@ -652,7 +666,7 @@ section{
             li{
               width: 50%;
               a{
-                border: 1px solid #000;
+                border: 1px solid $color-black;
                 display: inline-block;
                 width: 100%;
                 padding:7rem 0;
@@ -694,19 +708,24 @@ section{
     justify-content: center;
     flex-direction: column;
     gap:10rem;
-    h1{
-      font-size: min(13em,100rem);
+    h2{
+      font-family: $font-titleBigKor;
+      font-size: min(13em,80rem);
     }
-    p{font-size: min(5em,40rem);}
+    p{
+      padding-left: 20rem;
+      font-size: min(5em,40rem);
+    }
     ul{
-      margin-top: 50rem;
+      padding-left: 20rem;
+      margin-top: 20rem;
       display: flex;
       li{
         a{
-          background-color: #000;
-          border: 2px solid #000;
+          background-color: $color-black;
+          border: 2px solid $color-black;
           border-radius: 50rem;
-          color: #fff;
+          color: $color-white;
           font-size: 42rem;
           padding: 10rem 30rem;
           text-align: center;

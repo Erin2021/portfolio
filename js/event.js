@@ -1,1 +1,0 @@
-//when enter the detail page

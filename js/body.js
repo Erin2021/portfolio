@@ -1,5 +1,6 @@
+//body와 스크롤이벤트
 (function(){
-  const bgColor = document.body
+  const bgColor = document.body;
 let rotate=0;
 //시작배경
 let color1 ="rgb(252, 237, 190)";
@@ -130,7 +131,6 @@ $(document).ready(()=>{
     const delta = event.originalEvent.deltaY / Math.abs(event.originalEvent.deltaY);
     if (wheel) {
       let n = $(this).index()-2;
-      console.log(n);
       if(delta < 0) { //휠을 위로 돌렸다면
         a = n-2;
       }else{ //휠을 아래로 돌렸다면
