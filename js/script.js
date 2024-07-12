@@ -41,7 +41,7 @@ const loop = () => {
 
   //하단리스트에 호버시 이미지 위치 조정
   if(y>600){
-    preview.style.translate="-10% -60%"
+    preview.style.translate="-10% -120%"
   }else{
     preview.style.translate="-10% -10%"
   }

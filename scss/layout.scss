@@ -508,26 +508,55 @@ section{
     display:none;
   }
   .publishing-con{
-    ul{
+    .pub-inner{
       height: inherit;
-      li{
-        transition:0.3s;
-        img{display: none;}
-        p{
-          display: inline-block;
-          border-bottom: 5rem solid $color-black;
-          font-size: min(6em, 100rem);
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap:20rem;
+      li[data-preview]{
+        a{
+          display: block;
+          img{display: none;}
+          .pub-describe{
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            h4{
+              font-family: $font-BigEng;
+              display: inline-block;
+              width:80%;
+              font-size: min(6em, 80rem);
+              position: relative;
+              &::before{
+                content: '';
+                position:absolute;
+                width:0%;
+                bottom:0%;
+                right:0;
+                height: 3rem;
+                background-color: $color-black;
+                transition: width 0.3s ease-in;
+                
+              }
+            }
+            ul{
+              display: flex;
+              margin-top:10rem;
+              margin-bottom: 20rem;
+              width: 80%;
+              justify-content: space-between;
+              
+            }
+          }
+          &:hover{
+            .pub-describe h4{
+              &::before{width:100%}
+              
+            }
+          }
         }
-        &:nth-of-type(1){translate:20%}
-        &:nth-of-type(2){translate:30%}
-        &:nth-of-type(3){translate:40%}
-        &:nth-of-type(4){
-          // a{display:block;}
-          translate:50%
-        }
-      }
-      &:has(li:hover) :not(:hover){
-        opacity: 0.5;
       }
     }
   }
@@ -583,12 +612,10 @@ section{
           width:360rem;
           height: 240rem;
           overflow: hidden;
-          &::before{
-            content: 'test';
-          }
+          
           &:hover{
             img{
-              scale: 1.4;
+              scale: 1.2;
           }
         }
         img{
@@ -734,6 +761,58 @@ section{
           cursor: pointer;
         }
       }
+    }
+  }
+}
+
+
+/*🎉✨section5-contact____________________ */
+html{overflow: hidden;}
+#modal{
+  height: 100vh;
+  width:100%;
+  overflow-y: scroll;
+  background: rgb(0 0 0 /0.4);
+  display: flex;
+  justify-content: center;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 100;
+  .rel{
+    background: $color-white;
+    width:80%;
+    height: fit-content;
+    margin-top: $size-header;
+    padding:20rem;
+    .modal-inner{
+      border: 1px solid #000;
+      h2{
+        font-size: 48rem;
+      }
+    }
+  }
+  //버튼
+  .T-button{
+    padding:10rem;
+    position:absolute;
+    top:$size-header;
+    right:5%;
+    button{
+      width:70rem;
+      height: 40rem;
+      border-radius: 30rem;
+      background-color: $color-black;
+      border: none;
+      cursor: pointer;
+    }
+    a{
+      margin-top:10rem;
+      display: block;
+      width:50rem;
+      height: 40rem;
+      border-radius: 30rem;
+      background-color: $color-black;
     }
   }
 }
