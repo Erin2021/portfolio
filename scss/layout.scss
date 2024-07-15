@@ -515,9 +515,9 @@ section{
       display: grid;
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      gap:20rem;
       li[data-preview]{
-        a{
+        .P-detail{
+          cursor: pointer;
           display: block;
           img{display: none;}
           .pub-describe{
@@ -769,7 +769,6 @@ section{
 
 
 /*🎉✨section5-contact____________________ */
-
 #modal{
   display: flex;
   display: none;
@@ -784,7 +783,7 @@ section{
   position:absolute;
   top:0;
   left:0;
-  z-index: 100;
+  z-index: 150;
   .m-btn{
     position: sticky;
     top:20rem;
