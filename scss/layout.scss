@@ -9,6 +9,8 @@ $color-gray:#888;
 $color-black:#1E1E1A;
 $color-white:#fffff0;
 $size-header:60rem;
+$size-description:20rem;
+$size-description-title:22rem;
 $font-BigEng:"Playfair Display", serif;
 $font-MiddleEng:"Playfair Display", serif;
 $font-titleBigKor:'LeferiPoint-SpecialItalicA',sans-serif;
@@ -767,52 +769,226 @@ section{
 
 
 /*🎉✨section5-contact____________________ */
-html{overflow: hidden;}
+
 #modal{
+  display: flex;
+  display: none;
   height: 100vh;
   width:100%;
   overflow-y: scroll;
-  background: rgb(0 0 0 /0.4);
-  display: flex;
+  background: rgb(255 255 255 /0.4);
+  //draft
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   justify-content: center;
   position:absolute;
   top:0;
   left:0;
   z-index: 100;
+  .m-btn{
+    position: sticky;
+    top:20rem;
+    left:50%;
+    translate:-50%;
+    border: 1px solid $color-black;
+    background-color: $color-black;
+    z-index: 10;
+    width: 60rem;
+    height: 60rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    @include flex;
+    i{
+      font-size: 32rem;
+      color:$color-white
+    }
+    &.active{
+      width:150rem;
+      height: 50rem;
+      border-radius: 50rem;
+      i{
+        font-size: 24rem;
+      }
+    }    
+
+  }
   .rel{
+    position:absolute;
     background: $color-white;
     width:80%;
     height: fit-content;
     margin-top: $size-header;
-    padding:20rem;
+    padding:50rem 0;
+    display: flex;
+    justify-content: center;
     .modal-inner{
-      border: 1px solid #000;
+      width:90%;
+      .m-thumbnail{
+        text-align: center;
+        img{
+          border: 1px solid rgb(0 0 0 /.2);
+          height: 80%;
+        }
+      }
       h2{
+        margin-top:10rem;
         font-size: 48rem;
       }
-    }
-  }
-  //버튼
-  .T-button{
-    padding:10rem;
-    position:absolute;
-    top:$size-header;
-    right:5%;
-    button{
-      width:70rem;
-      height: 40rem;
-      border-radius: 30rem;
-      background-color: $color-black;
-      border: none;
-      cursor: pointer;
-    }
-    a{
-      margin-top:10rem;
-      display: block;
-      width:50rem;
-      height: 40rem;
-      border-radius: 30rem;
-      background-color: $color-black;
+      hr{
+        margin-top:20rem;
+        margin-bottom: 30rem;
+        border: 1px solid $color-black;
+      }
+      .T-description{
+        display: flex;
+        justify-content: space-between;
+        padding:0 0 30rem;
+        margin-bottom: 170rem;
+        ul{
+          flex:1;
+          li{
+            padding-left: 10rem;
+            strong{
+              display: inline-block;
+              width:100rem;
+            }
+            a{
+              &:hover,&:hover i{
+                font-style: italic;
+                text-decoration: underline;
+              }
+            }
+            &:not(:nth-of-type(1)){
+              margin-top:20rem;
+            }
+          }
+        }
+        p{
+          flex:1;
+          font-size: 22rem;
+          padding:0 30rem;
+        }
+      }
+      .T-detail{
+        margin-top:50rem;
+        .T-detail-l{
+          font-size: $size-description-title;
+          display: flex;
+          margin-bottom: 100rem;
+          h4{
+            padding-left: 10rem;
+            margin-right: 20rem;
+            display: inline-block;
+            width:100rem;
+          }
+          .T-detail-tool{            
+            li{
+              p{font-size:$size-description;}
+              display: flex;
+              &:not(:nth-of-type(1)){
+                margin-top:10rem;
+              }
+              img{width:30rem;
+                margin-right: 30rem;
+              }
+            }
+          }
+          .T-detail-function{
+            font-size:$size-description;
+            li{
+              margin-left: 20rem;
+              list-style-type:'- ';
+              padding-left: 20rem;
+              &:not(:nth-of-type(1)){
+                margin-top:10rem;
+              }
+            }
+          }
+          .T-detail-style{
+            font-size:$size-description-title;
+            display: flex;
+            justify-content: space-between;
+            column-gap:100rem;
+            width: 100%;
+            li{
+              flex:1;
+              p{
+                font-size:$size-description-title;
+                margin-bottom: 20rem;
+              }
+              .T-color{
+                ul{
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap:5rem;
+                  li{
+                    border: 1px solid rgb(0 0 0 /.2);
+                    height: 100rem;
+                    padding:10rem;
+                    display: flex;
+                    justify-content: end;
+                    align-items: end;
+                    &:nth-of-type(1){background-color: #FFF9E3;}
+                    &:nth-of-type(2){background-color: #45392E;}
+                    
+                  }
+                }
+
+              }
+              .T-typo{
+                height: inherit;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                li{
+                  font-size: 42rem;
+                  margin-bottom: 10rem;
+                }
+
+              }
+            }
+          }
+        }
+      }
+      .T-photo{
+        margin-top: 200rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap:20rem;
+        
+        li{
+          background-color: $color-white;
+          padding:10rem 10rem 30rem 10rem;
+          border: 1px solid rgb(0 0 0 /.2);
+          img{border: 1px solid rgb(0 0 0 /.2);}
+          p{
+            font-size: $size-description;
+            margin-top:20rem;
+            padding-left: 10rem;
+          }
+        }
+      }
+      .T-next{
+        display:flex;
+        justify-content: end;
+        column-gap: 10rem;
+        img{width:150rem;}
+        .T-next-des{
+          p{font-size: $size-description;}
+          h5{
+            font-size: 36rem;
+          }
+        }
+        .T-next-arrow{
+          @include flex;
+          padding-left: 30rem;
+          i{font-size: 36rem;}
+        }
+      }
     }
   }
 }

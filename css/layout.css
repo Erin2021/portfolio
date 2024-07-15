@@ -768,54 +768,230 @@ section .rel .contents {
 }
 
 /*🎉✨section5-contact____________________ */
-html {
-  overflow: hidden;
-}
-
 #modal {
+  display: flex;
+  display: none;
   height: 100vh;
   width: 100%;
   overflow-y: scroll;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
 }
+#modal .m-btn {
+  position: sticky;
+  top: 20rem;
+  left: 50%;
+  translate: -50%;
+  border: 1px solid #1E1E1A;
+  background-color: #1E1E1A;
+  z-index: 10;
+  width: 60rem;
+  height: 60rem;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal .m-btn i {
+  font-size: 32rem;
+  color: #fffff0;
+}
+#modal .m-btn.active {
+  width: 150rem;
+  height: 50rem;
+  border-radius: 50rem;
+}
+#modal .m-btn.active i {
+  font-size: 24rem;
+}
 #modal .rel {
+  position: absolute;
   background: #fffff0;
   width: 80%;
   height: fit-content;
   margin-top: 60rem;
-  padding: 20rem;
+  padding: 50rem 0;
+  display: flex;
+  justify-content: center;
 }
 #modal .rel .modal-inner {
-  border: 1px solid #000;
+  width: 90%;
+}
+#modal .rel .modal-inner .m-thumbnail {
+  text-align: center;
+}
+#modal .rel .modal-inner .m-thumbnail img {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 80%;
 }
 #modal .rel .modal-inner h2 {
+  margin-top: 10rem;
   font-size: 48rem;
 }
-#modal .T-button {
-  padding: 10rem;
-  position: absolute;
-  top: 60rem;
-  right: 5%;
+#modal .rel .modal-inner hr {
+  margin-top: 20rem;
+  margin-bottom: 30rem;
+  border: 1px solid #1E1E1A;
 }
-#modal .T-button button {
-  width: 70rem;
-  height: 40rem;
-  border-radius: 30rem;
-  background-color: #1E1E1A;
-  border: none;
-  cursor: pointer;
+#modal .rel .modal-inner .T-description {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 30rem;
+  margin-bottom: 170rem;
 }
-#modal .T-button a {
+#modal .rel .modal-inner .T-description ul {
+  flex: 1;
+}
+#modal .rel .modal-inner .T-description ul li {
+  padding-left: 10rem;
+}
+#modal .rel .modal-inner .T-description ul li strong {
+  display: inline-block;
+  width: 100rem;
+}
+#modal .rel .modal-inner .T-description ul li a:hover, #modal .rel .modal-inner .T-description ul li a:hover i {
+  font-style: italic;
+  text-decoration: underline;
+}
+#modal .rel .modal-inner .T-description ul li:not(:nth-of-type(1)) {
+  margin-top: 20rem;
+}
+#modal .rel .modal-inner .T-description p {
+  flex: 1;
+  font-size: 22rem;
+  padding: 0 30rem;
+}
+#modal .rel .modal-inner .T-detail {
+  margin-top: 50rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l {
+  font-size: 22rem;
+  display: flex;
+  margin-bottom: 100rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l h4 {
+  padding-left: 10rem;
+  margin-right: 20rem;
+  display: inline-block;
+  width: 100rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-tool li {
+  display: flex;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-tool li p {
+  font-size: 20rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-tool li:not(:nth-of-type(1)) {
   margin-top: 10rem;
-  display: block;
-  width: 50rem;
-  height: 40rem;
-  border-radius: 30rem;
-  background-color: #1E1E1A;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-tool li img {
+  width: 30rem;
+  margin-right: 30rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-function {
+  font-size: 20rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-function li {
+  margin-left: 20rem;
+  list-style-type: "- ";
+  padding-left: 20rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-function li:not(:nth-of-type(1)) {
+  margin-top: 10rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style {
+  font-size: 22rem;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 100rem;
+  width: 100%;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li {
+  flex: 1;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li p {
+  font-size: 22rem;
+  margin-bottom: 20rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li .T-color ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li .T-color ul li {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100rem;
+  padding: 10rem;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li .T-color ul li:nth-of-type(1) {
+  background-color: #FFF9E3;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li .T-color ul li:nth-of-type(2) {
+  background-color: #45392E;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li .T-typo {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li .T-typo li {
+  font-size: 42rem;
+  margin-bottom: 10rem;
+}
+#modal .rel .modal-inner .T-photo {
+  margin-top: 200rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20rem;
+}
+#modal .rel .modal-inner .T-photo li {
+  background-color: #fffff0;
+  padding: 10rem 10rem 30rem 10rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+#modal .rel .modal-inner .T-photo li img {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+#modal .rel .modal-inner .T-photo li p {
+  font-size: 20rem;
+  margin-top: 20rem;
+  padding-left: 10rem;
+}
+#modal .rel .modal-inner .T-next {
+  display: flex;
+  justify-content: end;
+  column-gap: 10rem;
+}
+#modal .rel .modal-inner .T-next img {
+  width: 150rem;
+}
+#modal .rel .modal-inner .T-next .T-next-des p {
+  font-size: 20rem;
+}
+#modal .rel .modal-inner .T-next .T-next-des h5 {
+  font-size: 36rem;
+}
+#modal .rel .modal-inner .T-next .T-next-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30rem;
+}
+#modal .rel .modal-inner .T-next .T-next-arrow i {
+  font-size: 36rem;
 }
