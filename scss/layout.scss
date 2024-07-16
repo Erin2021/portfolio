@@ -768,8 +768,8 @@ section{
 }
 
 
-/*🎉✨section5-contact____________________ */
-#modal{
+/*🎉✨modal-publishing____________________ */
+.modal{
   display: flex;
   display: none;
   height: 100vh;
@@ -918,23 +918,18 @@ section{
                 margin-bottom: 20rem;
               }
               .T-color{
-                ul{
+                display: flex;
+                flex-wrap: wrap;
+                gap:5rem;
+                li{
+                  
+                  border: 1px solid rgb(0 0 0 /.2);
+                  height: 100rem;
+                  padding:10rem;
                   display: flex;
-                  flex-wrap: wrap;
-                  gap:5rem;
-                  li{
-                    border: 1px solid rgb(0 0 0 /.2);
-                    height: 100rem;
-                    padding:10rem;
-                    display: flex;
-                    justify-content: end;
-                    align-items: end;
-                    &:nth-of-type(1){background-color: #FFF9E3;}
-                    &:nth-of-type(2){background-color: #45392E;}
-                    
-                  }
+                  justify-content: end;
+                  align-items: end;
                 }
-
               }
               .T-typo{
                 height: inherit;
@@ -963,7 +958,10 @@ section{
           background-color: $color-white;
           padding:10rem 10rem 30rem 10rem;
           border: 1px solid rgb(0 0 0 /.2);
-          img{border: 1px solid rgb(0 0 0 /.2);}
+          div{
+            @include flex;
+            img{border: 1px solid rgb(0 0 0 /.2);}
+          }
           p{
             font-size: $size-description;
             margin-top:20rem;
@@ -975,7 +973,14 @@ section{
         display:flex;
         justify-content: end;
         column-gap: 10rem;
-        img{width:150rem;}
+        cursor: pointer;
+        .T-next-img{
+          border: 1px solid rgb(0 0 0 /.2);
+          display: flex;
+          justify-content: center;
+          img{width:150rem;}
+        }
+        
         .T-next-des{
           p{font-size: $size-description;}
           h5{
@@ -991,3 +996,5 @@ section{
     }
   }
 }
+
+#modalD{display: flex;}
