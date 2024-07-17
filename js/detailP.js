@@ -116,10 +116,10 @@
 
   publishBtn.forEach((value,count)=>{
     value.addEventListener('click',()=>{
-      //console.log('눌린것:',count);
+      let progressCount=count;//눌린순서들어감
       Bigscroll=false;
       if(!Bigscroll){
-        //눌렀다. html 죽여
+        //html 스크롤 가리기
         document.getElementsByTagName('html')[0].style.overflowY='hidden'
         
         //modal띄우기
@@ -141,9 +141,9 @@
         //다음 프로젝트 눌렀을때 다음 데이터 불러와야해
         const MNext=publishModal.querySelector('.T-next');
         MNext.addEventListener('click',()=>{
-          count+=1;
-          if(count>=publishList.length){count=0;}
-          PStructure(count);
+          progressCount+=1;
+          if(progressCount>=publishList.length){progressCount=0;}
+          PStructure(progressCount);
         })
 
       }

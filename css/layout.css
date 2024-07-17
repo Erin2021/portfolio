@@ -658,36 +658,64 @@ section .rel .contents {
   overflow: hidden;
   width: 5%;
   flex: 0.05;
-  border: 1px solid #1E1E1A;
   height: 60%;
   transition: flex 1s, height 0.5s 0.5s;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner div {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(1) div {
+  background-image: url("../media/planning/plan1.png");
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(2) div {
+  background-image: url("../media/planning/plan2.png");
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(3) div {
+  background-image: url("../media/planning/plan3.png");
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(4) div {
+  background-image: url("../media/planning/plan4.png");
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(5) div {
+  background-image: url("../media/planning/plan1.png");
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div {
   display: flex;
   text-align: center;
   height: 100%;
   flex-direction: column;
   justify-content: center;
   row-gap: 60rem;
-  background: url(../img/cat.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: auto;
+  color: #fffff0;
+  position: relative;
   filter: grayscale(100%);
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner div h3 {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: block;
+  width: 80%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 1ms 0s;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3 {
   display: inline-block;
   font-size: 60rem;
   font-family: "Playfair Display", serif;
   position: relative;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner div h3 strong {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3 strong {
   font-family: "Pretendard-Regular", sans-serif;
   display: block;
   font-size: 24rem;
   margin-bottom: 30rem;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner div h3::before {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3::before {
   content: "";
   display: block;
   position: absolute;
@@ -696,25 +724,26 @@ section .rel .contents {
   translate: -50% -50%;
   width: 50rem;
   height: 3rem;
-  background: #1E1E1A;
+  background: #fffff0;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner div ul {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul {
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   row-gap: 10rem;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner div ul li {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul li {
   width: 50%;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner div ul li a {
-  border: 1px solid #1E1E1A;
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul li a {
+  border: 1px solid #fffff0;
   display: inline-block;
   width: 100%;
   padding: 7rem 0;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner div h3, #section4 .rel .plan-con .plan-con-list .plan-list-inner div ul {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3, #section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul {
   opacity: 0;
   transition: opacity 1ms 0s;
 }
@@ -727,6 +756,10 @@ section .rel .contents {
   transition: filter 0.7s;
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div h3, #section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div ul {
+  opacity: 1;
+  transition: opacity 1s 1s;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div::before {
   opacity: 1;
   transition: opacity 1s 1s;
 }
@@ -999,8 +1032,4 @@ section .rel .contents {
 }
 .modal .rel .modal-inner .T-next .T-next-arrow i {
   font-size: 36rem;
-}
-
-#modalD {
-  display: flex;
 }
