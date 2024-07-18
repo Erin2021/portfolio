@@ -1,132 +1,209 @@
 //상세페이지이벤트-디자인
 (function(){
   const designList=[
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g1.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g1.png",
+      detail:"media/design/detail/g1.png",
       nextProject:{
-        nextImg:"img/graphic2.png",
+        nextImg:"media/design/g2.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g2.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g2.png",
+      detail:"media/design/detail/g2.png",
       nextProject:{
-        nextImg:"img/graphic3.png",
+        nextImg:"media/design/g3.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g3.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g3.png",
+      detail:"media/design/detail/g3.png",
       nextProject:{
-        nextImg:"img/graphic4.png",
+        nextImg:"media/design/g4.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g4.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g4.png",
+      detail:"media/design/detail/g4.png",
       nextProject:{
-        nextImg:"img/graphic5.png",
+        nextImg:"media/design/g5.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g5.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g5.png",
+      detail:"media/design/detail/g5.png",
       nextProject:{
-        nextImg:"img/graphic6.png",
+        nextImg:"media/design/g6.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g6.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g6.png",
+      detail:"media/design/detail/g6.png",
       nextProject:{
-        nextImg:"img/graphic7.png",
+        nextImg:"media/design/g7.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g7.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g7.png",
+      detail:"media/design/detail/g7.png",
       nextProject:{
-        nextImg:"img/graphic8.png",
+        nextImg:"media/design/g8.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g8.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g8.png",
+      detail:"media/design/detail/g8.png",
       nextProject:{
-        nextImg:"img/graphic9.png",
+        nextImg:"media/design/g9.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g9.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g9.png",
+      detail:"media/design/detail/g9.png",
       nextProject:{
-        nextImg:"img/graphic10.png",
+        nextImg:"media/design/g10.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g10.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g10.png",
+      detail:"media/design/detail/g10.png",
       nextProject:{
-        nextImg:"img/graphic11.png",
+        nextImg:"media/design/g11.png",
         nextTitle:"우주일러스트",
       }
     },
-    { preview:"img/preview1.PNG",
+    { preview:"media/design/g11.png",
       title:"명함만들기",
       date:"2024.03",
       who:"개인 100%",
       description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
-      detail:"img/g11.png",
+      detail:"media/design/detail/g11.png",
       nextProject:{
-        nextImg:"img/graphic1.png",
+        nextImg:"media/design/g1.png",
         nextTitle:"우주일러스트",
       }
     },
+    { preview:"media/design/g12.png",
+      title:"명함만들기",
+      date:"2024.03",
+      who:"개인 100%",
+      description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
+      detail:"media/design/detail/g12.png",
+      nextProject:{
+        nextImg:"media/design/g13.png",
+        nextTitle:"우주일러스트",
+      }
+    },
+    { preview:"media/design/g13.png",
+      title:"명함만들기",
+      date:"2024.03",
+      who:"개인 100%",
+      description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
+      detail:"media/design/detail/g13.png",
+      nextProject:{
+        nextImg:"media/design/g14.png",
+        nextTitle:"우주일러스트",
+      }
+    },
+    { preview:"media/design/g14.png",
+      title:"명함만들기",
+      date:"2024.03",
+      who:"개인 100%",
+      description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
+      detail:"media/design/detail/g14.png",
+      nextProject:{
+        nextImg:"media/design/g15.png",
+        nextTitle:"우주일러스트",
+      }
+    },
+    { preview:"media/design/g15.png",
+      title:"명함만들기",
+      date:"2024.03",
+      who:"개인 100%",
+      description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
+      detail:"media/design/detail/g15.png",
+      nextProject:{
+        nextImg:"media/design/g16.png",
+        nextTitle:"우주일러스트",
+      }
+    },
+    { preview:"media/design/g16.png",
+      title:"명함만들기",
+      date:"2024.03",
+      who:"개인 100%",
+      description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
+      detail:"media/design/detail/g16.png",
+      nextProject:{
+        nextImg:"media/design/g17.png",
+        nextTitle:"우주일러스트",
+      }
+    },
+    { preview:"media/design/g17.png",
+      title:"명함만들기",
+      date:"2024.03",
+      who:"개인 100%",
+      description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
+      detail:"media/design/detail/g17.png",
+      nextProject:{
+        nextImg:"media/design/g18.png",
+        nextTitle:"우주일러스트",
+      }
+    },
+    { preview:"media/design/g18.png",
+      title:"명함만들기",
+      date:"2024.03",
+      who:"개인 100%",
+      description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
+      detail:"media/design/detail/g18.png",
+      nextProject:{
+        nextImg:"media/design/g12.png",
+        nextTitle:"우주일러스트",
+      }
+    },
+
   ]
 
 
   const DesignBtn = document.querySelectorAll('.d-thumbnail');
-  console.log(DesignBtn)
   const DesignModal = document.querySelector('#modalD');
   let Bigscroll = true;
 
@@ -163,24 +240,27 @@
 
 
         //다음 프로젝트 눌렀을때 다음 데이터 불러와야해
+        //이벤트 중첩제거필요
         const MNext=DesignModal.querySelector('.T-next');
-        MNext.addEventListener('click',()=>{
+        if(MNext.clickHandler){//이미실행된 이벤트가 있다면 초기화
+          MNext.removeEventListener('click', MNext.clickHandler);
+        }
+        MNext.clickHandler = ()=>{
           progressCount+=1;
-          console.log("다음은 여기야:",progressCount)
-
-          if(progressCount>=11){ //11까지 갔을경우 0로
-            progressCount=0;
-          }else if(progressCount>=17){//17까지 갔을경우 11로
-            progressCount=11;
+          //12~18
+          if(progressCount>=0 && progressCount<=11){
+            if(progressCount==11){
+              progressCount=0;
+            }
+          }else if(progressCount>=11&&progressCount<=18){
+            if(progressCount==18){
+              progressCount=11;
+            }
           }
           DStructure(progressCount);
-        })
-      
-      
+        }
+        MNext.addEventListener('click', MNext.clickHandler);      
       }
-
-
-
     })
   })
 
@@ -188,6 +268,11 @@
   function DStructure(count){
     //modal위치 초기화
     DesignModal.scrollTop=0;
+
+    //✨✨모달 내용 애니메이션 등장
+    const Mcontent=DesignModal.querySelector('.modal-inner');
+    gsap.from(Mcontent,{opacity:0, duration:1});
+
 
     //🔥🔥데이터 시각화
     //프리뷰

@@ -356,47 +356,129 @@ section .rel .contents {
   align-items: center;
 }
 #section1 .rel .porfile-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section1 .rel .porfile-inner .p-line {
+  width: 2rem;
+  height: 100%;
+  background-color: #fffff0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+#section1 .rel .porfile-inner .profile-left {
+  padding: 30rem;
+  height: inherit;
+  flex: 1;
+  text-align: right;
+  overflow: hidden;
+}
+#section1 .rel .porfile-inner .profile-left p {
+  cursor: default;
+  font-size: 20rem;
+  margin: 10rem 0;
+  transition: font-size 0.5s;
+}
+#section1 .rel .porfile-inner .profile-left p.name {
+  font-size: 50rem;
+}
+#section1 .rel .porfile-inner .profile-left p.name:hover {
+  font-size: 80rem;
+}
+#section1 .rel .porfile-inner .profile-left p.title {
+  font-size: 20rem;
+}
+#section1 .rel .porfile-inner .profile-left p.title:hover {
+  font-size: 20rem;
+}
+#section1 .rel .porfile-inner .profile-left p:hover {
+  font-size: 40rem;
+}
+#section1 .rel .porfile-inner .profile-right {
+  padding: 30rem;
+  height: inherit;
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+}
+#section1 .rel .porfile-inner .profile-right .skill-des h4 {
+  margin-top: 20rem;
+  margin-bottom: 15rem;
+  font-size: 24rem;
+}
+#section1 .rel .porfile-inner .profile-right .skill-des ul li {
+  list-style-type: "- ";
+  list-style-position: inside;
+  font-size: 18rem;
+  font-weight: 100;
+  opacity: 0.9;
+}
+#section1 .rel .porfile-inner .profile-right .skill-des .others {
+  display: flex;
+  column-gap: 20rem;
+}
+#section1 .rel .porfile-inner .profile-right .skill-des .others li {
+  list-style-type: none;
+}
+#section1 .rel .porfile-inner .profile-right .skill-des .others li img {
+  width: 36rem;
+}
+
+#section1draft .rel {
+  overflow: hidden;
+  color: #fffff0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50rem;
+  justify-content: center;
+  align-items: center;
+}
+#section1draft .rel .porfile-inner {
   padding: 50rem;
   display: flex;
   column-gap: 50rem;
 }
-#section1 .rel .porfile-inner .about {
+#section1draft .rel .porfile-inner .about {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10rem;
 }
-#section1 .rel .porfile-inner .about .photo {
+#section1draft .rel .porfile-inner .about .photo {
   width: fit-content;
   text-align: center;
 }
-#section1 .rel .porfile-inner .about .profile {
+#section1draft .rel .porfile-inner .about .profile {
   padding: 10rem 10rem;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail h4 {
+#section1draft .rel .porfile-inner .about .profile .info-detail h4 {
   font-size: 32rem;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail h4 i {
+#section1draft .rel .porfile-inner .about .profile .info-detail h4 i {
   margin-left: 10rem;
   font-style: normal;
   font-size: 18rem;
   color: #ddd;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail .birth {
+#section1draft .rel .porfile-inner .about .profile .info-detail .birth {
   margin-top: 20rem;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail .birth p {
+#section1draft .rel .porfile-inner .about .profile .info-detail .birth p {
   margin-top: 5rem;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail .personal {
+#section1draft .rel .porfile-inner .about .profile .info-detail .personal {
   margin-bottom: 30rem;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail .site {
+#section1draft .rel .porfile-inner .about .profile .info-detail .site {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail .site li a {
+#section1draft .rel .porfile-inner .about .profile .info-detail .site li a {
   background: #1E1E1A;
   border: 1rem solid #1E1E1A;
   padding: 4rem 10rem;
@@ -406,60 +488,60 @@ section .rel .contents {
   justify-content: center;
   align-items: center;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail .site li a svg {
+#section1draft .rel .porfile-inner .about .profile .info-detail .site li a svg {
   width: 32rem;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail .site li a:hover {
+#section1draft .rel .porfile-inner .about .profile .info-detail .site li a:hover {
   background: #fffff0;
 }
-#section1 .rel .porfile-inner .about .profile .info-detail .site li a:hover svg path {
+#section1draft .rel .porfile-inner .about .profile .info-detail .site li a:hover svg path {
   fill: #1E1E1A;
 }
-#section1 .rel .porfile-inner .info {
+#section1draft .rel .porfile-inner .info {
   flex: 2;
 }
-#section1 .rel .porfile-inner .info h3 {
+#section1draft .rel .porfile-inner .info h3 {
   font-size: 28rem;
   margin-bottom: 10rem;
 }
-#section1 .rel .porfile-inner .info .education {
+#section1draft .rel .porfile-inner .info .education {
   padding: 10rem;
   margin-bottom: 20rem;
 }
-#section1 .rel .porfile-inner .info .education .date {
+#section1draft .rel .porfile-inner .info .education .date {
   display: inline-block;
   color: #ddd;
   font-weight: bold;
 }
-#section1 .rel .porfile-inner .info .education .edu {
+#section1draft .rel .porfile-inner .info .education .edu {
   padding: 0 5rem;
   margin-bottom: 20rem;
 }
-#section1 .rel .porfile-inner .info .interests ul {
+#section1draft .rel .porfile-inner .info .interests ul {
   margin-bottom: 20rem;
   display: flex;
   flex-flow: wrap;
   padding: 10rem;
   gap: 10rem;
 }
-#section1 .rel .porfile-inner .info .interests ul li {
+#section1draft .rel .porfile-inner .info .interests ul li {
   background: #1E1E1A;
   padding: 7rem 25rem;
   border-radius: 30rem;
   font-size: 18rem;
 }
-#section1 .rel .porfile-inner .info .paper {
+#section1draft .rel .porfile-inner .info .paper {
   height: 200rem;
   background-color: #1E1E1A;
 }
-#section1 .rel .porfile-inner .skills {
+#section1draft .rel .porfile-inner .skills {
   flex: 3;
 }
-#section1 .rel .porfile-inner .skills h3 {
+#section1draft .rel .porfile-inner .skills h3 {
   font-size: 28rem;
   margin-bottom: 10rem;
 }
-#section1 .rel .porfile-inner .skills .skills-stats {
+#section1draft .rel .porfile-inner .skills .skills-stats {
   height: 90%;
   padding: 10rem;
   display: grid;
@@ -467,31 +549,31 @@ section .rel .contents {
   grid-template-columns: 1fr 1fr;
   gap: 20rem;
 }
-#section1 .rel .porfile-inner .skills .skills-stats .skill-des {
+#section1draft .rel .porfile-inner .skills .skills-stats .skill-des {
   padding: 10rem;
   border: 1px solid #fffff0;
 }
-#section1 .rel .porfile-inner .skills .skills-stats .skill-des h4 {
+#section1draft .rel .porfile-inner .skills .skills-stats .skill-des h4 {
   font-size: 24rem;
   margin-bottom: 10rem;
 }
-#section1 .rel .porfile-inner .skills .skills-stats .skill-des ul {
+#section1draft .rel .porfile-inner .skills .skills-stats .skill-des ul {
   padding: 5rem;
 }
-#section1 .rel .porfile-inner .skills .skills-stats .skill-des ul.others {
+#section1draft .rel .porfile-inner .skills .skills-stats .skill-des ul.others {
   display: flex;
   gap: 10rem;
   column-gap: 15rem;
   flex-flow: wrap;
   padding-left: 20rem;
 }
-#section1 .rel .porfile-inner .skills .skills-stats .skill-des ul.others li {
+#section1draft .rel .porfile-inner .skills .skills-stats .skill-des ul.others li {
   list-style-type: none;
 }
-#section1 .rel .porfile-inner .skills .skills-stats .skill-des ul.others li img {
+#section1draft .rel .porfile-inner .skills .skills-stats .skill-des ul.others li img {
   width: 36rem;
 }
-#section1 .rel .porfile-inner .skills .skills-stats .skill-des ul li {
+#section1draft .rel .porfile-inner .skills .skills-stats .skill-des ul li {
   list-style-type: "- ";
   list-style-position: inside;
   font-size: 18rem;
@@ -625,9 +707,8 @@ section .rel .contents {
 }
 #section3 .rel .design-con .design-con-inner .design-list .d-thumbnail {
   cursor: pointer;
-  border: 1px solid #1E1E1A;
   width: 360rem;
-  height: 240rem;
+  height: 220rem;
   overflow: hidden;
 }
 #section3 .rel .design-con .design-con-inner .design-list .d-thumbnail:hover img {

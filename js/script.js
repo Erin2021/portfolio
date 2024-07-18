@@ -104,6 +104,19 @@ DesignBtn.forEach(Btn=>{
       document.querySelector('.UXUI-part').classList.add('active');
       document.querySelector('.graphic-part').classList.remove('active');
     }
+
+    //✨✨active바뀔때마다 애니메이션효과로 등장
+    const Dthumbnail=document.querySelectorAll('#section3 .design-list .d-thumbnail');
+    gsap.from(Dthumbnail,{
+      opacity: 0,
+        scale:1.5,
+        stagger:{
+          amount:0.5,
+          from:"random",
+        },
+        y: 100,
+        invalidateOnRefresh:true,
+    });
   })
 })
 

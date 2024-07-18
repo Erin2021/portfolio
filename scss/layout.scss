@@ -330,6 +330,92 @@ section{
   justify-content: center;
   align-items: center;
   .porfile-inner{
+    // border: 1px solid $color-white;
+    position: relative;
+    @include flex;
+    .p-line{
+      width:2rem;
+      height: 100%;
+      background-color: $color-white;
+      position: absolute;
+      top:50%;
+      left:50%;
+      translate:-50% -50%;
+
+    }
+    .profile-left{
+      padding:30rem;
+      height: inherit;
+      flex:1;
+      text-align: right;
+      overflow: hidden;
+
+      p{
+        cursor: default;
+        font-size: 20rem;
+        margin:10rem 0;
+        transition:font-size 0.5s;
+        &.name{
+          font-size:50rem;          
+          &:hover{font-size:80rem;}
+        }
+        &.title{
+          font-size:20rem;
+          &:hover{font-size:20rem;}
+        }
+        &:hover{
+          font-size: 40rem;
+        }
+      }
+
+    }
+    .profile-right{
+      padding:30rem;
+      height: inherit;
+      flex:1;
+      text-align: left;
+      overflow: hidden;
+      // border: 1px solid blue;
+      .skill-des{
+        h4{
+          margin-top:20rem;
+          margin-bottom: 15rem;
+          font-size: 24rem;
+        }
+        ul li{
+          list-style-type:'- ';
+          list-style-position: inside;
+          font-size: 18rem;
+          font-weight: 100;
+          opacity:0.9;
+        }
+        .others{
+          display: flex;
+          column-gap: 20rem;
+          li{
+            list-style-type:none;
+            img{
+              width:36rem;
+            }
+          }
+        }
+
+      }
+      
+      
+      
+    }
+
+  }
+}
+
+#section1draft .rel{
+  overflow:hidden;
+  color:$color-white;
+  @include contents;
+  justify-content: center;
+  align-items: center;
+  .porfile-inner{
     padding:50rem;
     display: flex;
     column-gap: 50rem;
@@ -610,9 +696,8 @@ section{
         .d-thumbnail-1{margin-bottom: 40rem;}
         .d-thumbnail{
           cursor: pointer;
-          border: 1px solid $color-black;
           width:360rem;
-          height: 240rem;
+          height: 220rem;
           overflow: hidden;
           
           &:hover{

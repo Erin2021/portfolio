@@ -138,14 +138,19 @@
 
         PStructure(count);
 
+
         //다음 프로젝트 눌렀을때 다음 데이터 불러와야해
+        //이벤트 중첩제거필요
         const MNext=publishModal.querySelector('.T-next');
-        MNext.addEventListener('click',()=>{
+        if(MNext.clickHandler){//이미실행된 이벤트가 있다면 초기화
+          MNext.removeEventListener('click', MNext.clickHandler);
+        }
+        MNext.clickHandler = () =>{
           progressCount+=1;
           if(progressCount>=publishList.length){progressCount=0;}
           PStructure(progressCount);
-        })
-
+        }
+        MNext.addEventListener('click', MNext.clickHandler);
       }
     })
     
@@ -155,93 +160,99 @@
     //modal위치 초기화
     publishModal.scrollTop=0;
 
+
+    //✨✨모달 내용 애니메이션 등장
+    const Mcontent=publishModal.querySelector('.modal-inner');
+    gsap.from(Mcontent,{opacity:0, duration:1});
+
+
     //🔥🔥데이터 시각화
-        //프리뷰
-        const MThumbnail = publishModal.querySelector('.m-thumbnail img');
-        MThumbnail.src=publishList[count].preview;
+    //프리뷰
+    const MThumbnail = publishModal.querySelector('.m-thumbnail img');
+    MThumbnail.src=publishList[count].preview;
 
-        //제목
-        const Mtitle = publishModal.querySelector('.M-title');
-        Mtitle.innerText=publishList[count].title;
+    //제목
+    const Mtitle = publishModal.querySelector('.M-title');
+    Mtitle.innerText=publishList[count].title;
 
-        //개요
-        const Mdescription = publishModal.querySelector('.T-description');
-        Mdescription.querySelector('ul>li:nth-of-type(1)').innerHTML=`<strong>제작년도</strong> ${publishList[count].date}`
+    //개요
+    const Mdescription = publishModal.querySelector('.T-description');
+    Mdescription.querySelector('ul>li:nth-of-type(1)').innerHTML=`<strong>제작년도</strong> ${publishList[count].date}`
 
-        Mdescription.querySelector('ul>li:nth-of-type(2)').innerHTML=`<strong>기여도</strong> ${publishList[count].who}`
+    Mdescription.querySelector('ul>li:nth-of-type(2)').innerHTML=`<strong>기여도</strong> ${publishList[count].who}`
 
-        Mdescription.querySelector('ul>li:nth-of-type(3)').innerHTML=`<strong>외부링크</strong><a href=${publishList[count].link} target="_blank"> 바로가기 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`
+    Mdescription.querySelector('ul>li:nth-of-type(3)').innerHTML=`<strong>외부링크</strong><a href=${publishList[count].link} target="_blank"> 바로가기 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`
 
-        Mdescription.querySelector('p').innerText=publishList[count].description;
+    Mdescription.querySelector('p').innerText=publishList[count].description;
 
-        //디테일-사용툴
-        const MdetailTool = publishModal.querySelector('.T-detail-tool');
-        const MTool= publishList[count].detailTool.toolImg;
-        const MToolDes = publishList[count].detailTool.toolDes;
-        MdetailTool.innerHTML='';//사용툴li초기화
-        
-        for(let i=0;i<MTool.length;i++){
-          const listTool =document.createElement("li");
-          listTool.innerHTML=`<img src=${MTool[i]} alt=${MTool[i]}>
-                <p>${MToolDes[i]}</p>`;
-          MdetailTool.appendChild(listTool);
-        }
+    //디테일-사용툴
+    const MdetailTool = publishModal.querySelector('.T-detail-tool');
+    const MTool= publishList[count].detailTool.toolImg;
+    const MToolDes = publishList[count].detailTool.toolDes;
+    MdetailTool.innerHTML='';//사용툴li초기화
+    
+    for(let i=0;i<MTool.length;i++){
+      const listTool =document.createElement("li");
+      listTool.innerHTML=`<img src=${MTool[i]} alt=${MTool[i]}>
+            <p>${MToolDes[i]}</p>`;
+      MdetailTool.appendChild(listTool);
+    }
 
-        //디테일-주요기능
-        const MdetailFunction = publishModal.querySelector('.T-detail-function');
-        const MFunction =publishList[count].detailFunction;
-        MdetailFunction.innerHTML='';//주요기능li초기화
-        for(let i =0;i<MFunction.length;i++){
-          const listFunction = document.createElement("li");
-          listFunction.innerText=MFunction[i];
-          MdetailFunction.appendChild(listFunction);
-        }
-        
+    //디테일-주요기능
+    const MdetailFunction = publishModal.querySelector('.T-detail-function');
+    const MFunction =publishList[count].detailFunction;
+    MdetailFunction.innerHTML='';//주요기능li초기화
+    for(let i =0;i<MFunction.length;i++){
+      const listFunction = document.createElement("li");
+      listFunction.innerText=MFunction[i];
+      MdetailFunction.appendChild(listFunction);
+    }
+    
 
-        //디테일-스타일
-        //a.color
-        const MdetailColor =publishModal.querySelector('.T-color')
-        const MColor= publishList[count].detailStyle.color;
-        MdetailColor.innerHTML='';
+    //디테일-스타일
+    //a.color
+    const MdetailColor =publishModal.querySelector('.T-color')
+    const MColor= publishList[count].detailStyle.color;
+    MdetailColor.innerHTML='';
 
-        for(let i =0;i<MColor.length;i++){
-          const listColor = document.createElement("li");
-          listColor.style.backgroundColor=MColor[i];
-          listColor.innerText=MColor[i];
-          MdetailColor.appendChild(listColor);
-        }
+    for(let i =0;i<MColor.length;i++){
+      const listColor = document.createElement("li");
+      listColor.style.backgroundColor=MColor[i];
+      listColor.innerText=MColor[i];
+      MdetailColor.appendChild(listColor);
+    }
 
-        //b.interface
-        const MdetailTypo = publishModal.querySelector('.T-typo');
-        const MTypo = publishList[count].detailStyle.typo;
-        const MTypoFamily = publishList[count].detailStyle.typoFamily;
-        MdetailTypo.innerHTML='';
+    //b.interface
+    const MdetailTypo = publishModal.querySelector('.T-typo');
+    const MTypo = publishList[count].detailStyle.typo;
+    const MTypoFamily = publishList[count].detailStyle.typoFamily;
+    MdetailTypo.innerHTML='';
 
-        for(let i=0;i<MTypo.length;i++){
-          const listTypo= document.createElement("li");
-          listTypo.innerText =MTypo[i];
-          //폰트적용
-          listTypo.style.fontFamily= `${MTypoFamily[i]},sans-serif`;
-          MdetailTypo.appendChild(listTypo);
-        }
+    for(let i=0;i<MTypo.length;i++){
+      const listTypo= document.createElement("li");
+      listTypo.innerText =MTypo[i];
+      //폰트적용
+      listTypo.style.fontFamily= `${MTypoFamily[i]},sans-serif`;
+      MdetailTypo.appendChild(listTypo);
+    }
 
-        //포토
-        const MPhoto = publishModal.querySelector('.T-photo');
-        const MPhotoImg=publishList[count].shortdes.photo;
-        const MPhotoDes=publishList[count].shortdes.photoDes;
-        MPhoto.innerHTML='';
+    //포토
+    const MPhoto = publishModal.querySelector('.T-photo');
+    const MPhotoImg=publishList[count].shortdes.photo;
+    const MPhotoDes=publishList[count].shortdes.photoDes;
+    MPhoto.innerHTML='';
 
-        for(let i=0;i< MPhotoImg.length;i++){
-          const listPhoto =document.createElement("li");
-          listPhoto.innerHTML = `<div><img src= img/${MPhotoImg[i]} alt=${MPhotoDes[i]}></div><p>${MPhotoDes[i]}</p>`;
-          MPhoto.appendChild(listPhoto);
-        }
+    for(let i=0;i< MPhotoImg.length;i++){
+      const listPhoto =document.createElement("li");
+      listPhoto.innerHTML = `<div><img src= img/${MPhotoImg[i]} alt=${MPhotoDes[i]}></div><p>${MPhotoDes[i]}</p>`;
+      MPhoto.appendChild(listPhoto);
+    }
 
-        //다음프로젝트
-        const MNextImg=publishModal.querySelector('.T-next img');
-        const MNextTitle = publishModal.querySelector('.T-next .T-next-des h5');
-        MNextImg.src= publishList[count].nextProject.nextImg;
-        MNextTitle.innerText=publishList[count].nextProject.nextTitle;
+    //다음프로젝트
+    const MNextImg=publishModal.querySelector('.T-next img');
+    const MNextTitle = publishModal.querySelector('.T-next .T-next-des h5');
+    MNextImg.src= publishList[count].nextProject.nextImg;
+    MNextTitle.innerText=publishList[count].nextProject.nextTitle;
   }
 
 })()
