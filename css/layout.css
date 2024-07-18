@@ -20,7 +20,7 @@ body {
   color: #1E1E1A;
 }
 
-p {
+li, p {
   font-size: 18rem;
 }
 
@@ -156,6 +156,7 @@ header .top .pc-menu li {
   padding: 15rem 0rem;
 }
 header .top .pc-menu li a {
+  font-size: 18rem;
   display: inline-block;
   padding: 5rem 30rem;
   border-radius: 30rem;
@@ -362,7 +363,7 @@ section .rel .contents {
   align-items: center;
 }
 #section1 .rel .porfile-inner .p-line {
-  width: 2rem;
+  width: 1rem;
   height: 100%;
   background-color: #fffff0;
   position: absolute;
@@ -376,6 +377,11 @@ section .rel .contents {
   flex: 1;
   text-align: right;
   overflow: hidden;
+  position: relative;
+  transition: flex 0.5s;
+}
+#section1 .rel .porfile-inner .profile-left:hover {
+  flex: 3;
 }
 #section1 .rel .porfile-inner .profile-left p {
   cursor: default;
@@ -390,13 +396,80 @@ section .rel .contents {
   font-size: 80rem;
 }
 #section1 .rel .porfile-inner .profile-left p.title {
+  border-top: solid #fffff0;
+  border-width: 1rem;
+  padding-top: 7rem;
   font-size: 20rem;
+  transition: 0.3s;
 }
 #section1 .rel .porfile-inner .profile-left p.title:hover {
   font-size: 20rem;
 }
 #section1 .rel .porfile-inner .profile-left p:hover {
   font-size: 40rem;
+}
+#section1 .rel .porfile-inner .profile-left ul:hover + .title {
+  border-width: 0rem;
+  border-color: rgba(255, 255, 240, 0);
+}
+#section1 .rel .porfile-inner .profile-left .site li a p {
+  cursor: pointer;
+}
+#section1 .rel .porfile-inner .profile-left .site li a p:hover {
+  font-style: italic;
+  text-decoration: underline;
+}
+#section1 .rel .porfile-inner .profile-left .education .date {
+  margin: 0rem 0;
+  font-size: 18rem;
+  color: #888;
+}
+#section1 .rel .porfile-inner .profile-left .education .date:hover {
+  font-size: 18rem;
+}
+#section1 .rel .porfile-inner .profile-left .personal {
+  position: relative;
+}
+#section1 .rel .porfile-inner .profile-left .personal .p-des-1 {
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  border: 10rem solid #fffff0;
+  width: 240rem;
+  height: 360rem;
+  top: 10%;
+  left: 50%;
+  translate: -50% 0%;
+  z-index: -1;
+  background: url("../img/portrait.jpg") no-repeat center/cover;
+}
+#section1 .rel .porfile-inner .profile-left .education {
+  position: relative;
+}
+#section1 .rel .porfile-inner .profile-left .education .p-des-2 {
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 10rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+#section1 .rel .porfile-inner .profile-left .interests {
+  position: relative;
+}
+#section1 .rel .porfile-inner .profile-left .interests .p-des-3 {
+  text-align: center;
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 10rem;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 #section1 .rel .porfile-inner .profile-right {
   padding: 30rem;
@@ -677,6 +750,7 @@ section .rel .contents {
 #section3 .rel .sec-title .design-btn button.active {
   background-color: #1E1E1A;
   color: #fffff0;
+  pointer-events: none;
 }
 #section3 .rel .design-con {
   position: relative;
@@ -948,7 +1022,7 @@ section .rel .contents {
   height: 80%;
 }
 .modal .rel .modal-inner h2 {
-  margin-top: 10rem;
+  margin-top: 30rem;
   font-size: 48rem;
 }
 .modal .rel .modal-inner hr {
@@ -967,6 +1041,7 @@ section .rel .contents {
 }
 .modal .rel .modal-inner .T-description ul li {
   padding-left: 10rem;
+  font-size: 20;
 }
 .modal .rel .modal-inner .T-description ul li strong {
   display: inline-block;
@@ -981,7 +1056,7 @@ section .rel .contents {
 }
 .modal .rel .modal-inner .T-description p {
   flex: 1;
-  font-size: 22rem;
+  font-size: 20rem;
   padding: 0 30rem;
 }
 .modal .rel .modal-inner .T-detail {

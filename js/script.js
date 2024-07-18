@@ -56,6 +56,51 @@ loop();
 
 
 
+//🎈Profile-마우스가 호버하는 것에 따라 
+//사진
+const Pname=document.querySelectorAll('#section1 .personal p');
+Pname.forEach(value=>{
+  value.addEventListener('mouseover',()=>{
+    document.querySelector('#section1 .p-des-1').style.opacity=0.6;
+  })
+  value.addEventListener('mouseleave',()=>{
+    document.querySelector('#section1 .p-des-1').style.opacity=0;
+  })
+
+})
+
+
+//학업
+const Pclass=document.querySelectorAll('#section1 .class');
+const Pclassdes=['UXUI부터 퍼블리싱을 배웠습니다.','본 전공입니다. 문화원형과 산업에 대해 배웠으며 일본어도 배웠습니다.','복수전공입니다. 이 전공으로 개발에 대해 알게 되었습니다.']
+
+Pclass.forEach((value,count)=>{
+  value.addEventListener('mouseover',()=>{
+    document.querySelector('#section1 .p-des-2').style.opacity=1;
+    document.querySelector('#section1 .p-des-2').innerHTML=`<p>${Pclassdes[count]}</p>`
+  })
+  value.addEventListener('mouseleave',()=>{
+    document.querySelector('#section1 .p-des-2').style.opacity=0;
+  })
+})
+
+//취미
+const Phobby=document.querySelectorAll('#section1 .hobby');
+const Phobbydes=['새로운 언어 배우는 것을 좋아합니다. 일반 수준의 영어와 일본어를 구사할 수 있으며 초급 수준의 프랑스어를 할 수 있습니다.','생존운동으로 시작했지만 이제는 운동을 즐기게 되었습니다.<br>헬스장을 좋아합니다.','다양한 분야를 접하는 것을 즐깁니다.<br>최근에는 항공 다큐멘터리에 빠져 있습니다.','계획없이 카드만 들고 시내를 떠돕니다. 생각 정리하기에 도움을 줍니다.']
+
+Phobby.forEach((value,count)=>{
+  value.addEventListener('mouseover',()=>{
+    document.querySelector('#section1 .p-des-3').style.opacity=1;
+    document.querySelector('#section1 .p-des-3').innerHTML=`<p>${Phobbydes[count]}</p>`
+  })
+  value.addEventListener('mouseleave',()=>{
+    document.querySelector('#section1 .p-des-3').style.opacity=0;
+  })
+})
+
+
+
+
 
 
 //🎈Design-마우스가 돌아다니는 방향대로 스크롤 되기
@@ -106,19 +151,24 @@ DesignBtn.forEach(Btn=>{
     }
 
     //✨✨active바뀔때마다 애니메이션효과로 등장
-    const Dthumbnail=document.querySelectorAll('#section3 .design-list .d-thumbnail');
-    gsap.from(Dthumbnail,{
-      opacity: 0,
-        scale:1.5,
-        stagger:{
-          amount:0.5,
-          from:"random",
-        },
-        y: 100,
-        invalidateOnRefresh:true,
-    });
-  })
+  const Dthumbnail=document.querySelectorAll('#section3 .design-list .d-thumbnail');
+  gsap.from(Dthumbnail,{
+    opacity: 0,
+      scale:1.5,
+      stagger:{
+        amount:0.5,
+        from:"random",
+      },
+      y: 100,
+      //invalidateOnRefresh:true,
+  });
+  });
+
+  
+
 })
+
+
 
 
 

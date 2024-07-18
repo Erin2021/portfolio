@@ -2,10 +2,10 @@
 (function(){
   const designList=[
     { preview:"media/design/g1.png",
-      title:"명함만들기",
+      title:"개인 로고 디자인하기",
       date:"2024.03",
       who:"개인 100%",
-      description:"내가 좀 쩔어서 자기브랜드를 만들려고 했음",
+      description:"도전을 두려워하지 말자는 다짐을 바탕으로 한 자기 브랜딩 프로젝트입니다.",
       detail:"media/design/detail/g1.png",
       nextProject:{
         nextImg:"media/design/g2.png",
