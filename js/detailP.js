@@ -3,7 +3,7 @@
   const publishList =[
     //원페이지
     { preview:'img/preview1.PNG',
-      title:'Ben &Jerry’s',
+      title:'Ben & Jerry’s',
       date:'2024.05',
       who:'개인 100%',
       link:'https://erin2021.github.io/onepage/',
@@ -46,7 +46,7 @@
         typoFamily:['SokchoBadaDotum','Pretendard-Regular'],
       },
       shortdes:{
-        photo:['p2-1.PNG','p2-2.PNG','p2-3.PNG','p2-4.PNG','p2-5.PNG','p2-6.PNG'],
+        photo:['p2-1.png','p2-2.png','p2-3.png','p2-4.png','p2-5.png','p2-6.png'],
         photoDes:['설명1','설명2','설명3','설명4','설명5','설명6']
       },
       nextProject:{
@@ -72,7 +72,7 @@
         typoFamily:['WavvePADO-Regular','NanumSquareAc'],
       },
       shortdes:{
-        photo:['p3-1.PNG','p3-2.PNG','p3-3.PNG','p3-4.PNG','p3-5.PNG','p3-6.PNG'],
+        photo:['p3-1.PNG','p3-2.PNG','p3-3.png','p3-4.PNG','p3-5.PNG','p3-6.PNG'],
         photoDes:['설명1','설명2','설명3','설명4','설명5','설명6']
       },
       nextProject:{

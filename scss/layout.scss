@@ -8,9 +8,10 @@
 $color-gray:#888;
 $color-black:#1E1E1A;
 $color-white:#fffff0;
+$color-orange:#FF5F1F;
 $size-header:60rem;
 $size-description:20rem;
-$size-description-title:22rem;
+$size-description-title:20rem;
 $font-BigEng:"Playfair Display", serif;
 $font-MiddleEng:"Playfair Display", serif;
 $font-titleBigKor:'LeferiPoint-SpecialItalicA',sans-serif;
@@ -487,169 +488,6 @@ section{
   }
 }
 
-#section1draft .rel{
-  overflow:hidden;
-  color:$color-white;
-  @include contents;
-  justify-content: center;
-  align-items: center;
-  .porfile-inner{
-    padding:50rem;
-    display: flex;
-    column-gap: 50rem;
-    .about{
-      flex:1;
-      display: flex;
-      flex-direction: column;
-      // flex-flow:wrap;
-      gap:10rem;
-      .photo{
-        width: fit-content;
-        text-align: center;
-      }
-      .profile{
-        padding:10rem 10rem;
-        .info-detail{
-          h4{
-            font-size:32rem;
-            i{
-              margin-left:10rem;
-              font-style: normal;
-              font-size: 18rem;
-              color:#ddd;
-            }
-          }
-          .birth{
-            margin-top:20rem;
-            p{
-              margin-top:5rem;
-            }
-          }
-          
-          .personal{
-            margin-bottom: 30rem;
-          }
-          .site{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            li{
-              a{
-                background: $color-black;
-                border: 1rem solid $color-black;
-                padding:4rem 10rem;
-                border-radius: 35rem;
-                display: block;
-                @include flex;
-                svg{
-                  width:32rem;
-                }
-                &:hover{
-                  background:$color-white;
-                  svg{
-                    path{
-                      fill: $color-black;
-                    }
-                    
-                  }
-                  
-                }
-              }
-              
-            }
-          }
-        }
-        
-      }
-    }
-    .info{
-      flex:2;
-      h3{font-size: 28rem;
-        margin-bottom: 10rem;
-      }
-      .education{
-        padding:10rem;
-        margin-bottom: 20rem;
-        .date{
-          display: inline-block;
-          color:#ddd;
-          font-weight: bold;
-          
-        }
-        .edu{
-          padding:0 5rem;
-          margin-bottom: 20rem;
-        }
-      }
-      .interests{
-        ul{
-          margin-bottom: 20rem;
-          display: flex;
-          flex-flow: wrap;
-          padding:10rem;
-          gap: 10rem;
-          li{
-            background: $color-black;
-            padding:7rem 25rem;
-            border-radius: 30rem;
-            font-size: 18rem;
-          }
-        }
-      }
-      .paper{
-        height: 200rem;
-        background-color: $color-black;
-      }
-    }
-    .skills{
-      flex:3;
-      h3{font-size: 28rem;
-        margin-bottom: 10rem;
-      }
-      .skills-stats{
-        height: 90%;
-        padding: 10rem;
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        gap:20rem;
-        .skill-des{
-          padding:10rem;
-          border: 1px solid $color-white;
-          h4{
-            font-size: 24rem;
-            margin-bottom: 10rem;
-          }
-          ul{
-            padding: 5rem;
-            &.others{
-              display: flex;
-              gap:10rem;
-              column-gap: 15rem;
-              flex-flow: wrap;
-              padding-left:20rem;
-              li{
-                list-style-type: none;
-                img{
-                  width:36rem;
-                }
-              }
-            }
-            
-            li{
-              list-style-type:"- ";
-              list-style-position: inside;
-              font-size: 18rem;
-            }
-          }
-        }
-      }
-    }
-  }
-  
-
-}
-
 /*🎉✨section2-publishing____________________ */
 #section2 .rel{
   @include contents;
@@ -745,10 +583,14 @@ section{
       display: inline-block;
       margin: 0 10rem;
       cursor: pointer;
+      transition: 0.5s;
       &.active{
         background-color: $color-black;
         color: $color-white; 
         pointer-events: none;
+      }
+      &:hover{
+        background-color: $color-gray;
       }
     }
   }
@@ -940,27 +782,177 @@ section{
       margin-top: 20rem;
       display: flex;
       li{
-        a{
-          background-color: $color-black;
-          border: 2px solid $color-black;
-          border-radius: 50rem;
-          color: $color-white;
-          font-size: 42rem;
-          padding: 10rem 30rem;
-          text-align: center;
-          display: inline-block;
-          margin: 0 10rem;
-          cursor: pointer;
+        .contactA{
+          & span {
+            --tilt: 40px;
+
+            overflow: hidden;
+            background-color: $color-black;
+            border: 2px solid $color-black;
+            border-radius: 50rem;
+            color: $color-white;
+            font-size: 42rem;
+            padding: 10rem 30rem;
+            text-align: center;
+            display: inline-block;
+            margin: 0 10rem;
+            cursor: pointer;
+
+            font-weight: 700;
+            z-index: 2;
+            position: relative;
+
+            &:before,
+            &:after {
+            content: "";
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            left: -100%;
+            background: $color-gray;
+            clip-path: polygon(
+              0 0,
+              100% 0,
+              calc(100% - var(--tilt)) 50%,
+              100% 100%,
+              0 100%
+            );
+            transition: transform 0.6s;
+            }
+            &:before {
+              left: -100%;
+            }
+            &:after {
+              left: 100%;
+              transform: rotate(180deg);
+            }
+            &:hover:before {
+              transform: translateX(100%);
+            }
+            &:hover:after {
+              transform: rotate(180deg) translateX(100%);
+            }
+          }
+
+          
+
         }
+        .contactB{
+          span {
+            --tilt: 40px;
+
+            overflow: hidden;
+            background-color: $color-black;
+            border: 2px solid $color-black;
+            border-radius: 50rem;
+            color: $color-white;
+            font-size: 42rem;
+            padding: 10rem 30rem;
+            text-align: center;
+            display: inline-block;
+            margin: 0 10rem;
+            cursor: pointer;
+
+            font-weight: 700;
+            z-index: 2;
+            position: relative;
+
+          &:hover{
+            color:$color-black;
+          }
+            &:before,
+            &:after {
+            content: "";
+            z-index: -1;
+            width: calc(100% + var(--tilt));
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            left: calc(-100% - var(--tilt));
+            background: $color-gray;
+            clip-path: polygon(
+              0 0,
+              calc(100% - var(--tilt)) 0,
+              100% 50%,
+              calc(100% - var(--tilt)) 100%,
+              0 100%
+            );
+            transition: transform 0.6s;
+            }
+            &:before {
+              left: calc(-100% - var(--tilt));
+            }
+            &:after {
+              left: 100%;
+              transform: rotate(180deg);
+            }
+            &:hover:before {
+              transform: translateX(100%);
+            }
+            &:hover:after {
+              transform: rotate(180deg) translateX(100%);
+            }
+          }
+
+          
+        }
+        .email{
+          span{
+            &:before,&:after{
+              background: #4284F4;
+            }
+          }
+        }
+        .phone{
+          span{
+            &:before,&:after{
+              background: #FF5F1F;
+            }
+          }
+        }
+        .github{
+          span{
+            &:before,&:after{
+              background: #A049AE;
+            }
+          }
+        }
+        .velog{
+          span{
+            &:before,&:after{
+              background: #12B886;
+            }
+          }
+        }
+        .twitter{
+          span{
+            &:before,&:after{
+              background: #1D9BF0;
+            }
+          }
+        }
+
       }
     }
   }
 }
 
+//#4284F4-이메일
+//#FF5F1F-전화
+//#A049AE-깃허브
+//#12B886-벨로그
+//#1D9BF0-트위터
+
 
 /*🎉✨modal-publishing____________________ */
 .modal{
-  display: flex;
+  li,p{
+    font-size: 20rem;
+  }
   display: none;
   height: 100vh;
   width:100%;
@@ -1006,14 +998,14 @@ section{
   .rel{
     position:absolute;
     background: $color-white;
-    width:80%;
+    width:70%;
     height: fit-content;
     margin-top: $size-header;
     padding:50rem 0;
     display: flex;
     justify-content: center;
     .modal-inner{
-      width:90%;
+      width:80%;
       .m-thumbnail{
         text-align: center;
         img{
@@ -1039,15 +1031,24 @@ section{
           flex:1;
           li{
             padding-left: 10rem;
-            font-size:20;
+            font-size:20rem;
             strong{
               display: inline-block;
               width:100rem;
             }
             a{
+              &, i{
+                transition: background-color 0.3s;
+              }
+              font-size: 20rem;
+              padding:10rem 35rem;
+              background-color: $color-orange;
+              border: 1px solid $color-black;
               &:hover,&:hover i{
+                background-color: $color-gray;
                 font-style: italic;
                 text-decoration: underline;
+                border-color: $color-gray;
               }
             }
             &:not(:nth-of-type(1)){
@@ -1059,6 +1060,7 @@ section{
           flex:1;
           font-size: 20rem;
           padding:0 30rem;
+          line-height: 1.618;
         }
       }
       .T-detail{
