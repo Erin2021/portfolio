@@ -384,9 +384,23 @@ section{
       .site{
         li a p{
           cursor: pointer;
+          display: inline-block;
+          margin:5rem;
           &:hover{
             font-style: italic;
             text-decoration: underline;
+            &::before{
+              opacity: 1;
+              translate:0rem;
+            }
+          }
+          &::before{
+            content: '☞';
+            margin-right: 10rem;
+            opacity: 0;
+            translate:-500rem 0;
+            transition: opacity 0.3s, translate 0.3s;
+            
           }
         }
       }
@@ -695,6 +709,7 @@ section{
             font-size: 60rem;
             font-family: $font-MiddleEng;
             position: relative;
+            cursor: default;
             strong{
               font-family: $font-titleMiddleKor;
               display: block;
@@ -726,6 +741,10 @@ section{
                 display: inline-block;
                 width: 100%;
                 padding:7rem 0;
+                &:hover{
+                  background-color: $color-white;
+                  color:$color-black;
+                }
               }
             }
           }
@@ -788,7 +807,7 @@ section{
 
             overflow: hidden;
             background-color: $color-black;
-            border: 2px solid $color-black;
+            // border: 2px solid $color-black;
             border-radius: 50rem;
             color: $color-white;
             font-size: 42rem;
@@ -812,7 +831,7 @@ section{
             position: absolute;
             top: 0;
             left: -100%;
-            background: $color-gray;
+            background: $color-black;
             clip-path: polygon(
               0 0,
               100% 0,
@@ -846,7 +865,7 @@ section{
 
             overflow: hidden;
             background-color: $color-black;
-            border: 2px solid $color-black;
+            // border: 2px solid $color-black;
             border-radius: 50rem;
             color: $color-white;
             font-size: 42rem;
@@ -860,9 +879,6 @@ section{
             z-index: 2;
             position: relative;
 
-          &:hover{
-            color:$color-black;
-          }
             &:before,
             &:after {
             content: "";
@@ -873,7 +889,7 @@ section{
             position: absolute;
             top: 0;
             left: calc(-100% - var(--tilt));
-            background: $color-gray;
+            background: $color-black;
             clip-path: polygon(
               0 0,
               calc(100% - var(--tilt)) 0,
@@ -901,41 +917,20 @@ section{
           
         }
         .email{
-          span{
-            &:before,&:after{
-              background: #4284F4;
-            }
-          }
+          span{background-color: #4284F4;}
         }
         .phone{
-          span{
-            &:before,&:after{
-              background: #FF5F1F;
-            }
-          }
+          span{background-color: #FF5F1F;}
         }
         .github{
-          span{
-            &:before,&:after{
-              background: #A049AE;
-            }
-          }
+          span{background-color: #A049AE;}
         }
         .velog{
-          span{
-            &:before,&:after{
-              background: #12B886;
-            }
-          }
+          span{background-color: #12B886;}
         }
         .twitter{
-          span{
-            &:before,&:after{
-              background: #1D9BF0;
-            }
-          }
+          span{background-color: #1D9BF0;}
         }
-
       }
     }
   }
@@ -966,35 +961,41 @@ section{
   top:0;
   left:0;
   z-index: 150;
-  .m-btn{
+  nav{
+    border: 1px solid #000;
+    border-radius: 10rem;
     position: sticky;
     top:20rem;
     left:50%;
     translate:-50%;
-    border: 1px solid $color-black;
-    background-color: $color-black;
-    z-index: 10;
+    z-index: 10;    
     width: 60rem;
     height: 60rem;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-    transition: .5s;
-    @include flex;
-    i{
-      font-size: 32rem;
-      color:$color-white
-    }
-    &.active{
-      width:150rem;
-      height: 50rem;
-      border-radius: 50rem;
-      i{
-        font-size: 24rem;
-      }
-    }    
+    .m-btn{
+      border: 1px solid $color-black;
+      background-color: $color-black;
 
+      
+      overflow: hidden;
+      cursor: pointer;
+      transition: .5s;
+      @include flex;
+      i{
+        font-size: 32rem;
+        color:$color-white
+      }
+      &.active{
+        width:150rem;
+        height: 50rem;
+        border-radius: 50rem;
+        i{
+          font-size: 24rem;
+        }
+      }    
+  
+    }
   }
+  
   .rel{
     position:absolute;
     background: $color-white;
@@ -1188,4 +1189,8 @@ section{
       }
     }
   }
+}
+
+#modalP{
+  display: flex;
 }

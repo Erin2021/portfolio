@@ -161,6 +161,7 @@
     publishModal.scrollTop=0;
 
 
+
     //✨✨모달 내용 애니메이션 등장
     const Mcontent=publishModal.querySelector('.modal-inner');
     gsap.from(Mcontent,{opacity:0, duration:1});
@@ -254,5 +255,16 @@
     MNextImg.src= publishList[count].nextProject.nextImg;
     MNextTitle.innerText=publishList[count].nextProject.nextTitle;
   }
+
+  //modal일정 스크롤시, 닫기 버튼 기다랗게 변화
+  //1.모달 스크롤이벤트 추가
+  publishModal.addEventListener('scroll',()=>{
+    if(publishModal.scrollTop>200){
+      console.log(publishModal.scrollTop);
+      //모양변신 하....어케 변신하지
+
+    }
+  })
+  
 
 })()

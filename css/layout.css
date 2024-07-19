@@ -414,10 +414,23 @@ section .rel .contents {
 }
 #section1 .rel .porfile-inner .profile-left .site li a p {
   cursor: pointer;
+  display: inline-block;
+  margin: 5rem;
 }
 #section1 .rel .porfile-inner .profile-left .site li a p:hover {
   font-style: italic;
   text-decoration: underline;
+}
+#section1 .rel .porfile-inner .profile-left .site li a p:hover::before {
+  opacity: 1;
+  translate: 0rem;
+}
+#section1 .rel .porfile-inner .profile-left .site li a p::before {
+  content: "☞";
+  margin-right: 10rem;
+  opacity: 0;
+  translate: -500rem 0;
+  transition: opacity 0.3s, translate 0.3s;
 }
 #section1 .rel .porfile-inner .profile-left .education .date {
   margin: 0rem 0;
@@ -716,6 +729,7 @@ section .rel .contents {
   font-size: 60rem;
   font-family: "Playfair Display", serif;
   position: relative;
+  cursor: default;
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3 strong {
   font-family: "Pretendard-Regular", sans-serif;
@@ -750,6 +764,10 @@ section .rel .contents {
   display: inline-block;
   width: 100%;
   padding: 7rem 0;
+}
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul li a:hover {
+  background-color: #fffff0;
+  color: #1E1E1A;
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3, #section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul {
   opacity: 0;
@@ -799,7 +817,6 @@ section .rel .contents {
   --tilt: 40px;
   overflow: hidden;
   background-color: #1E1E1A;
-  border: 2px solid #1E1E1A;
   border-radius: 50rem;
   color: #fffff0;
   font-size: 42rem;
@@ -820,7 +837,7 @@ section .rel .contents {
   position: absolute;
   top: 0;
   left: -100%;
-  background: #888;
+  background: #1E1E1A;
   clip-path: polygon(0 0, 100% 0, calc(100% - var(--tilt)) 50%, 100% 100%, 0 100%);
   transition: transform 0.6s;
 }
@@ -841,7 +858,6 @@ section .rel .contents {
   --tilt: 40px;
   overflow: hidden;
   background-color: #1E1E1A;
-  border: 2px solid #1E1E1A;
   border-radius: 50rem;
   color: #fffff0;
   font-size: 42rem;
@@ -854,9 +870,6 @@ section .rel .contents {
   z-index: 2;
   position: relative;
 }
-#section5 .rel .greeting ul li .contactB span:hover {
-  color: #1E1E1A;
-}
 #section5 .rel .greeting ul li .contactB span:before, #section5 .rel .greeting ul li .contactB span:after {
   content: "";
   z-index: -1;
@@ -865,7 +878,7 @@ section .rel .contents {
   position: absolute;
   top: 0;
   left: calc(-100% - var(--tilt));
-  background: #888;
+  background: #1E1E1A;
   clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 50%, calc(100% - var(--tilt)) 100%, 0 100%);
   transition: transform 0.6s;
 }
@@ -882,20 +895,20 @@ section .rel .contents {
 #section5 .rel .greeting ul li .contactB span:hover:after {
   transform: rotate(180deg) translateX(100%);
 }
-#section5 .rel .greeting ul li .email span:before, #section5 .rel .greeting ul li .email span:after {
-  background: #4284F4;
+#section5 .rel .greeting ul li .email span {
+  background-color: #4284F4;
 }
-#section5 .rel .greeting ul li .phone span:before, #section5 .rel .greeting ul li .phone span:after {
-  background: #FF5F1F;
+#section5 .rel .greeting ul li .phone span {
+  background-color: #FF5F1F;
 }
-#section5 .rel .greeting ul li .github span:before, #section5 .rel .greeting ul li .github span:after {
-  background: #A049AE;
+#section5 .rel .greeting ul li .github span {
+  background-color: #A049AE;
 }
-#section5 .rel .greeting ul li .velog span:before, #section5 .rel .greeting ul li .velog span:after {
-  background: #12B886;
+#section5 .rel .greeting ul li .velog span {
+  background-color: #12B886;
 }
-#section5 .rel .greeting ul li .twitter span:before, #section5 .rel .greeting ul li .twitter span:after {
-  background: #1D9BF0;
+#section5 .rel .greeting ul li .twitter span {
+  background-color: #1D9BF0;
 }
 
 /*🎉✨modal-publishing____________________ */
@@ -916,17 +929,20 @@ section .rel .contents {
 .modal li, .modal p {
   font-size: 20rem;
 }
-.modal .m-btn {
+.modal nav {
+  border: 1px solid #000;
+  border-radius: 10rem;
   position: sticky;
   top: 20rem;
   left: 50%;
   translate: -50%;
-  border: 1px solid #1E1E1A;
-  background-color: #1E1E1A;
   z-index: 10;
   width: 60rem;
   height: 60rem;
-  border-radius: 50%;
+}
+.modal nav .m-btn {
+  border: 1px solid #1E1E1A;
+  background-color: #1E1E1A;
   overflow: hidden;
   cursor: pointer;
   transition: 0.5s;
@@ -934,16 +950,16 @@ section .rel .contents {
   justify-content: center;
   align-items: center;
 }
-.modal .m-btn i {
+.modal nav .m-btn i {
   font-size: 32rem;
   color: #fffff0;
 }
-.modal .m-btn.active {
+.modal nav .m-btn.active {
   width: 150rem;
   height: 50rem;
   border-radius: 50rem;
 }
-.modal .m-btn.active i {
+.modal nav .m-btn.active i {
   font-size: 24rem;
 }
 .modal .rel {
@@ -1145,4 +1161,8 @@ section .rel .contents {
 }
 .modal .rel .modal-inner .T-next .T-next-arrow i {
   font-size: 36rem;
+}
+
+#modalP {
+  display: flex;
 }
