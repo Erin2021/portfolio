@@ -14,14 +14,10 @@
     },
     f_1:function(){
       const tl = gsap.timeline();
-      tl.from("#section1 .contents> .profile-right",{
+      tl.from("#section1 .contents> *",{
       opacity:0,
       y:100,
       });
-      tl.from("#section1 .contents> .profile-left",{
-        opacity:0,
-        x:100,
-        });
     },
     f_2:function(){
       const tl = gsap.timeline();

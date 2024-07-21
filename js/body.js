@@ -44,7 +44,6 @@ $(window).scroll(function(){
         //변할배경(w)
         bGroup1=[252, 237, 190];
         bGroup2=[175,213,252];
-        console.log("어케움직이는중인가")
         yumyum(aGroup1[0],bGroup1[0],0,true);
         yumyum(aGroup1[1],bGroup1[1],1,true);
         yumyum(aGroup1[2],bGroup1[2],2,true);
