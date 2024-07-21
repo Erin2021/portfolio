@@ -99,7 +99,7 @@ function rotateColor(){
     rotate = 0;
   } 
 };
-setInterval(rotateColor,50);
+setInterval(rotateColor,30);
 
 
 

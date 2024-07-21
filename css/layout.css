@@ -930,37 +930,68 @@ section .rel .contents {
   font-size: 20rem;
 }
 .modal nav {
-  border: 1px solid #000;
+  background-color: #1E1E1A;
   border-radius: 10rem;
   position: sticky;
   top: 20rem;
   left: 50%;
   translate: -50%;
   z-index: 10;
-  width: 60rem;
-  height: 60rem;
-}
-.modal nav .m-btn {
-  border: 1px solid #1E1E1A;
-  background-color: #1E1E1A;
-  overflow: hidden;
-  cursor: pointer;
-  transition: 0.5s;
+  border: 1px solid #fffff0;
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 60rem;
+  padding: 0rem 20rem;
+  height: 60rem;
+  overflow: hidden;
+  transition: 0.5s;
 }
-.modal nav .m-btn i {
-  font-size: 32rem;
+.modal nav:hover {
+  background-color: #fffff0;
+  border-color: #1E1E1A;
+}
+.modal nav:hover .m-btn li i {
+  color: #1E1E1A;
+}
+.modal nav:hover .m-btn li i:hover {
+  color: #ff7f50;
+}
+.modal nav .m-btn {
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30rem;
+}
+.modal nav .m-btn li {
+  cursor: pointer;
+}
+.modal nav .m-btn li i {
+  transition: 0.4s;
+  font-size: 28rem;
   color: #fffff0;
 }
-.modal nav .m-btn.active {
-  width: 150rem;
+.modal nav .m-btn li.m-hidden {
+  transition: 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.modal nav.active {
+  width: 170rem;
   height: 50rem;
   border-radius: 50rem;
 }
-.modal nav .m-btn.active i {
+.modal nav.active .m-btn li i {
   font-size: 24rem;
+}
+.modal nav.active .m-btn li.m-hidden {
+  translate: 0;
+  opacity: 1;
+  visibility: visible;
+  display: list-item;
 }
 .modal .rel {
   position: absolute;
@@ -1011,8 +1042,9 @@ section .rel .contents {
 .modal .rel .modal-inner .T-description ul li a {
   font-size: 20rem;
   padding: 10rem 35rem;
-  background-color: #FF5F1F;
-  border: 1px solid #1E1E1A;
+  background-color: #ff7f50;
+  border: 1px solid #888;
+  border-radius: 10rem;
 }
 .modal .rel .modal-inner .T-description ul li a, .modal .rel .modal-inner .T-description ul li a i {
   transition: background-color 0.3s;
@@ -1136,33 +1168,38 @@ section .rel .contents {
 .modal .rel .modal-inner .T-next {
   display: flex;
   justify-content: end;
+}
+.modal .rel .modal-inner .T-next .T-next-inner {
+  display: flex;
   column-gap: 10rem;
   cursor: pointer;
 }
-.modal .rel .modal-inner .T-next .T-next-img {
+.modal .rel .modal-inner .T-next .T-next-inner .T-next-img {
   border: 1px solid rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  height: 80rem;
 }
-.modal .rel .modal-inner .T-next .T-next-img img {
-  width: 150rem;
-}
-.modal .rel .modal-inner .T-next .T-next-des p {
+.modal .rel .modal-inner .T-next .T-next-inner .T-next-des p {
   font-size: 20rem;
 }
-.modal .rel .modal-inner .T-next .T-next-des h5 {
+.modal .rel .modal-inner .T-next .T-next-inner .T-next-des h5 {
   font-size: 36rem;
 }
-.modal .rel .modal-inner .T-next .T-next-arrow {
+.modal .rel .modal-inner .T-next .T-next-inner .T-next-arrow {
+  margin-left: 0rem;
+  width: 0;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 30rem;
+  transition: 0.4s;
 }
-.modal .rel .modal-inner .T-next .T-next-arrow i {
+.modal .rel .modal-inner .T-next .T-next-inner .T-next-arrow i {
   font-size: 36rem;
 }
-
-#modalP {
-  display: flex;
+.modal .rel .modal-inner .T-next .T-next-inner:hover .T-next-arrow {
+  margin-left: 30rem;
+  width: 40rem;
 }

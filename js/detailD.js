@@ -228,8 +228,7 @@
 
 
         //modal닫기-버튼 누르면 다시 원래대로
-        const DesignClosBtn = DesignModal.querySelector('.m-btn');
-
+        const DesignClosBtn = DesignModal.querySelector('.m-btn li');
         DesignClosBtn.addEventListener('click',()=>{
           DesignModal.style.display='none';
           Bigscroll = true;

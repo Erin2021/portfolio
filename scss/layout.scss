@@ -8,7 +8,7 @@
 $color-gray:#888;
 $color-black:#1E1E1A;
 $color-white:#fffff0;
-$color-orange:#FF5F1F;
+$color-orange:#ff7f50;
 $size-header:60rem;
 $size-description:20rem;
 $size-description-title:20rem;
@@ -962,38 +962,74 @@ section{
   left:0;
   z-index: 150;
   nav{
-    border: 1px solid #000;
+    background-color: $color-black;
     border-radius: 10rem;
     position: sticky;
     top:20rem;
     left:50%;
     translate:-50%;
-    z-index: 10;    
-    width: 60rem;
-    height: 60rem;
-    .m-btn{
-      border: 1px solid $color-black;
-      background-color: $color-black;
+    z-index: 10;
+    border: 1px solid $color-white;
 
-      
-      overflow: hidden;
-      cursor: pointer;
-      transition: .5s;
-      @include flex;
-      i{
-        font-size: 32rem;
-        color:$color-white
-      }
-      &.active{
-        width:150rem;
-        height: 50rem;
-        border-radius: 50rem;
-        i{
-          font-size: 24rem;
+    @include flex;
+    justify-content: center;
+    width: 60rem;
+    padding:0rem 20rem;
+    height: 60rem;
+    overflow: hidden;
+    transition: 0.5s;
+    &:hover{
+      background-color: $color-white;
+      border-color: $color-black;
+      .m-btn li i{
+        color:$color-black;
+        &:hover{
+          color:$color-orange;
         }
-      }    
-  
+
+      }
+
     }
+    
+    .m-btn{
+      transition: .3s;
+      @include flex;
+      column-gap: 30rem;
+      li{
+        cursor: pointer;
+        i{
+          transition: 0.4s;
+          font-size: 28rem;
+          color:$color-white
+        }
+        &.m-hidden{
+          transition: 0.4s;
+          opacity: 0;
+          visibility: hidden;
+          display: none;
+        }
+      }
+    }
+    &.active{
+      width: 170rem;
+      height: 50rem;
+      border-radius: 50rem;
+      
+      .m-btn{
+        li{
+          i{
+            
+            font-size: 24rem;
+          }
+          &.m-hidden{
+            translate:0;
+            opacity: 1;
+            visibility:visible;
+            display: list-item;
+          }
+        }
+      }
+    } 
   }
   
   .rel{
@@ -1044,7 +1080,8 @@ section{
               font-size: 20rem;
               padding:10rem 35rem;
               background-color: $color-orange;
-              border: 1px solid $color-black;
+              border: 1px solid $color-gray;
+              border-radius: 10rem;
               &:hover,&:hover i{
                 background-color: $color-gray;
                 font-style: italic;
@@ -1166,31 +1203,38 @@ section{
       .T-next{
         display:flex;
         justify-content: end;
-        column-gap: 10rem;
-        cursor: pointer;
-        .T-next-img{
-          border: 1px solid rgb(0 0 0 /.2);
+        .T-next-inner{
           display: flex;
-          justify-content: center;
-          img{width:150rem;}
-        }
-        
-        .T-next-des{
-          p{font-size: $size-description;}
-          h5{
-            font-size: 36rem;
+          column-gap: 10rem;
+          cursor: pointer;
+          .T-next-img{
+            border: 1px solid rgb(0 0 0 /.2);
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            height: 80rem;
+          }
+          .T-next-des{
+            p{font-size: $size-description;}
+            h5{
+              font-size: 36rem;
+            }
+          }
+          .T-next-arrow{
+            margin-left:0rem;
+            width:0;
+            overflow: hidden;
+            @include flex;
+            transition: 0.4s;
+            i{font-size: 36rem;}
+          }
+          &:hover .T-next-arrow{
+            margin-left:30rem;
+            width:40rem;
           }
         }
-        .T-next-arrow{
-          @include flex;
-          padding-left: 30rem;
-          i{font-size: 36rem;}
-        }
+
       }
     }
   }
-}
-
-#modalP{
-  display: flex;
 }

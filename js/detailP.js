@@ -2,7 +2,8 @@
 (function(){
   const publishList =[
     //원페이지
-    { preview:'img/preview1.PNG',
+    { githref:'https://github.com/Erin2021/onepage',
+      preview:'img/preview1.PNG',
       title:'Ben & Jerry’s',
       date:'2024.05',
       who:'개인 100%',
@@ -29,7 +30,8 @@
 
     },
     //상세페이지
-    { preview:'img/preview2.PNG',
+    { githref:'https://github.com/Erin2021/waterpark',
+      preview:'img/preview2.PNG',
       title:'Carribian Bay',
       date:'2024.05',
       who:'개인 100%',
@@ -55,7 +57,8 @@
       }
     },
     //반응형페이지
-    { preview:'img/preview3.PNG',
+    { githref:'https://github.com/Erin2021/Open-Tutorials',
+      preview:'img/preview3.PNG',
       title:'Open Tutorials',
       date:'2024.06',
       who:'개인 100%',
@@ -81,7 +84,8 @@
       }
     },
     //적응형페이지
-    { preview:'img/preview4.PNG',
+    { githref:'https://github.com/Erin2021/adaptive-page',
+      preview:'img/preview4.PNG',
       title:'SNUH',
       date:'2024.06',
       who:'개인 100%',
@@ -116,7 +120,7 @@
 
   publishBtn.forEach((value,count)=>{
     value.addEventListener('click',()=>{
-      let progressCount=count;//눌린순서들어감
+      let progressCount=count;//열린순서들어감
       Bigscroll=false;
       if(!Bigscroll){
         //html 스크롤 가리기
@@ -129,19 +133,32 @@
         
 
         //modal닫기-버튼 누르면 다시 원래대로
-        const publishClosBtn = publishModal.querySelector('.m-btn');
-        publishClosBtn.addEventListener('click',()=>{
+        const publishClosBtn = publishModal.querySelectorAll('.m-btn li');
+        //닫기
+        publishClosBtn[0].addEventListener('click',()=>{
           publishModal.style.display='none';
           Bigscroll = true;
           document.getElementsByTagName('html')[0].style.overflowY='scroll'
         });
+        //깃허브이동
+        publishClosBtn[1].addEventListener('click',()=>{
+          window.open(publishList[count].githref);
+        })
+        //프로젝트
+        publishClosBtn[2].addEventListener('click',()=>{
+          window.open(publishList[count].link);
+        })
 
+
+
+        
+        //데이터 시각화
         PStructure(count);
 
 
         //다음 프로젝트 눌렀을때 다음 데이터 불러와야해
         //이벤트 중첩제거필요
-        const MNext=publishModal.querySelector('.T-next');
+        const MNext=publishModal.querySelector('.T-next .T-next-inner');
         if(MNext.clickHandler){//이미실행된 이벤트가 있다면 초기화
           MNext.removeEventListener('click', MNext.clickHandler);
         }
@@ -256,13 +273,13 @@
     MNextTitle.innerText=publishList[count].nextProject.nextTitle;
   }
 
-  //modal일정 스크롤시, 닫기 버튼 기다랗게 변화
-  //1.모달 스크롤이벤트 추가
+  //modal일정 스크롤시, 닫기 버튼 변화
+  const closeM=publishModal.querySelector('nav');
   publishModal.addEventListener('scroll',()=>{
     if(publishModal.scrollTop>200){
-      console.log(publishModal.scrollTop);
-      //모양변신 하....어케 변신하지
-
+      closeM.classList.add('active')
+    }else{
+      closeM.classList.remove('active')
     }
   })
   
