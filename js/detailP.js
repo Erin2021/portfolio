@@ -155,15 +155,11 @@
     //modal위치 초기화
     publishModal.scrollTop=0;
 
-
-
     //✨✨모달 내용 애니메이션 등장
     const Mcontent=publishModal.querySelector('.modal-inner');
-    gsap.from(Mcontent,{opacity:0, duration:1});
-
+    gsap.from(Mcontent,{opacity:0, y:50,duration:1});
 
     //🔥🔥데이터 시각화
-
 
     //닫기버튼
     //modal닫기-버튼 누르면 다시 원래대로

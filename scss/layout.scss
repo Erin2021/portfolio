@@ -1,9 +1,3 @@
-
-//https://dribbble.com/shots/24125748-Unifiers-of-Japan?utm_content=buffer75cc3&utm_medium=ownedsocial&utm_source=twitter&utm_campaign=buffer 
-//https://p5aholic.me/ 
-//https://medium.com/daangn/%EB%8B%B9%EA%B7%BC-%EB%A6%AC%EB%B8%8C%EB%9E%9C%EB%94%A9-%EC%BA%A0%ED%8E%98%EC%9D%B8-%ED%8E%98%EC%9D%B4%EC%A7%80%EB%A5%BC-%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B4-%EA%B2%83-b41d866df9b7 
-
-
 //Variables
 $color-gray:#888;
 $color-black:#1E1E1A;
@@ -77,6 +71,16 @@ body{
   background:linear-gradient(0deg,#fcedbe,#afd5fc) ;
   position: relative;
   color:$color-black;
+  &::before{
+    content: '';
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    background-image: url('../img/overlay.gif');
+    opacity: 0.06;
+  }
 }
 li,p{font-size: 18rem;}
 
@@ -89,15 +93,15 @@ header .top{
   top:0;
   .top-left{
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: baseline;
     column-gap: 45rem;
 
     p:nth-of-type(2){
       background-color: $color-black;
       color:$color-white;
-      padding:1rem 30rem;
-      border-radius: 20rem;
+      padding:5rem 30rem;
+      border-radius: 10rem;
       position:relative;
       &:before{
         content: '';
@@ -189,7 +193,7 @@ header .top{
         font-size: 18rem;
         display: inline-block;
         padding:5rem 30rem;
-        border-radius: 30rem;
+        border-radius: 10rem;
       }
       &.active a{
         background-color: $color-black;
@@ -262,7 +266,9 @@ footer{
     transition: 0.5s;
     a{
       display: none;
+      font-size: 18rem;
       padding:0 10rem;
+      margin-right: 10rem;
       i{margin-left:10rem;}
       &:hover,&:hover i{
         font-style: italic;
@@ -333,7 +339,6 @@ section{
   justify-content: center;
   align-items: center;
   .porfile-inner{
-    // border: 1px solid $color-white;
     position: relative;
     @include flex;
     .p-line{
@@ -446,7 +451,7 @@ section{
           left:50%;
           translate:-50% -50%;
           padding:10rem 20rem;
-          background-color: rgb(0 0 0 /0.6);
+          background-color: rgb(0 0 0 /0.8);
         }
       }
       .interests{
@@ -460,7 +465,7 @@ section{
           left:50%;
           translate:-50% -50%;
           padding:10rem 20rem;
-          background-color: rgb(0 0 0 /0.6);
+          background-color: rgb(0 0 0 /0.8);
 
         }
       }
@@ -499,13 +504,8 @@ section{
             }
           }
         }
-
-      }
-      
-      
-      
+      } 
     }
-
   }
 }
 
@@ -681,7 +681,7 @@ section{
         &:nth-of-type(2) div{background-image: url('../media/planning/plan2.png');}
         &:nth-of-type(3) div{background-image: url('../media/planning/plan3.png');}
         &:nth-of-type(4) div{background-image: url('../media/planning/plan4.png');}
-        &:nth-of-type(5) div{background-image: url('../media/planning/plan1.png');}
+        &:nth-of-type(5) div{background-image: url('../media/planning/plan5.png');}
         &>div{
           display: flex;
           text-align: center;
@@ -721,6 +721,7 @@ section{
               font-family: $font-titleMiddleKor;
               display: block;
               font-size: 24rem;
+              font-weight: 100;
               margin-bottom: 30rem;
 
             }
@@ -960,7 +961,6 @@ section{
   width:100%;
   overflow-y: scroll;
   background: rgb(255 255 255 /0.4);
-  //draft
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   justify-content: center;
@@ -993,9 +993,7 @@ section{
         &:hover{
           color:$color-orange;
         }
-
       }
-
     }
     
     .m-btn{
