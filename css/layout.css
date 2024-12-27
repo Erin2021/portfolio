@@ -16,8 +16,10 @@ body {
   /* 반응형폰트변화수치 */
   font-size: 1.1111111111vw;
   background: linear-gradient(0deg, #fcedbe, #afd5fc);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   position: relative;
-  color: #1E1E1A;
+  color: #1e1e1a;
 }
 body::before {
   content: "";
@@ -30,7 +32,8 @@ body::before {
   opacity: 0.06;
 }
 
-li, p {
+li,
+p {
   font-size: 18rem;
 }
 
@@ -56,7 +59,7 @@ header .top .top-left {
   column-gap: 45rem;
 }
 header .top .top-left p:nth-of-type(2) {
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   color: #fffff0;
   padding: 5rem 30rem;
   border-radius: 10rem;
@@ -72,7 +75,7 @@ header .top .top-left p:nth-of-type(2):before {
   width: 13rem;
   height: 13rem;
   border-radius: 50%;
-  background-color: #00FF00;
+  background-color: #00ff00;
   opacity: 0;
   animation: work-ani 1s infinite alternate;
 }
@@ -86,7 +89,7 @@ header .top .hamberger-menu span {
   display: block;
   width: 100%;
   height: 3rem;
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   border-radius: 8rem;
   text-indent: -9999px;
   position: absolute;
@@ -172,7 +175,7 @@ header .top .pc-menu li a {
   border-radius: 10rem;
 }
 header .top .pc-menu li.active a {
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   color: #fffff0;
   text-align: center;
 }
@@ -190,19 +193,6 @@ header .top .pc-menu li:hover a {
 #layout > div {
   position: absolute;
   border: 1rem solid #888;
-}
-#layout > div.cursor {
-  border: none;
-  background: radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
-  box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
-  width: 200rem;
-  height: 200rem;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  pointer-events: none;
 }
 #layout > div.left {
   pointer-events: none;
@@ -299,14 +289,15 @@ footer .bottom a:hover, footer .bottom a:hover i {
 }
 footer .bottom.active {
   transition: 0.5s;
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   color: #fffff0;
 }
 footer .bottom.active a {
   display: block;
 }
 
-header, #layout {
+header,
+#layout {
   transition: 0.7s;
 }
 
@@ -591,7 +582,7 @@ section .rel .contents {
   bottom: 0%;
   right: 0;
   height: 3rem;
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   transition: width 0.3s ease-in;
 }
 #section2 .rel .publishing-con .pub-inner li[data-preview] .P-detail .pub-describe ul {
@@ -617,9 +608,9 @@ section .rel .contents {
 }
 #section3 .rel .sec-title .design-btn button {
   background-color: #fffff0;
-  border: 2px solid #1E1E1A;
+  border: 2px solid #1e1e1a;
   border-radius: 32rem;
-  color: #1E1E1A;
+  color: #1e1e1a;
   font-size: 30rem;
   padding: 10px 20px;
   text-align: center;
@@ -629,7 +620,7 @@ section .rel .contents {
   transition: 0.5s;
 }
 #section3 .rel .sec-title .design-btn button.active {
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   color: #fffff0;
   pointer-events: none;
 }
@@ -648,13 +639,16 @@ section .rel .contents {
 #section3 .rel .design-con .design-con-inner .design-list {
   width: fit-content;
 }
-#section3 .rel .design-con .design-con-inner .design-list .graphic-part, #section3 .rel .design-con .design-con-inner .design-list .UXUI-part {
+#section3 .rel .design-con .design-con-inner .design-list .graphic-part,
+#section3 .rel .design-con .design-con-inner .design-list .UXUI-part {
   display: none;
 }
-#section3 .rel .design-con .design-con-inner .design-list .graphic-part.active, #section3 .rel .design-con .design-con-inner .design-list .UXUI-part.active {
+#section3 .rel .design-con .design-con-inner .design-list .graphic-part.active,
+#section3 .rel .design-con .design-con-inner .design-list .UXUI-part.active {
   display: block;
 }
-#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-1, #section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-2 {
+#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-1,
+#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -786,9 +780,10 @@ section .rel .contents {
 }
 #section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul li a:hover {
   background-color: #fffff0;
-  color: #1E1E1A;
+  color: #1e1e1a;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3, #section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3,
+#section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul {
   opacity: 0;
   transition: opacity 1ms 0s;
 }
@@ -800,7 +795,8 @@ section .rel .contents {
   filter: grayscale(0%);
   transition: filter 0.7s;
 }
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div h3, #section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div ul {
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div h3,
+#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div ul {
   opacity: 1;
   transition: opacity 1s 1s;
 }
@@ -835,7 +831,7 @@ section .rel .contents {
 #section5 .rel .greeting ul li .contactA span {
   --tilt: 40px;
   overflow: hidden;
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   border-radius: 50rem;
   color: #fffff0;
   font-size: 42rem;
@@ -856,7 +852,7 @@ section .rel .contents {
   position: absolute;
   top: 0;
   left: -100%;
-  background: #1E1E1A;
+  background: #1e1e1a;
   clip-path: polygon(0 0, 100% 0, calc(100% - var(--tilt)) 50%, 100% 100%, 0 100%);
   transition: transform 0.6s;
 }
@@ -876,7 +872,7 @@ section .rel .contents {
 #section5 .rel .greeting ul li .contactB span {
   --tilt: 40px;
   overflow: hidden;
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   border-radius: 50rem;
   color: #fffff0;
   font-size: 42rem;
@@ -897,7 +893,7 @@ section .rel .contents {
   position: absolute;
   top: 0;
   left: calc(-100% - var(--tilt));
-  background: #1E1E1A;
+  background: #1e1e1a;
   clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 50%, calc(100% - var(--tilt)) 100%, 0 100%);
   transition: transform 0.6s;
 }
@@ -915,19 +911,19 @@ section .rel .contents {
   transform: rotate(180deg) translateX(100%);
 }
 #section5 .rel .greeting ul li .email span {
-  background-color: #4284F4;
+  background-color: #4284f4;
 }
 #section5 .rel .greeting ul li .phone span {
-  background-color: #FF5F1F;
+  background-color: #ff5f1f;
 }
 #section5 .rel .greeting ul li .github span {
-  background-color: #A049AE;
+  background-color: #a049ae;
 }
 #section5 .rel .greeting ul li .velog span {
-  background-color: #12B886;
+  background-color: #12b886;
 }
 #section5 .rel .greeting ul li .twitter span {
-  background-color: #1D9BF0;
+  background-color: #1d9bf0;
 }
 
 /*🎉✨modal-publishing____________________ */
@@ -945,11 +941,12 @@ section .rel .contents {
   left: 0;
   z-index: 150;
 }
-.modal li, .modal p {
+.modal li,
+.modal p {
   font-size: 20rem;
 }
 .modal nav {
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   border-radius: 10rem;
   position: sticky;
   top: 20rem;
@@ -969,10 +966,10 @@ section .rel .contents {
 }
 .modal nav:hover {
   background-color: #fffff0;
-  border-color: #1E1E1A;
+  border-color: #1e1e1a;
 }
 .modal nav:hover .m-btn li i {
-  color: #1E1E1A;
+  color: #1e1e1a;
 }
 .modal nav:hover .m-btn li i:hover {
   color: #ff7f50;
@@ -1040,7 +1037,7 @@ section .rel .contents {
 .modal .rel .modal-inner hr {
   margin-top: 20rem;
   margin-bottom: 30rem;
-  border: 1px solid #1E1E1A;
+  border: 1px solid #1e1e1a;
 }
 .modal .rel .modal-inner .T-description {
   display: flex;
@@ -1067,7 +1064,8 @@ section .rel .contents {
   border: 1px solid #888;
   border-radius: 10rem;
 }
-.modal .rel .modal-inner .T-description ul li a, .modal .rel .modal-inner .T-description ul li a i {
+.modal .rel .modal-inner .T-description ul li a,
+.modal .rel .modal-inner .T-description ul li a i {
   transition: background-color 0.3s;
 }
 .modal .rel .modal-inner .T-description ul li a:hover, .modal .rel .modal-inner .T-description ul li a:hover i {
@@ -1158,7 +1156,7 @@ section .rel .contents {
   margin: 0;
   padding: 5rem 10rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: #1E1E1A;
+  background-color: #1e1e1a;
   color: #fffff0;
 }
 .modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li .T-typo {
@@ -1197,7 +1195,7 @@ section .rel .contents {
   text-align: center;
   font-size: 20rem;
   font-weight: 700;
-  color: #1E1E1A;
+  color: #1e1e1a;
   margin-top: 10rem;
 }
 .modal .rel .modal-inner .T-next {
