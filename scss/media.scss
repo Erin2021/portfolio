@@ -11,92 +11,92 @@
 //2.그 색션에서만 적용이 될 것 min-max로 표시되어 있음
 
 /* 스마트폰*/
-@media screen and (max-width:480px){
-  header .subNav .inner{
-    width:100% !important;
+@media screen and (max-width: 480px) {
+  header .subNav .inner {
+    width: 100% !important;
   }
-  
 }
 /* 작은태블릿 */
-@media screen and (min-width:481px) and (max-width:768px){
-  header .subNav .inner{
-    width:70% !important;
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header .subNav .inner {
+    width: 70% !important;
   }
 }
 /* 큰태블릿 */
-@media screen and (min-width:769px) and (max-width:990px){ 
+@media screen and (min-width: 769px) and (max-width: 990px) {
 }
 
 /* 큰타블릿까지 가져야할 공통사항 */
-@media screen and (max-width:990px){
-  div.top, div.bottom{
-    padding:0 2em;
+@media screen and (max-width: 990px) {
+  div.top,
+  div.bottom {
+    padding: 0 2em;
   }
-  
 }
 /* 작은모니터까지 가져야할 공통사항*/
-@media screen and (max-width:1200px){
-  header, #layout{
+@media screen and (max-width: 1200px) {
+  header,
+  #layout {
     font-size: 17rem;
-    div{
+    div {
       &.right,
       &.left,
-      &.bottom{
+      &.bottom {
         display: none;
       }
-      &.top{
-        ul.pc-menu{display: none;}
-        .hamberger-menu{
+      &.top {
+        ul.pc-menu {
+          display: none;
+        }
+        .hamberger-menu {
           display: block;
         }
       }
     }
   }
-  section .rel{
-    width:90%;
+  section .rel {
+    width: 90%;
     height: auto;
   }
   #section2 {
-    .publishing-con.mob-only{
-      ul{
+    .publishing-con.mob-only {
+      ul {
         // background-color: red;
         display: grid;
-        grid-template-rows:1fr 1fr;
-        grid-template-columns:1fr 1fr;
-        gap:4em;
-        li{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 4em;
+        li {
           overflow: hidden;
-          translate:0% !important;
-          padding:10rem;
+          translate: 0% !important;
+          padding: 10rem;
           background-color: #fff;
           border-radius: 0.2em;
           width: inherit;
           height: inherit;
-          box-shadow: 0 3px 20px rgb(0 0 0 /.23);
-          a{
+          box-shadow: 0 3px 20px rgb(0 0 0 /0.23);
+          a {
             width: inherit;
             height: inherit;
             display: flex;
             flex-direction: column;
-            .thumbnail{
-              flex:7;
+            .thumbnail {
+              flex: 7;
               display: inline;
               overflow: hidden;
-              img{
+              img {
                 display: inline-block;
-                }
+              }
             }
-            p{flex:5;
-              display:block;
+            p {
+              flex: 5;
+              display: block;
               border: none;
               font-size: min(3em);
             }
           }
-          
         }
       }
     }
   }
-  
-  
 }
