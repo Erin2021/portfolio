@@ -18,9 +18,14 @@
   // 배경색 변신
   let test = true;
   let test2 = true;
+
+  // 섹션 위치
+  let section = document.querySelectorAll("section");
+  const section2Top = section[1].offsetTop;
+  const section3Top = section[2].offsetTop;
   $(window).scroll(function () {
     let sc = $(document).scrollTop();
-    if (sc >= windowHeight && sc < windowHeight * 2 - 1) {
+    if (sc >= section2Top && sc < section3Top) {
       //자기소개화면에서만 색변하기
       if (test) {
         //메인배경

@@ -18,6 +18,55 @@
   div.bottom {
     padding: 0 2em;
   }
+  #section0 {
+    height: 70vh;
+  }
+  #section0 .rel .mob-only {
+    display: flex;
+  }
+  #section0 .rel .greeting {
+    align-items: center;
+  }
+  #section0 .rel .greeting h1,
+  #section0 .rel .greeting p {
+    text-align: center;
+  }
+  #section1 {
+    height: max-content;
+    padding: 60rem 0;
+  }
+  #section1 .rel .profile-left,
+  #section1 .rel .profile-right {
+    width: 100%;
+    padding: 0 !important;
+  }
+  #section1 .rel .porfile-inner {
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+  }
+  #section1 .rel .porfile-inner .profile-left {
+    text-align: left;
+  }
+  #section1 .rel .porfile-inner .profile-left:hover {
+    flex: 1;
+  }
+  #section1 .rel .porfile-inner .profile-left p {
+    font-size: 16rem;
+  }
+  #section1 .rel .porfile-inner .profile-left .site li a p::before {
+    opacity: 1;
+  }
+  #section1 .rel .porfile-inner .profile-left .p-des-1,
+  #section1 .rel .porfile-inner .profile-left .p-des-2,
+  #section1 .rel .porfile-inner .profile-left .p-des-3 {
+    display: none;
+  }
+  #section1 .rel .porfile-inner .profile-right .skill-des ul li {
+    font-size: 16rem;
+  }
+  #section1 .rel .porfile-inner .profile-right .skill-des .others {
+    column-gap: 10rem;
+  }
 }
 /* 작은모니터까지 가져야할 공통사항*/
 @media screen and (max-width: 1200px) {
@@ -43,17 +92,47 @@
     width: 90%;
     height: auto;
   }
-  #section0 {
-    height: 70vh;
-  }
   #section0 .rel .mob-only {
     display: flex;
   }
-  #section0 .rel .greeting {
-    align-items: center;
+  #section2 {
+    height: max-content;
+    border: 1px solid red;
   }
-  #section0 .rel .greeting h1,
-  #section0 .rel .greeting p {
-    text-align: center;
+  #section2 .publishing-con.mob-only ul {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+  }
+  #section2 .publishing-con.mob-only ul li {
+    overflow: hidden;
+    translate: 0% !important;
+    padding: 10rem;
+    background-color: #fff;
+    border-radius: 0.2em;
+    width: inherit;
+    height: inherit;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.23);
+  }
+  #section2 .publishing-con.mob-only ul li a {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  #section2 .publishing-con.mob-only ul li a .thumbnail {
+    flex: 7;
+    display: inline;
+    overflow: hidden;
+  }
+  #section2 .publishing-con.mob-only ul li a .thumbnail img {
+    display: inline-block;
+  }
+  #section2 .publishing-con.mob-only ul li a p {
+    flex: 5;
+    display: block;
+    border: none;
+    font-size: 3em;
   }
 }

@@ -346,11 +346,11 @@ section {
     width: 100%;
     h1 {
       font-family: $font-titleBigKor;
-      font-size: min(8.3em, 100rem);
+      font-size: min(11em, 100rem);
     }
     p {
       padding-left: 20rem;
-      font-size: min(3em, 40rem);
+      font-size: min(3.3em, 40rem);
     }
   }
   .mob-only {
@@ -365,9 +365,11 @@ section {
   @include contents;
   justify-content: center;
   align-items: center;
+
   .porfile-inner {
     position: relative;
     @include flex;
+
     .p-line {
       width: 1rem;
       height: 100%;

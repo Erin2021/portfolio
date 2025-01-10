@@ -342,11 +342,11 @@ section .rel .contents {
 }
 #section0 .rel .greeting h1 {
   font-family: "LeferiPoint-SpecialItalicA", sans-serif;
-  font-size: min(8.3em, 100rem);
+  font-size: min(11em, 100rem);
 }
 #section0 .rel .greeting p {
   padding-left: 20rem;
-  font-size: min(3em, 40rem);
+  font-size: min(3.3em, 40rem);
 }
 #section0 .rel .mob-only {
   display: none;
