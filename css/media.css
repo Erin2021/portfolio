@@ -25,10 +25,11 @@
   #layout {
     font-size: 17rem;
   }
-  header div.right, header div.left, header div.bottom,
+  header div.right,
+  header div.left,
+  header div.bottom,
   #layout div.right,
-  #layout div.left,
-  #layout div.bottom {
+  #layout div.left {
     display: none;
   }
   header div.top ul.pc-menu,
@@ -43,7 +44,7 @@
     width: 90%;
     height: auto;
   }
-  #section2 .publishing-con.mob-only ul {
+  /* #section2 .publishing-con.mob-only ul {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -78,5 +79,5 @@
     display: block;
     border: none;
     font-size: 3em;
-  }
+  } */
 }

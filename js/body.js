@@ -116,19 +116,12 @@
   //🔥Jquery 부분
   $(document).ready(() => {
     //🎈🎈풀페이지 스크롤 이벤트
-    let wh = $(window).height();
-    let wv = $(window).width();
+    // 변수 초기화
+    let wv = $(window).width(); // 현재 창 너비
+    const wh = $(window).height(); // 현재 창 높이
+    const area_n = $(".area").length; //섹션개수
     let a = 0; //페이지번호
-    let area_n = $(".area").length; //섹션개수
-    let wheel = true;
-
-    /*브라우저 창 사이즈 변경___________ */
-    $(window).resize(function () {
-      let wh = $(window).height();
-      $("html,body")
-        .stop()
-        .animate({ scrollTop: wh * a }, 100);
-    });
+    let wheel = true; // 휠 작동 여부
 
     /* 메뉴클릭______________________ */
     $("header .top ul li").click(function () {
@@ -138,34 +131,55 @@
         .animate({ scrollTop: wh * num });
     });
 
-    /* 컴퓨터스크린일때만-풀페이지 마우스휠__________________________ */
-    if (wv >= 1200) {
-      $(".area").on("wheel", function (event) {
-        const delta =
-          event.originalEvent.deltaY / Math.abs(event.originalEvent.deltaY);
-        if (wheel) {
-          let n = $(this).index() - 2;
-          if (delta < 0) {
-            //휠을 위로 돌렸다면
-            a = n - 2;
-          } else {
-            //휠을 아래로 돌렸다면
-            a = n;
-          }
+    // 휠 이벤트 처리 함수
+    function setWheelEvent() {
+      if (wv >= 1200) {
+        $(".area").on("wheel", function (event) {
+          const delta =
+            event.originalEvent.deltaY / Math.abs(event.originalEvent.deltaY);
+          if (wheel) {
+            let n = $(this).index() - 2;
+            if (delta < 0) {
+              // 휠을 위로 돌렸다면
+              a = n - 2;
+            } else {
+              // 휠을 아래로 돌렸다면
+              a = n;
+            }
 
-          if (a <= 0) {
-            a = 0;
-          }
-          if (a >= area_n - 1) {
-            a = area_n - 1;
-          }
+            // 스크롤 범위 제한
+            if (a < 0) {
+              a = 0;
+            }
+            if (a >= area_n - 1) {
+              a = area_n - 1;
+            }
 
-          $("html,body")
-            .stop()
-            .animate({ scrollTop: wh * a }, 100);
-        }
-      });
+            // 애니메이션 스크롤
+            $("html,body")
+              .stop()
+              .animate({ scrollTop: wh * a }, 100);
+          }
+        });
+      } else {
+        // console.log("풀페이지 적용 해제");
+        $(".area").off("wheel"); // 휠 이벤트 제거
+      }
     }
+
+    // 초기 실행
+    setWheelEvent();
+
+    // 윈도우 크기 변경 시 화면 크기 정보 업데이트
+    $(window).on("resize", function () {
+      let wh = $(window).height();
+      wv = $(window).width(); // 현재 창 너비 업데이트
+      setWheelEvent(); // 휠 이벤트 재설정
+      /*브라우저 창 사이즈 변경___________ */
+      $("html,body")
+        .stop()
+        .animate({ scrollTop: wh * a }, 100);
+    });
 
     //🎈스크롤 레이아웃 변화 이벤트
     $(window).scroll(function () {
