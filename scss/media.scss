@@ -58,45 +58,63 @@
     width: 90%;
     height: auto;
   }
-  #section2 {
-    .publishing-con.mob-only {
-      ul {
-        // background-color: red;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        gap: 4em;
-        li {
-          overflow: hidden;
-          translate: 0% !important;
-          padding: 10rem;
-          background-color: #fff;
-          border-radius: 0.2em;
-          width: inherit;
-          height: inherit;
-          box-shadow: 0 3px 20px rgb(0 0 0 /0.23);
-          a {
-            width: inherit;
-            height: inherit;
-            display: flex;
-            flex-direction: column;
-            .thumbnail {
-              flex: 7;
-              display: inline;
-              overflow: hidden;
-              img {
-                display: inline-block;
-              }
-            }
-            p {
-              flex: 5;
-              display: block;
-              border: none;
-              font-size: min(3em);
-            }
-          }
+
+  #section0 {
+    height: 70vh;
+    .rel {
+      .mob-only {
+        display: flex;
+      }
+
+      .greeting {
+        align-items: center;
+        h1,
+        p {
+          text-align: center;
         }
       }
     }
   }
+
+  // #section2 {
+  //   .publishing-con.mob-only {
+  //     ul {
+  //       // background-color: red;
+  //       display: grid;
+  //       grid-template-rows: 1fr 1fr;
+  //       grid-template-columns: 1fr 1fr;
+  //       gap: 4em;
+  //       li {
+  //         overflow: hidden;
+  //         translate: 0% !important;
+  //         padding: 10rem;
+  //         background-color: #fff;
+  //         border-radius: 0.2em;
+  //         width: inherit;
+  //         height: inherit;
+  //         box-shadow: 0 3px 20px rgb(0 0 0 /0.23);
+  //         a {
+  //           width: inherit;
+  //           height: inherit;
+  //           display: flex;
+  //           flex-direction: column;
+  //           .thumbnail {
+  //             flex: 7;
+  //             display: inline;
+  //             overflow: hidden;
+  //             img {
+  //               display: inline-block;
+  //             }
+  //           }
+  //           p {
+  //             flex: 5;
+  //             display: block;
+  //             border: none;
+  //             font-size: min(3em);
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }

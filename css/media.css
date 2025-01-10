@@ -25,11 +25,10 @@
   #layout {
     font-size: 17rem;
   }
-  header div.right,
-  header div.left,
-  header div.bottom,
+  header div.right, header div.left, header div.bottom,
   #layout div.right,
-  #layout div.left {
+  #layout div.left,
+  #layout div.bottom {
     display: none;
   }
   header div.top ul.pc-menu,
@@ -44,40 +43,17 @@
     width: 90%;
     height: auto;
   }
-  /* #section2 .publishing-con.mob-only ul {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 4em;
+  #section0 {
+    height: 70vh;
   }
-  #section2 .publishing-con.mob-only ul li {
-    overflow: hidden;
-    translate: 0% !important;
-    padding: 10rem;
-    background-color: #fff;
-    border-radius: 0.2em;
-    width: inherit;
-    height: inherit;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.23);
-  }
-  #section2 .publishing-con.mob-only ul li a {
-    width: inherit;
-    height: inherit;
+  #section0 .rel .mob-only {
     display: flex;
-    flex-direction: column;
   }
-  #section2 .publishing-con.mob-only ul li a .thumbnail {
-    flex: 7;
-    display: inline;
-    overflow: hidden;
+  #section0 .rel .greeting {
+    align-items: center;
   }
-  #section2 .publishing-con.mob-only ul li a .thumbnail img {
-    display: inline-block;
+  #section0 .rel .greeting h1,
+  #section0 .rel .greeting p {
+    text-align: center;
   }
-  #section2 .publishing-con.mob-only ul li a p {
-    flex: 5;
-    display: block;
-    border: none;
-    font-size: 3em;
-  } */
 }

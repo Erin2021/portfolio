@@ -338,18 +338,23 @@ section {
 /*🎉✨section0-opening____________________ */
 #section0 .rel {
   display: flex;
+
   .greeting {
     @include flex;
     align-items: start;
     flex-direction: column;
+    width: 100%;
     h1 {
       font-family: $font-titleBigKor;
-      font-size: min(13em, 120rem);
+      font-size: min(8.3em, 100rem);
     }
     p {
       padding-left: 20rem;
-      font-size: min(5em, 40rem);
+      font-size: min(3em, 40rem);
     }
+  }
+  .mob-only {
+    display: none;
   }
 }
 
