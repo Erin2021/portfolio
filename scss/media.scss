@@ -32,6 +32,68 @@
   div.bottom {
     padding: 0 2em;
   }
+  #section0 {
+    height: 70vh;
+    .rel {
+      .mob-only {
+        display: flex;
+      }
+      .greeting {
+        align-items: center;
+        h1,
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+  #section1 {
+    height: max-content;
+    padding: 60rem 0;
+    .rel {
+      .profile-left,
+      .profile-right {
+        width: 100%;
+        padding: 0 !important;
+      }
+      .porfile-inner {
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        .profile-left {
+          text-align: left;
+          &:hover {
+            flex: 1;
+          }
+          p {
+            font-size: 16rem;
+          }
+          // contact묶음
+          .site {
+            li a p {
+              &::before {
+                opacity: 1;
+              }
+            }
+          }
+          .p-des-1,
+          .p-des-2,
+          .p-des-3 {
+            display: none;
+          }
+        }
+        .profile-right {
+          .skill-des {
+            ul li {
+              font-size: 16rem;
+            }
+            .others {
+              column-gap: 10rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 /* 작은모니터까지 가져야할 공통사항*/
 @media screen and (max-width: 1200px) {
@@ -58,6 +120,18 @@
     width: 90%;
     height: auto;
   }
+  #section0 {
+    .rel {
+      .mob-only {
+        display: flex;
+      }
+    }
+  }
+  #section2 {
+    height: max-content;
+    border: 1px solid red;
+  }
+
   #section2 {
     .publishing-con.mob-only {
       ul {

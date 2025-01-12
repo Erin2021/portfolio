@@ -338,14 +338,18 @@ section .rel .contents {
   align-items: center;
   align-items: start;
   flex-direction: column;
+  width: 100%;
 }
 #section0 .rel .greeting h1 {
   font-family: "LeferiPoint-SpecialItalicA", sans-serif;
-  font-size: min(13em, 120rem);
+  font-size: min(11em, 100rem);
 }
 #section0 .rel .greeting p {
   padding-left: 20rem;
-  font-size: min(5em, 40rem);
+  font-size: min(3.3em, 40rem);
+}
+#section0 .rel .mob-only {
+  display: none;
 }
 
 /*🎉✨section1-profile____________________ */
