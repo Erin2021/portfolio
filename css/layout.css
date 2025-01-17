@@ -316,12 +316,12 @@ section .rel {
 }
 section .rel .sec-title h2 {
   translate: 0 -10%;
-  font-size: min(6em, 120rem);
+  font-size: min(9.3em, 120rem);
   font-family: "Playfair Display", sans-serif;
 }
 section .rel .sec-title p {
   font-family: "Pretendard-Regular", sans-serif;
-  font-size: min(6em, 28rem);
+  font-size: min(4.2em, 28rem);
 }
 section .rel .contents {
   width: 100%;
@@ -346,7 +346,7 @@ section .rel .contents {
 }
 #section0 .rel .greeting p {
   padding-left: 20rem;
-  font-size: min(3.3em, 40rem);
+  font-size: min(4.2em, 40rem);
 }
 #section0 .rel .mob-only {
   display: none;
@@ -572,10 +572,13 @@ section .rel .contents {
   align-items: end;
 }
 #section2 .rel .publishing-con .pub-inner li[data-preview] .P-detail .pub-describe h4 {
+  width: 100%;
   font-family: "Playfair Display", sans-serif;
   display: inline-block;
-  width: 80%;
-  font-size: min(6em, 80rem);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden; /* 넘치는 글자 숨김 */
+  font-size: clamp(28rem, 5vw, 80rem);
   position: relative;
 }
 #section2 .rel .publishing-con .pub-inner li[data-preview] .P-detail .pub-describe h4::before {

@@ -26,6 +26,23 @@
 @media screen and (min-width: 769px) and (max-width: 990px) {
 }
 
+/* 작은타블릿까지 가져야할 공통사항 */
+@media screen and (max-width: 768px) {
+  #section2 {
+    height: max-content;
+    .rel {
+      .publishing-con {
+        .pub-inner {
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr 1fr !important;
+          grid-template-columns: 1fr !important;
+          gap: 4em;
+        }
+      }
+    }
+  }
+}
+
 /* 큰타블릿까지 가져야할 공통사항 */
 @media screen and (max-width: 990px) {
   div.top,
@@ -65,7 +82,10 @@
             flex: 1;
           }
           p {
-            font-size: 16rem;
+            font-size: min(0.9em, 20rem);
+            &.name {
+              font-size: 32rem;
+            }
           }
           // contact묶음
           .site {
@@ -84,7 +104,7 @@
         .profile-right {
           .skill-des {
             ul li {
-              font-size: 16rem;
+              font-size: min(0.9em, 20rem);
             }
             .others {
               column-gap: 10rem;
@@ -95,6 +115,7 @@
     }
   }
 }
+
 /* 작은모니터까지 가져야할 공통사항*/
 @media screen and (max-width: 1200px) {
   header,
@@ -116,9 +137,13 @@
       }
     }
   }
-  section .rel {
-    width: 90%;
-    height: auto;
+  section {
+    padding: 100px 0;
+    border: 1px solid #000;
+    .rel {
+      width: 90%;
+      height: auto;
+    }
   }
   #section0 {
     .rel {
@@ -129,48 +154,86 @@
   }
   #section2 {
     height: max-content;
-    border: 1px solid red;
-  }
-
-  #section2 {
-    .publishing-con.mob-only {
-      ul {
-        // background-color: red;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        gap: 4em;
-        li {
-          overflow: hidden;
-          translate: 0% !important;
-          padding: 10rem;
-          background-color: #fff;
-          border-radius: 0.2em;
-          width: inherit;
-          height: inherit;
-          box-shadow: 0 3px 20px rgb(0 0 0 /0.23);
-          a {
+    .rel {
+      .publishing-con {
+        .pub-inner {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+          gap: 4em;
+          li[data-preview] {
+            overflow: hidden;
+            translate: 0% !important;
+            padding: 10rem;
+            background-color: #fff;
+            border-radius: 0.2em;
             width: inherit;
-            height: inherit;
-            display: flex;
-            flex-direction: column;
-            .thumbnail {
-              flex: 7;
-              display: inline;
-              overflow: hidden;
-              img {
-                display: inline-block;
+            height: fit-content;
+            box-shadow: 0 3px 20px rgb(0 0 0 /0.23);
+            .P-detail {
+              .thumbnail {
+                text-align: center;
+                img {
+                  display: inline-block;
+                  height: 250rem;
+                  border: 1px solid rgba(0, 0, 0, 0.2);
+                }
+              }
+              .pub-describe {
+                h4 {
+                  font-size: 28rem;
+                }
+                ul {
+                  width: 100%;
+
+                  flex-direction: column;
+                  li {
+                  }
+                }
               }
             }
-            p {
-              flex: 5;
-              display: block;
-              border: none;
-              font-size: min(3em);
+
+            a {
+              width: inherit;
+              height: inherit;
+              display: flex;
+              flex-direction: column;
+              .thumbnail {
+                flex: 7;
+                display: inline;
+                overflow: hidden;
+                img {
+                  display: inline-block;
+                }
+              }
+              p {
+                flex: 5;
+                display: block;
+                border: none;
+                font-size: min(3em);
+              }
             }
           }
         }
       }
+    }
+  }
+  #section3 {
+    .rel {
+    }
+  }
+}
+
+/* hover를 지원하지 않는 환경에서 비활성화 */
+@media (hover: none) {
+  #section1 .rel .porfile-inner .profile-left p.name {
+    &:hover {
+      font-size: 32rem;
+    }
+  }
+  #section1 .rel .porfile-inner .profile-left p {
+    &:hover {
+      font-size: inherit;
     }
   }
 }
