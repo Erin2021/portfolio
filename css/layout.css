@@ -346,7 +346,7 @@ section .rel .contents {
 }
 #section0 .rel .greeting p {
   padding-left: 20rem;
-  font-size: min(4.2em, 40rem);
+  font-size: min(3.3em, 40rem);
 }
 #section0 .rel .mob-only {
   display: none;
@@ -610,7 +610,6 @@ section .rel .contents {
 }
 #section3 .rel .sec-title .design-btn {
   display: flex;
-  align-self: center;
 }
 #section3 .rel .sec-title .design-btn button {
   background-color: #fffff0;

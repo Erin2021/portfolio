@@ -15,6 +15,19 @@
   header .subNav .inner {
     width: 100% !important;
   }
+  #section3 {
+    .rel {
+      .sec-title {
+        .design-btn {
+          justify-content: center;
+          button {
+            font-size: 20rem;
+            padding:5px 20px;
+          }
+        }
+      }
+    }
+  }
 }
 /* 작은태블릿 */
 @media screen and (min-width: 481px) and (max-width: 768px) {

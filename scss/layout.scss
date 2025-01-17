@@ -350,7 +350,7 @@ section {
     }
     p {
       padding-left: 20rem;
-      font-size: min(4.2em, 40rem);
+      font-size: min(3.3em, 40rem);
     }
   }
   .mob-only {
@@ -629,7 +629,6 @@ section {
   @include contents;
   .sec-title .design-btn {
     display: flex;
-    align-self: center;
     button {
       background-color: $color-white;
       border: 2px solid $color-black;
