@@ -4,6 +4,13 @@
   header .subNav .inner {
     width: 100% !important;
   }
+  #section3 .rel .sec-title .design-btn {
+    justify-content: center;
+  }
+  #section3 .rel .sec-title .design-btn button {
+    font-size: 20rem;
+    padding: 5px 20px;
+  }
 }
 /* 작은태블릿 */
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -12,6 +19,18 @@
   }
 }
 /* 큰태블릿 */
+/* 작은타블릿까지 가져야할 공통사항 */
+@media screen and (max-width: 768px) {
+  #section2 {
+    height: max-content;
+  }
+  #section2 .rel .publishing-con .pub-inner {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr !important;
+    grid-template-columns: 1fr !important;
+    gap: 4em;
+  }
+}
 /* 큰타블릿까지 가져야할 공통사항 */
 @media screen and (max-width: 990px) {
   div.top,
@@ -51,7 +70,10 @@
     flex: 1;
   }
   #section1 .rel .porfile-inner .profile-left p {
-    font-size: 16rem;
+    font-size: min(0.9em, 20rem);
+  }
+  #section1 .rel .porfile-inner .profile-left p.name {
+    font-size: 32rem;
   }
   #section1 .rel .porfile-inner .profile-left .site li a p::before {
     opacity: 1;
@@ -62,10 +84,55 @@
     display: none;
   }
   #section1 .rel .porfile-inner .profile-right .skill-des ul li {
-    font-size: 16rem;
+    font-size: min(0.9em, 20rem);
   }
   #section1 .rel .porfile-inner .profile-right .skill-des .others {
     column-gap: 10rem;
+  }
+  #section5 {
+    height: max-content;
+  }
+  #section5 .mob-only {
+    display: inline-block !important;
+  }
+  #section5 .rel .greeting {
+    align-items: center;
+  }
+  #section5 .rel .greeting h2,
+  #section5 .rel .greeting p {
+    text-align: center;
+  }
+  #section5 .rel .greeting ul {
+    width: 100%;
+    overflow: auto;
+    padding: 10rem;
+    justify-content: space-between;
+    column-gap: 15rem;
+  }
+  #section5 .rel .greeting ul li a span {
+    overflow: hidden;
+  }
+  #section5 .rel .greeting ul li a span img {
+    max-width: none; /* reset code의 max-width를 무효화 */
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+  }
+  #section5 .rel .greeting ul li a span p.pc-only {
+    display: none;
+  }
+  #section5 .rel .greeting ul li {
+    flex: 1;
+  }
+  #section5 .rel .greeting ul li .contactA span,
+  #section5 .rel .greeting ul li .contactB span {
+    border-radius: 30%;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    margin: 0;
   }
 }
 /* 작은모니터까지 가져야할 공통사항*/
@@ -88,6 +155,9 @@
   #layout div.top .hamberger-menu {
     display: block;
   }
+  section {
+    padding: 100px 0;
+  }
   section .rel {
     width: 90%;
     height: auto;
@@ -97,42 +167,141 @@
   }
   #section2 {
     height: max-content;
-    border: 1px solid red;
   }
-  #section2 .publishing-con.mob-only ul {
+  #section2 .rel .publishing-con .pub-inner {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 4em;
   }
-  #section2 .publishing-con.mob-only ul li {
+  #section2 .rel .publishing-con .pub-inner li[data-preview] {
     overflow: hidden;
     translate: 0% !important;
     padding: 10rem;
     background-color: #fff;
     border-radius: 0.2em;
     width: inherit;
-    height: inherit;
+    height: fit-content;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.23);
   }
-  #section2 .publishing-con.mob-only ul li a {
+  #section2 .rel .publishing-con .pub-inner li[data-preview] .P-detail .thumbnail {
+    text-align: center;
+  }
+  #section2 .rel .publishing-con .pub-inner li[data-preview] .P-detail .thumbnail img {
+    display: inline-block;
+    height: 250rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  #section2 .rel .publishing-con .pub-inner li[data-preview] .P-detail .pub-describe h4 {
+    font-size: 28rem;
+  }
+  #section2 .rel .publishing-con .pub-inner li[data-preview] .P-detail .pub-describe ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  #section2 .rel .publishing-con .pub-inner li[data-preview] a {
     width: inherit;
     height: inherit;
     display: flex;
     flex-direction: column;
   }
-  #section2 .publishing-con.mob-only ul li a .thumbnail {
+  #section2 .rel .publishing-con .pub-inner li[data-preview] a .thumbnail {
     flex: 7;
     display: inline;
     overflow: hidden;
   }
-  #section2 .publishing-con.mob-only ul li a .thumbnail img {
+  #section2 .rel .publishing-con .pub-inner li[data-preview] a .thumbnail img {
     display: inline-block;
   }
-  #section2 .publishing-con.mob-only ul li a p {
+  #section2 .rel .publishing-con .pub-inner li[data-preview] a p {
     flex: 5;
     display: block;
     border: none;
     font-size: 3em;
+  }
+  #section4 {
+    height: max-content;
+  }
+  #section4 .rel .plan-con .plan-con-list {
+    flex-direction: column;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner {
+    margin: 20rem 0;
+    width: 100%;
+    flex: 1;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div {
+    padding: 30rem 0;
+    display: flex;
+    text-align: center;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+    filter: grayscale(100%);
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div::before {
+    width: 100%;
+    height: 95%;
+    opacity: 1;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3 {
+    display: inline-block;
+    font-size: 32rem;
+    position: relative;
+    cursor: default;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3 strong {
+    display: block;
+    font-size: 18rem;
+    font-weight: 100;
+    margin-bottom: 10rem;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3::before {
+    height: 1rem;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul {
+    z-index: 3;
+    flex-direction: column;
+    row-gap: 10rem;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul li {
+    width: 80%;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul li a {
+    font-size: 16rem;
+    display: inline-block;
+    width: 100%;
+    padding: 7rem 0;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div h3,
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner > div ul {
+    opacity: 1;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div {
+    filter: grayscale(100%);
+    transition: none;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div h3,
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div ul {
+    opacity: inherit;
+    transition: none;
+  }
+  #section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div::before {
+    opacity: inherit;
+    transition: none;
+  }
+}
+/* hover를 지원하지 않는 환경에서 비활성화 */
+@media (hover: none) {
+  #section1 .rel .porfile-inner .profile-left p.name:hover {
+    font-size: 32rem;
+  }
+  #section1 .rel .porfile-inner .profile-left p:hover {
+    font-size: inherit;
   }
 }

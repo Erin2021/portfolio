@@ -320,12 +320,12 @@ section {
     .sec-title {
       h2 {
         translate: 0 -10%;
-        font-size: min(6em, 120rem);
+        font-size: min(9.3em, 120rem);
         font-family: $font-BigEng;
       }
       p {
         font-family: $font-titleMiddleKor;
-        font-size: min(6em, 28rem);
+        font-size: min(4.2em, 28rem);
       }
     }
     .contents {
@@ -570,6 +570,7 @@ section {
       display: grid;
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+
       li[data-preview] {
         .P-detail {
           cursor: pointer;
@@ -583,10 +584,13 @@ section {
             flex-direction: column;
             align-items: end;
             h4 {
+              width: 100%;
               font-family: $font-BigEng;
               display: inline-block;
-              width: 80%;
-              font-size: min(6em, 80rem);
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden; /* 넘치는 글자 숨김 */
+              font-size: clamp(28rem, 5vw, 80rem);
               position: relative;
               &::before {
                 content: "";
@@ -625,7 +629,6 @@ section {
   @include contents;
   .sec-title .design-btn {
     display: flex;
-    align-self: center;
     button {
       background-color: $color-white;
       border: 2px solid $color-black;
@@ -833,17 +836,20 @@ section {
 #section5 .rel {
   display: flex;
   .greeting {
-    display: flex;
-    justify-content: center;
+    @include flex;
+    align-items: start;
     flex-direction: column;
-    gap: 10rem;
+    width: 100%;
+
     h2 {
       font-family: $font-titleBigKor;
-      font-size: min(13em, 80rem);
+      font-size: min(7em, 80rem);
     }
     p {
-      padding-left: 20rem;
       font-size: min(5em, 40rem);
+    }
+    & > p {
+      padding-left: 20rem;
     }
     ul {
       padding-left: 20rem;
@@ -986,6 +992,10 @@ section {
           }
         }
       }
+    }
+
+    .mob-only {
+      display: none;
     }
   }
 }

@@ -316,12 +316,12 @@ section .rel {
 }
 section .rel .sec-title h2 {
   translate: 0 -10%;
-  font-size: min(6em, 120rem);
+  font-size: min(9.3em, 120rem);
   font-family: "Playfair Display", sans-serif;
 }
 section .rel .sec-title p {
   font-family: "Pretendard-Regular", sans-serif;
-  font-size: min(6em, 28rem);
+  font-size: min(4.2em, 28rem);
 }
 section .rel .contents {
   width: 100%;
@@ -347,6 +347,9 @@ section .rel .contents {
 #section0 .rel .greeting p {
   padding-left: 20rem;
   font-size: min(3.3em, 40rem);
+}
+#section0 .rel .mob-only {
+  display: none;
 }
 #section0 .rel .mob-only {
   display: none;
@@ -572,10 +575,13 @@ section .rel .contents {
   align-items: end;
 }
 #section2 .rel .publishing-con .pub-inner li[data-preview] .P-detail .pub-describe h4 {
+  width: 100%;
   font-family: "Playfair Display", sans-serif;
   display: inline-block;
-  width: 80%;
-  font-size: min(6em, 80rem);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden; /* 넘치는 글자 숨김 */
+  font-size: clamp(28rem, 5vw, 80rem);
   position: relative;
 }
 #section2 .rel .publishing-con .pub-inner li[data-preview] .P-detail .pub-describe h4::before {
@@ -607,7 +613,6 @@ section .rel .contents {
 }
 #section3 .rel .sec-title .design-btn {
   display: flex;
-  align-self: center;
 }
 #section3 .rel .sec-title .design-btn button {
   background-color: #fffff0;
@@ -815,16 +820,20 @@ section .rel .contents {
 #section5 .rel .greeting {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-items: start;
   flex-direction: column;
-  gap: 10rem;
+  width: 100%;
 }
 #section5 .rel .greeting h2 {
   font-family: "LeferiPoint-SpecialItalicA", sans-serif;
-  font-size: min(13em, 80rem);
+  font-size: min(7em, 80rem);
 }
 #section5 .rel .greeting p {
-  padding-left: 20rem;
   font-size: min(5em, 40rem);
+}
+#section5 .rel .greeting > p {
+  padding-left: 20rem;
 }
 #section5 .rel .greeting ul {
   padding-left: 20rem;
@@ -927,6 +936,9 @@ section .rel .contents {
 }
 #section5 .rel .greeting ul li .twitter span {
   background-color: #1d9bf0;
+}
+#section5 .rel .greeting .mob-only {
+  display: none;
 }
 
 /*🎉✨modal-publishing____________________ */

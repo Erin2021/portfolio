@@ -15,6 +15,19 @@
   header .subNav .inner {
     width: 100% !important;
   }
+  #section3 {
+    .rel {
+      .sec-title {
+        .design-btn {
+          justify-content: center;
+          button {
+            font-size: 20rem;
+            padding: 5px 20px;
+          }
+        }
+      }
+    }
+  }
 }
 /* 작은태블릿 */
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -24,6 +37,23 @@
 }
 /* 큰태블릿 */
 @media screen and (min-width: 769px) and (max-width: 990px) {
+}
+
+/* 작은타블릿까지 가져야할 공통사항 */
+@media screen and (max-width: 768px) {
+  #section2 {
+    height: max-content;
+    .rel {
+      .publishing-con {
+        .pub-inner {
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr 1fr !important;
+          grid-template-columns: 1fr !important;
+          gap: 4em;
+        }
+      }
+    }
+  }
 }
 
 /* 큰타블릿까지 가져야할 공통사항 */
@@ -65,7 +95,10 @@
             flex: 1;
           }
           p {
-            font-size: 16rem;
+            font-size: min(0.9em, 20rem);
+            &.name {
+              font-size: 32rem;
+            }
           }
           // contact묶음
           .site {
@@ -84,7 +117,7 @@
         .profile-right {
           .skill-des {
             ul li {
-              font-size: 16rem;
+              font-size: min(0.9em, 20rem);
             }
             .others {
               column-gap: 10rem;
@@ -94,7 +127,62 @@
       }
     }
   }
+  #section5 {
+    .mob-only {
+      display: inline-block !important;
+    }
+
+    height: max-content;
+    .rel {
+      .greeting {
+        align-items: center;
+
+        h2,
+        p {
+          text-align: center;
+        }
+        ul {
+          width: 100%;
+          overflow: auto;
+          padding: 10rem;
+          justify-content: space-between;
+          column-gap: 15rem;
+          li a span {
+            overflow: hidden;
+            img {
+              max-width: none; /* reset code의 max-width를 무효화 */
+              width: calc(100% + 10px);
+              height: calc(100% + 10px);
+            }
+            p.pc-only {
+              display: none;
+            }
+          }
+          li {
+            flex: 1;
+            .contactA,
+            .contactB {
+              & span {
+                border-radius: 30%;
+                padding: 0;
+                // width: 48px;
+                // height: 48px;
+                height: 100%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 /* 작은모니터까지 가져야할 공통사항*/
 @media screen and (max-width: 1200px) {
   header,
@@ -116,9 +204,12 @@
       }
     }
   }
-  section .rel {
-    width: 90%;
-    height: auto;
+  section {
+    padding: 100px 0;
+    .rel {
+      width: 90%;
+      height: auto;
+    }
   }
   #section0 {
     .rel {
@@ -129,48 +220,166 @@
   }
   #section2 {
     height: max-content;
-    border: 1px solid red;
-  }
-
-  #section2 {
-    .publishing-con.mob-only {
-      ul {
-        // background-color: red;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        gap: 4em;
-        li {
-          overflow: hidden;
-          translate: 0% !important;
-          padding: 10rem;
-          background-color: #fff;
-          border-radius: 0.2em;
-          width: inherit;
-          height: inherit;
-          box-shadow: 0 3px 20px rgb(0 0 0 /0.23);
-          a {
+    .rel {
+      .publishing-con {
+        .pub-inner {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+          gap: 4em;
+          li[data-preview] {
+            overflow: hidden;
+            translate: 0% !important;
+            padding: 10rem;
+            background-color: #fff;
+            border-radius: 0.2em;
             width: inherit;
-            height: inherit;
-            display: flex;
-            flex-direction: column;
-            .thumbnail {
-              flex: 7;
-              display: inline;
-              overflow: hidden;
-              img {
-                display: inline-block;
+            height: fit-content;
+            box-shadow: 0 3px 20px rgb(0 0 0 /0.23);
+            .P-detail {
+              .thumbnail {
+                text-align: center;
+                img {
+                  display: inline-block;
+                  height: 250rem;
+                  border: 1px solid rgba(0, 0, 0, 0.2);
+                }
+              }
+              .pub-describe {
+                h4 {
+                  font-size: 28rem;
+                }
+                ul {
+                  width: 100%;
+
+                  flex-direction: column;
+                  li {
+                  }
+                }
               }
             }
-            p {
-              flex: 5;
-              display: block;
-              border: none;
-              font-size: min(3em);
+
+            a {
+              width: inherit;
+              height: inherit;
+              display: flex;
+              flex-direction: column;
+              .thumbnail {
+                flex: 7;
+                display: inline;
+                overflow: hidden;
+                img {
+                  display: inline-block;
+                }
+              }
+              p {
+                flex: 5;
+                display: block;
+                border: none;
+                font-size: min(3em);
+              }
             }
           }
         }
       }
+    }
+  }
+  #section4 {
+    height: max-content;
+    .rel .plan-con .plan-con-list {
+      flex-direction: column;
+      .plan-list-inner {
+        margin: 20rem 0;
+        width: 100%;
+        flex: 1;
+        & > div {
+          padding: 30rem 0;
+          display: flex;
+          text-align: center;
+          height: 100%;
+          flex-direction: column;
+          justify-content: center;
+          row-gap: 20rem;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          position: relative;
+
+          &::before {
+            width: 100%;
+            height: 95%;
+            opacity: 1;
+            // padding: 30rem 0;
+          }
+
+          //CONTENT-BEGINS
+          h3 {
+            display: inline-block;
+            font-size: 32rem;
+            position: relative;
+            cursor: default;
+            strong {
+              display: block;
+              font-size: 18rem;
+              font-weight: 100;
+              margin-bottom: 10rem;
+            }
+            &::before {
+              height: 1rem;
+            }
+          }
+          ul {
+            z-index: 3;
+            flex-direction: column;
+            row-gap: 10rem;
+
+            li {
+              width: 80%;
+              a {
+                font-size: 16rem;
+                display: inline-block;
+                width: 100%;
+                padding: 7rem 0;
+              }
+            }
+          }
+          h3,
+          ul {
+            opacity: 1;
+          }
+          //CONTENT-ENDS
+          filter: grayscale(100%);
+        }
+        &:hover {
+          div {
+            filter: grayscale(100%);
+            transition: none;
+            h3,
+            ul {
+              opacity: inherit;
+              transition: none;
+            }
+            &::before {
+              opacity: inherit;
+              transition: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* hover를 지원하지 않는 환경에서 비활성화 */
+@media (hover: none) {
+  #section1 .rel .porfile-inner .profile-left p.name {
+    &:hover {
+      font-size: 32rem;
+    }
+  }
+  #section1 .rel .porfile-inner .profile-left p {
+    &:hover {
+      font-size: inherit;
     }
   }
 }
