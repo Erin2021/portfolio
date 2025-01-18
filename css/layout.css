@@ -346,7 +346,10 @@ section .rel .contents {
 }
 #section0 .rel .greeting p {
   padding-left: 20rem;
-  font-size: min(5em, 40rem);
+  font-size: min(3.3em, 40rem);
+}
+#section0 .rel .mob-only {
+  display: none;
 }
 #section0 .rel .mob-only {
   display: none;
