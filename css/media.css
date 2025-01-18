@@ -89,6 +89,51 @@
   #section1 .rel .porfile-inner .profile-right .skill-des .others {
     column-gap: 10rem;
   }
+  #section5 {
+    height: max-content;
+  }
+  #section5 .mob-only {
+    display: inline-block !important;
+  }
+  #section5 .rel .greeting {
+    align-items: center;
+  }
+  #section5 .rel .greeting h2,
+  #section5 .rel .greeting p {
+    text-align: center;
+  }
+  #section5 .rel .greeting ul {
+    width: 100%;
+    overflow: auto;
+    padding: 10rem;
+    justify-content: space-between;
+    column-gap: 15rem;
+  }
+  #section5 .rel .greeting ul li a span {
+    overflow: hidden;
+  }
+  #section5 .rel .greeting ul li a span img {
+    max-width: none; /* reset code의 max-width를 무효화 */
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+  }
+  #section5 .rel .greeting ul li a span p.pc-only {
+    display: none;
+  }
+  #section5 .rel .greeting ul li {
+    flex: 1;
+  }
+  #section5 .rel .greeting ul li .contactA span,
+  #section5 .rel .greeting ul li .contactB span {
+    border-radius: 30%;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    margin: 0;
+  }
 }
 /* 작은모니터까지 가져야할 공통사항*/
 @media screen and (max-width: 1200px) {
@@ -112,7 +157,6 @@
   }
   section {
     padding: 100px 0;
-    border: 1px solid #000;
   }
   section .rel {
     width: 90%;

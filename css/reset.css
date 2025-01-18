@@ -29,6 +29,17 @@ a {
 }
 
 /* 낮은버전 브라우저용-시멘틱태그를 inline로 인식함*/
-article, aside, details, summary, figcaption, figure, footer, header, hgroup, main, nav, section {
+article,
+aside,
+details,
+summary,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
   display: block;
 }

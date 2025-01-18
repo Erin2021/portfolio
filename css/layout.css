@@ -346,7 +346,7 @@ section .rel .contents {
 }
 #section0 .rel .greeting p {
   padding-left: 20rem;
-  font-size: min(3.3em, 40rem);
+  font-size: min(5em, 40rem);
 }
 #section0 .rel .mob-only {
   display: none;
@@ -817,16 +817,20 @@ section .rel .contents {
 #section5 .rel .greeting {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-items: start;
   flex-direction: column;
-  gap: 10rem;
+  width: 100%;
 }
 #section5 .rel .greeting h2 {
   font-family: "LeferiPoint-SpecialItalicA", sans-serif;
-  font-size: min(13em, 80rem);
+  font-size: min(7em, 80rem);
 }
 #section5 .rel .greeting p {
-  padding-left: 20rem;
   font-size: min(5em, 40rem);
+}
+#section5 .rel .greeting > p {
+  padding-left: 20rem;
 }
 #section5 .rel .greeting ul {
   padding-left: 20rem;
@@ -929,6 +933,9 @@ section .rel .contents {
 }
 #section5 .rel .greeting ul li .twitter span {
   background-color: #1d9bf0;
+}
+#section5 .rel .greeting .mob-only {
+  display: none;
 }
 
 /*🎉✨modal-publishing____________________ */

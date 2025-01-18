@@ -127,6 +127,60 @@
       }
     }
   }
+  #section5 {
+    .mob-only {
+      display: inline-block !important;
+    }
+
+    height: max-content;
+    .rel {
+      .greeting {
+        align-items: center;
+
+        h2,
+        p {
+          text-align: center;
+        }
+        ul {
+          width: 100%;
+          overflow: auto;
+          padding: 10rem;
+          justify-content: space-between;
+          column-gap: 15rem;
+          li a span {
+            overflow: hidden;
+            img {
+              max-width: none; /* reset code의 max-width를 무효화 */
+              width: calc(100% + 10px);
+              height: calc(100% + 10px);
+            }
+            p.pc-only {
+              display: none;
+            }
+          }
+          li {
+            flex: 1;
+            .contactA,
+            .contactB {
+              & span {
+                border-radius: 30%;
+                padding: 0;
+                // width: 48px;
+                // height: 48px;
+                height: 100%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* 작은모니터까지 가져야할 공통사항*/
@@ -152,7 +206,6 @@
   }
   section {
     padding: 100px 0;
-    border: 1px solid #000;
     .rel {
       width: 90%;
       height: auto;

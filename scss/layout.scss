@@ -350,7 +350,7 @@ section {
     }
     p {
       padding-left: 20rem;
-      font-size: min(3.3em, 40rem);
+      font-size: min(5em, 40rem);
     }
   }
   .mob-only {
@@ -836,17 +836,20 @@ section {
 #section5 .rel {
   display: flex;
   .greeting {
-    display: flex;
-    justify-content: center;
+    @include flex;
+    align-items: start;
     flex-direction: column;
-    gap: 10rem;
+    width: 100%;
+
     h2 {
       font-family: $font-titleBigKor;
-      font-size: min(13em, 80rem);
+      font-size: min(7em, 80rem);
     }
     p {
-      padding-left: 20rem;
       font-size: min(5em, 40rem);
+    }
+    & > p {
+      padding-left: 20rem;
     }
     ul {
       padding-left: 20rem;
@@ -989,6 +992,10 @@ section {
           }
         }
       }
+    }
+
+    .mob-only {
+      display: none;
     }
   }
 }
