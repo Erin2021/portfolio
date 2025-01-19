@@ -1,6 +1,13 @@
 @charset "UTF-8";
 /* 스마트폰*/
 @media screen and (max-width: 480px) {
+  div.top,
+  div.bottom {
+    padding: 0 1em !important;
+  }
+  header .top .top-left {
+    column-gap: 10rem !important;
+  }
   header .subNav .inner {
     width: 100% !important;
   }
@@ -154,6 +161,31 @@
   header div.top .hamberger-menu,
   #layout div.top .hamberger-menu {
     display: block;
+  }
+  header .top .top-left {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    column-gap: 30rem;
+  }
+  header .top .top-left p:nth-of-type(2) {
+    padding: 5rem 5rem 5rem 25rem;
+    border-radius: 10rem;
+    position: relative;
+  }
+  header .top .top-left p:nth-of-type(2):before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    left: 5%;
+    display: block;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    background-color: #00ff00;
+    opacity: 0;
+    animation: work-ani 1s infinite alternate;
   }
   section {
     padding: 100px 0;
