@@ -10,6 +10,12 @@ html {
   overflow-x: hidden;
 }
 
+/* 사파리에서만 강제로 font-size 지정 */
+@supports (-webkit-touch-callout: none) and (not (overflow: -webkit-marquee)) {
+  html {
+    font-size: 6.25%;
+  }
+}
 body {
   font-family: "Pretendard", sans-serif;
   overflow-x: hidden;
