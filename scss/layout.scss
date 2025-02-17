@@ -216,7 +216,7 @@ header .top {
     height: inherit;
     li {
       height: inherit;
-      padding: 1.5rem rem;
+      padding: 1.5rem 0rem;
       a {
         font-size: 1.8rem;
         display: inline-block;
@@ -431,7 +431,7 @@ section {
             text-decoration: underline;
             &::before {
               opacity: 1;
-              translate: rem;
+              translate: 0rem;
             }
           }
           &::before {
@@ -446,7 +446,7 @@ section {
         }
       }
       .education .date {
-        margin: rem 0;
+        margin: 0rem 0;
         font-size: 1.8rem;
         color: $color-gray;
         &:hover {
@@ -1037,7 +1037,7 @@ section {
     @include flex;
     justify-content: center;
     width: 6rem;
-    padding: rem 2rem;
+    padding: 0rem 2rem;
     height: 6rem;
     overflow: hidden;
     transition: 0.5s;
@@ -1305,7 +1305,7 @@ section {
             }
           }
           .T-next-arrow {
-            margin-left: rem;
+            margin-left: 0rem;
             width: 0;
             overflow: hidden;
             @include flex;

@@ -166,7 +166,7 @@ header .top .pc-menu {
 }
 header .top .pc-menu li {
   height: inherit;
-  padding: 1.5rem rem;
+  padding: 1.5rem 0rem;
 }
 header .top .pc-menu li a {
   font-size: 1.8rem;
@@ -431,7 +431,7 @@ section .rel .contents {
 }
 #section1 .rel .porfile-inner .profile-left .site li a p:hover::before {
   opacity: 1;
-  translate: rem;
+  translate: 0rem;
 }
 #section1 .rel .porfile-inner .profile-left .site li a p::before {
   content: "☞";
@@ -441,7 +441,7 @@ section .rel .contents {
   transition: opacity 0.3s, translate 0.3s;
 }
 #section1 .rel .porfile-inner .profile-left .education .date {
-  margin: rem 0;
+  margin: 0rem 0;
   font-size: 1.8rem;
   color: #888;
 }
@@ -971,7 +971,7 @@ section .rel .contents {
   align-items: center;
   justify-content: center;
   width: 6rem;
-  padding: rem 2rem;
+  padding: 0rem 2rem;
   height: 6rem;
   overflow: hidden;
   transition: 0.5s;
@@ -1234,7 +1234,7 @@ section .rel .contents {
   font-size: 3.6rem;
 }
 .modal .rel .modal-inner .T-next .T-next-inner .T-next-arrow {
-  margin-left: rem;
+  margin-left: 0rem;
   width: 0;
   overflow: hidden;
   display: flex;
