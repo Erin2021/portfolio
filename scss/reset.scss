@@ -10,7 +10,7 @@ html {
   overflow-x: hidden;
 }
 /* 사파리 전용 rem → px 강제 변환 */
-@supports (-webkit-touch-callout: none) and (not (overflow: -webkit-marquee)) {
+@supports (-webkit-touch-callout: none) {
   * {
     border-width: calc(var(--border-width, 1rem) * 0.1111) !important;
     height: calc(var(--height, 1rem) * 0.1111) !important;
