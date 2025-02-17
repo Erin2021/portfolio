@@ -19,7 +19,7 @@
 
   header .top {
     .top-left {
-      column-gap: 10rem !important;
+      column-gap: 1rem !important;
     }
   }
 
@@ -32,7 +32,7 @@
         .design-btn {
           justify-content: center;
           button {
-            font-size: 20rem;
+            font-size: 2rem;
             padding: 5px 20px;
           }
         }
@@ -90,7 +90,7 @@
   }
   #section1 {
     height: max-content;
-    padding: 60rem 0;
+    padding: 6rem 0;
     .rel {
       .profile-left,
       .profile-right {
@@ -106,9 +106,9 @@
             flex: 1;
           }
           p {
-            font-size: min(0.9em, 20rem);
+            font-size: min(0.9em, 2rem);
             &.name {
-              font-size: 32rem;
+              font-size: 3.2rem;
             }
           }
           // contact묶음
@@ -128,10 +128,10 @@
         .profile-right {
           .skill-des {
             ul li {
-              font-size: min(0.9em, 20rem);
+              font-size: min(0.9em, 2rem);
             }
             .others {
-              column-gap: 10rem;
+              column-gap: 1rem;
             }
           }
         }
@@ -155,9 +155,9 @@
         ul {
           width: 100%;
           overflow: auto;
-          padding: 10rem;
+          padding: 1rem;
           justify-content: space-between;
-          column-gap: 15rem;
+          column-gap: 1.5rem;
           li a span {
             overflow: hidden;
             img {
@@ -199,7 +199,7 @@
   //햄버거 메뉴 생성
   header,
   #layout {
-    font-size: 17rem;
+    font-size: 1.7rem;
     div {
       &.right,
       &.left,
@@ -222,11 +222,11 @@
       display: flex;
       align-items: center;
       justify-content: baseline;
-      column-gap: 30rem;
+      column-gap: 3rem;
 
       p:nth-of-type(2) {
-        padding: 5rem 5rem 5rem 25rem;
-        border-radius: 10rem;
+        padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+        border-radius: 1rem;
         position: relative;
         &:before {
           content: "";
@@ -235,8 +235,8 @@
           translate: 0 -50%;
           left: 5%;
           display: block;
-          width: 13rem;
-          height: 13rem;
+          width: 1.3rem;
+          height: 1.3rem;
           border-radius: 50%;
           background-color: #00ff00;
           opacity: 0;
@@ -274,7 +274,7 @@
           li[data-preview] {
             overflow: hidden;
             translate: 0% !important;
-            padding: 10rem;
+            padding: 1rem;
             background-color: #fff;
             border-radius: 0.2em;
             width: inherit;
@@ -285,13 +285,13 @@
                 text-align: center;
                 img {
                   display: inline-block;
-                  height: 250rem;
+                  height: 25rem;
                   border: 1px solid rgba(0, 0, 0, 0.2);
                 }
               }
               .pub-describe {
                 h4 {
-                  font-size: 28rem;
+                  font-size: 2.8rem;
                 }
                 ul {
                   width: 100%;
@@ -333,17 +333,17 @@
     .rel .plan-con .plan-con-list {
       flex-direction: column;
       .plan-list-inner {
-        margin: 20rem 0;
+        margin: 2rem 0;
         width: 100%;
         flex: 1;
         & > div {
-          padding: 30rem 0;
+          padding: 3rem 0;
           display: flex;
           text-align: center;
           height: 100%;
           flex-direction: column;
           justify-content: center;
-          row-gap: 20rem;
+          row-gap: 2rem;
           background-position: center;
           background-repeat: no-repeat;
           background-size: auto;
@@ -353,37 +353,37 @@
             width: 100%;
             height: 95%;
             opacity: 1;
-            // padding: 30rem 0;
+            // padding: 3rem 0;
           }
 
           //CONTENT-BEGINS
           h3 {
             display: inline-block;
-            font-size: 32rem;
+            font-size: 3.2rem;
             position: relative;
             cursor: default;
             strong {
               display: block;
-              font-size: 18rem;
+              font-size: 1.8rem;
               font-weight: 100;
-              margin-bottom: 10rem;
+              margin-bottom: 1rem;
             }
             &::before {
-              height: 1rem;
+              height: 0.1rem;
             }
           }
           ul {
             z-index: 3;
             flex-direction: column;
-            row-gap: 10rem;
+            row-gap: 1rem;
 
             li {
               width: 80%;
               a {
-                font-size: 16rem;
+                font-size: 1.6rem;
                 display: inline-block;
                 width: 100%;
-                padding: 7rem 0;
+                padding: 0.7rem 0;
               }
             }
           }
@@ -418,7 +418,7 @@
 @media (hover: none) {
   #section1 .rel .porfile-inner .profile-left p.name {
     &:hover {
-      font-size: 32rem;
+      font-size: 3.2rem;
     }
   }
   #section1 .rel .porfile-inner .profile-left p {

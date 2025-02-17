@@ -6,19 +6,18 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 6.25%;
+  font-size: 62.5%;
   overflow-x: hidden;
 }
 /* 사파리 전용 rem → px 강제 변환 */
-@supports (-webkit-touch-callout: none) {
-  * {
-    background-color: red;
-    border-width: calc(var(--border-width, 1rem) * 0.1111) !important;
-    height: calc(var(--height, 1rem) * 0.1111) !important;
-    padding: calc(var(--padding, 1rem) * 0.1111) !important;
-    margin: calc(var(--margin, 1rem) * 0.1111) !important;
-  }
-}
+// @supports (-webkit-touch-callout: none) {
+//   * {
+//     border-width: calc(var(--border-width, 1rem) * 0.1111) !important;
+//     height: calc(var(--height, 1rem) * 0.1111) !important;
+//     padding: calc(var(--padding, 1rem) * 0.1111) !important;
+//     margin: calc(var(--margin, 1rem) * 0.1111) !important;
+//   }
+// }
 
 body {
   font-family: "Pretendard", sans-serif;
