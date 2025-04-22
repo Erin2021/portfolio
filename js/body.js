@@ -122,22 +122,26 @@
   $(document).ready(() => {
     let a = 0; // 현재 섹션 번호
     let wheel = true;
-    let wh = $(window).height(); 
-    let wv = $(window).width(); 
+    let wh = $(window).height();
+    let wv = $(window).width();
 
     // 메뉴 클릭 이벤트
     $('header .top ul li').click(function () {
       const index = $(this).index() + 1;
-      a = index - 1;
-      $('html, body')
-        .stop()
-        .animate({ scrollTop: wh * a }, 300);
+      a = index;
+
+      const target = $('#section' + index);
+      console.log(a);
+
+      if (target.length) {
+        $('html, body').stop().animate({ scrollTop: target.offset().top }, 300);
+      }
     });
 
     // 휠 이벤트 설정 함수
     function setWheelEvent() {
       wh = $(window).height();
-      wv = $(window).width(); 
+      wv = $(window).width();
       const area_n = $('.area').length;
 
       if (wv >= 1200) {
@@ -171,8 +175,8 @@
     setWheelEvent();
 
     $(window).on('resize', function () {
-      wh = $(window).height(); // ✅ 업데이트
-      wv = $(window).width(); // ✅ 업데이트
+      wh = $(window).height();
+      wv = $(window).width();
 
       setWheelEvent();
 
