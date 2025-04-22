@@ -90,7 +90,7 @@
       date:'2024.06',
       who:'개인 100%',
       link:'https://erin2021.github.io/adaptive-page/',
-      description: '기존의 서울대학교병원 웹페이지를 바탕으로 적응형 모바일 페이지를 작업했습니다. 메인 화면의 콘텐츠 중 중요도를 설정한 후, 진료 관련 요소를 재배치했습니다.',
+      description: '기존의 서울대학교병원 웹페이지를 바탕으로 적응형 모바일 페이지를 작업했습니다. 기존 웹사이트에 배치되어 있는 기존의 많은 컨텐츠의 중요도를 분석하여, 모바일웹에 적합한 진료 관련 요소를 재배치했습니다.',
       detailTool:{
         toolImg:['img/skill-html.svg','img/skill-css.svg','img/skill-jquery.svg','img/skill-js.svg'],
         toolDes:['기존 페이지 구조를 분해한 다음 모바일에 적합한 구조를 구성했습니다.','text-overflow와 flex를 사용하여 다양한 모바일 기기에서 같은 비율로 화면이 보일 수 있도록 디자인했습니다.','classList를 통해 토글 애니메이션을 넣을 수 있습니다.','깊이2 크기의 메뉴와 언어 선택창을 만들 수 있습니다.']

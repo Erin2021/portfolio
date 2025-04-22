@@ -28,6 +28,9 @@
 /* 큰태블릿 */
 /* 작은타블릿까지 가져야할 공통사항 */
 @media screen and (max-width: 768px) {
+  #section0 .rel .greeting p {
+    font-size: 2rem;
+  }
   #section2 {
     height: max-content;
   }
@@ -37,9 +40,14 @@
     grid-template-columns: 1fr !important;
     gap: 4em;
   }
+  #section5 .rel .greeting p {
+    font-size: 2rem;
+  }
+  /* 큰타블릿까지 가져야할 공통사항 */
+  /* 작은모니터까지 가져야할 공통사항*/
+  /* hover를 지원하지 않는 환경에서 비활성화 */
 }
-/* 큰타블릿까지 가져야할 공통사항 */
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 768px) and (max-width: 990px) {
   div.top,
   div.bottom {
     padding: 0 2em;
@@ -53,9 +61,16 @@
   #section0 .rel .greeting {
     align-items: center;
   }
-  #section0 .rel .greeting h1,
+  #section0 .rel .greeting h1 {
+    text-align: center;
+  }
   #section0 .rel .greeting p {
     text-align: center;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    width: inherit;
+    padding: 0;
   }
   #section1 {
     height: max-content;
@@ -99,51 +114,106 @@
   #section5 {
     height: max-content;
   }
-  #section5 .mob-only {
-    display: inline-block !important;
-  }
   #section5 .rel .greeting {
     align-items: center;
   }
-  #section5 .rel .greeting h2,
-  #section5 .rel .greeting p {
+  #section5 .rel .greeting h2 {
     text-align: center;
   }
+  #section5 .rel .greeting p {
+    text-align: center;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    width: inherit;
+    padding: 0;
+  }
   #section5 .rel .greeting ul {
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    overflow: auto;
-    padding: 1rem;
-    justify-content: space-between;
-    column-gap: 1.5rem;
-  }
-  #section5 .rel .greeting ul li a span {
-    overflow: hidden;
-  }
-  #section5 .rel .greeting ul li a span img {
-    max-width: none; /* reset code의 max-width를 무효화 */
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-  }
-  #section5 .rel .greeting ul li a span p.pc-only {
-    display: none;
-  }
-  #section5 .rel .greeting ul li {
-    flex: 1;
   }
   #section5 .rel .greeting ul li .contactA span,
-  #section5 .rel .greeting ul li .contactB span {
-    border-radius: 30%;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0;
-    margin: 0;
+  #section5 .rel .greeting ul .contactB span {
+    font-size: 2.4rem;
+    padding: 1rem;
+  }
+  .modal li,
+  .modal p {
+    font-size: 1.5rem;
+  }
+  .modal .rel {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .modal .rel .modal-inner {
+    width: 95%;
+    font-size: 1rem;
+  }
+  .modal .rel .modal-inner h2 {
+    margin-top: 2rem;
+    font-size: 2.4rem;
+  }
+  .modal .rel .modal-inner .T-description {
+    margin-bottom: 10rem;
+  }
+  .modal .rel .modal-inner .T-description ul li {
+    font-size: 1.5rem;
+  }
+  .modal .rel .modal-inner .T-description ul li strong {
+    width: 8rem;
+  }
+  .modal .rel .modal-inner .T-description ul li a {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .modal .rel .modal-inner .T-description p {
+    font-size: 1.5rem;
+  }
+  .modal .rel .modal-inner .T-detail .T-detail-l {
+    font-size: 1.5rem;
+  }
+  .modal .rel .modal-inner .T-detail .T-detail-l h4 {
+    width: 8rem;
+  }
+  .modal .rel .modal-inner .T-detail .T-detail-l .T-detail-tool li img {
+    width: auto;
+  }
+  .modal .rel .modal-inner .T-detail .T-detail-l .T-detail-tool li p {
+    font-size: 1.5rem;
+  }
+  .modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style {
+    column-gap: 1rem;
+  }
+  .modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li .T-color li p {
+    font-size: 1.4rem;
+  }
+  .modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li p {
+    font-size: 1.5rem;
+  }
+  .modal .rel .modal-inner .T-photo li p {
+    font-size: 1.5rem;
+  }
+  .modal .rel .modal-inner .T-next .T-next-inner .T-next-des p {
+    font-size: 1.5rem;
+  }
+  .modal .rel .modal-inner .T-next .T-next-inner .T-next-des h5 {
+    font-size: 2rem;
+  }
+  .modal .rel .modal-inner .T-next .T-next-inner .T-next-arrow {
+    transition: none;
+    margin-left: 0;
+    width: auto;
+  }
+  .modal .rel .modal-inner .T-next .T-next-inner .T-next-arrow i {
+    font-size: 2.4rem;
+  }
+  .modal .rel .modal-inner .T-next .T-next-inner:hover .T-next-arrow {
+    margin-left: 0;
+    width: 0;
   }
 }
-/* 작은모니터까지 가져야할 공통사항*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) and (max-width: 1200px) {
   header,
   #layout {
     font-size: 1.7rem;
@@ -328,8 +398,7 @@
     transition: none;
   }
 }
-/* hover를 지원하지 않는 환경에서 비활성화 */
-@media (hover: none) {
+@media screen and (max-width: 768px) and (hover: none) {
   #section1 .rel .porfile-inner .profile-left p.name:hover {
     font-size: 3.2rem;
   }
