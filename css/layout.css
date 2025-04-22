@@ -827,15 +827,16 @@ section .rel .contents {
   font-size: min(7em, 8rem);
 }
 #section5 .rel .greeting p {
-  font-size: min(5em, 4rem);
+  font-size: 4rem;
 }
 #section5 .rel .greeting > p {
   padding-left: 2rem;
 }
 #section5 .rel .greeting ul {
-  padding-left: 2rem;
   margin-top: 2rem;
   display: flex;
+  gap: 1rem;
+  width: auto;
 }
 #section5 .rel .greeting ul li .contactA span {
   --tilt: 40px;
@@ -847,7 +848,6 @@ section .rel .contents {
   padding: 1rem 3rem;
   text-align: center;
   display: inline-block;
-  margin: 0 1rem;
   cursor: pointer;
   font-weight: 700;
   z-index: 2;
@@ -888,7 +888,6 @@ section .rel .contents {
   padding: 1rem 3rem;
   text-align: center;
   display: inline-block;
-  margin: 0 1rem;
   cursor: pointer;
   font-weight: 700;
   z-index: 2;
@@ -933,9 +932,6 @@ section .rel .contents {
 }
 #section5 .rel .greeting ul li .twitter span {
   background-color: #1d9bf0;
-}
-#section5 .rel .greeting .mob-only {
-  display: none;
 }
 
 /*🎉✨modal-publishing____________________ */
@@ -1053,15 +1049,12 @@ section .rel .contents {
 }
 .modal .rel .modal-inner .T-description {
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
   padding: 0 0 3rem;
   margin-bottom: 15rem;
 }
-.modal .rel .modal-inner .T-description ul {
-  flex: 1;
-}
 .modal .rel .modal-inner .T-description ul li {
-  padding-left: 1rem;
   font-size: 2rem;
 }
 .modal .rel .modal-inner .T-description ul li strong {
@@ -1092,7 +1085,6 @@ section .rel .contents {
 .modal .rel .modal-inner .T-description p {
   flex: 1;
   font-size: 2rem;
-  padding: 0 3rem;
   line-height: 1.618;
 }
 .modal .rel .modal-inner .T-detail {
@@ -1100,12 +1092,11 @@ section .rel .contents {
 }
 .modal .rel .modal-inner .T-detail .T-detail-l {
   font-size: 2rem;
-  display: flex;
   margin-bottom: 10rem;
 }
 .modal .rel .modal-inner .T-detail .T-detail-l h4 {
-  padding-left: 1rem;
   margin-right: 2rem;
+  margin-bottom: 2rem;
   display: inline-block;
   width: 10rem;
   font-weight: 900;
@@ -1179,8 +1170,9 @@ section .rel .contents {
   flex-direction: column;
 }
 .modal .rel .modal-inner .T-detail .T-detail-l .T-detail-style li .T-typo li {
-  font-size: 4.2rem;
+  font-size: min(4.2rem, 5.2vw);
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 .modal .rel .modal-inner .T-photo {
   margin-top: 15rem;
