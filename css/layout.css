@@ -440,12 +440,14 @@ section .rel .contents {
   translate: -50rem 0;
   transition: opacity 0.3s, translate 0.3s;
 }
-#section1 .rel .porfile-inner .profile-left .education .date {
+#section1 .rel .porfile-inner .profile-left .education .date,
+#section1 .rel .porfile-inner .profile-left .experience .date {
   margin: 0rem 0;
   font-size: 1.8rem;
   color: #888;
 }
-#section1 .rel .porfile-inner .profile-left .education .date:hover {
+#section1 .rel .porfile-inner .profile-left .education .date:hover,
+#section1 .rel .porfile-inner .profile-left .experience .date:hover {
   font-size: 1.8rem;
 }
 #section1 .rel .porfile-inner .profile-left .personal {
@@ -481,10 +483,10 @@ section .rel .contents {
   padding: 1rem 2rem;
   background-color: rgba(0, 0, 0, 0.8);
 }
-#section1 .rel .porfile-inner .profile-left .interests {
+#section1 .rel .porfile-inner .profile-left .experience {
   position: relative;
 }
-#section1 .rel .porfile-inner .profile-left .interests .p-des-3 {
+#section1 .rel .porfile-inner .profile-left .experience .p-des-3 {
   text-align: center;
   transition: 0.3s;
   opacity: 0;

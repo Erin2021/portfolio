@@ -445,7 +445,8 @@ section {
           }
         }
       }
-      .education .date {
+      .education .date,
+      .experience .date {
         margin: 0rem 0;
         font-size: 1.8rem;
         color: $color-gray;
@@ -488,7 +489,7 @@ section {
           background-color: rgb(0 0 0 /0.8);
         }
       }
-      .interests {
+      .experience {
         position: relative;
         .p-des-3 {
           text-align: center;
