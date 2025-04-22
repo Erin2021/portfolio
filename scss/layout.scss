@@ -846,15 +846,16 @@ section {
       font-size: min(7em, 8rem);
     }
     p {
-      font-size: min(5em, 4rem);
+      font-size: 4rem;
     }
     & > p {
       padding-left: 2rem;
     }
     ul {
-      padding-left: 2rem;
       margin-top: 2rem;
       display: flex;
+      gap: 1rem;
+      width: auto;
       li {
         .contactA {
           & span {
@@ -869,7 +870,7 @@ section {
             padding: 1rem 3rem;
             text-align: center;
             display: inline-block;
-            margin: 0 1rem;
+
             cursor: pointer;
 
             font-weight: 700;
@@ -924,7 +925,6 @@ section {
             padding: 1rem 3rem;
             text-align: center;
             display: inline-block;
-            margin: 0 1rem;
             cursor: pointer;
 
             font-weight: 700;
@@ -992,10 +992,6 @@ section {
           }
         }
       }
-    }
-
-    .mob-only {
-      display: none;
     }
   }
 }
@@ -1249,7 +1245,6 @@ section {
                   white-space: nowrap;
                 }
               }
-              
             }
           }
         }

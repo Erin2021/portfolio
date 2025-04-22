@@ -99,47 +99,24 @@
   #section5 {
     height: max-content;
   }
-  #section5 .mob-only {
-    display: inline-block !important;
-  }
   #section5 .rel .greeting {
     align-items: center;
   }
-  #section5 .rel .greeting h2,
-  #section5 .rel .greeting p {
+  #section5 .rel .greeting h2 {
     text-align: center;
   }
+  #section5 .rel .greeting p {
+    font-size: 2.4rem;
+  }
   #section5 .rel .greeting ul {
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    overflow: auto;
-    padding: 1rem;
-    justify-content: space-between;
-    column-gap: 1.5rem;
-  }
-  #section5 .rel .greeting ul li a span {
-    overflow: hidden;
-  }
-  #section5 .rel .greeting ul li a span img {
-    max-width: none; /* reset code의 max-width를 무효화 */
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-  }
-  #section5 .rel .greeting ul li a span p.pc-only {
-    display: none;
-  }
-  #section5 .rel .greeting ul li {
-    flex: 1;
   }
   #section5 .rel .greeting ul li .contactA span,
-  #section5 .rel .greeting ul li .contactB span {
-    border-radius: 30%;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0;
-    margin: 0;
+  #section5 .rel .greeting ul .contactB span {
+    font-size: 2.4rem;
+    padding: 1rem;
   }
   .modal li,
   .modal p {
