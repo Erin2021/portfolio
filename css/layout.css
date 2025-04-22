@@ -346,7 +346,7 @@ section .rel .contents {
 }
 #section0 .rel .greeting p {
   padding-left: 2rem;
-  font-size: min(3.3em, 4rem);
+  font-size: 4rem;
 }
 #section0 .rel .mob-only {
   display: none;
