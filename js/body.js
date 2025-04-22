@@ -4,8 +4,8 @@
   let rotate = 0;
 
   //시작배경
-  let color1 = "rgb(252, 237, 190)";
-  let color2 = "rgb(175, 213, 252)";
+  let color1 = 'rgb(252, 237, 190)';
+  let color2 = 'rgb(175, 213, 252)';
 
   //메인배경
   let lightGroup1 = [252, 237, 190];
@@ -20,7 +20,7 @@
   let test2 = true;
 
   // 섹션 위치
-  let section = document.querySelectorAll("section");
+  let section = document.querySelectorAll('section');
   const section2Top = section[1].offsetTop;
   const section3Top = section[2].offsetTop;
   $(window).scroll(function () {
@@ -110,8 +110,8 @@
   function rotateColor() {
     rotate++;
     bgColor.style.background = `linear-gradient(${rotate}deg,${color1},${color2}`;
-    bgColor.style.backgroundAttachment = "fixed";
-    bgColor.style.backgroundRepeat = " no-repeat";
+    bgColor.style.backgroundAttachment = 'fixed';
+    bgColor.style.backgroundRepeat = ' no-repeat';
     if (rotate === 360) {
       rotate = 0;
     }
@@ -120,142 +120,136 @@
 
   //🔥Jquery 부분
   $(document).ready(() => {
-    //🎈🎈풀페이지 스크롤 이벤트
-    // 변수 초기화
-    let wv = $(window).width(); // 현재 창 너비
-    const wh = $(window).height(); // 현재 창 높이
-    const area_n = $(".area").length; //섹션개수
-    let a = 0; //페이지번호
-    let wheel = true; // 휠 작동 여부
+    let a = 0; // 현재 섹션 번호
+    let wheel = true;
+    let wh = $(window).height(); 
+    let wv = $(window).width(); 
 
-    /* 메뉴클릭______________________ */
-    $("header .top ul li").click(function () {
-      let num = $(this).index() + 1;
-      $("html,body")
+    // 메뉴 클릭 이벤트
+    $('header .top ul li').click(function () {
+      const index = $(this).index() + 1;
+      a = index - 1;
+      $('html, body')
         .stop()
-        .animate({ scrollTop: wh * num });
+        .animate({ scrollTop: wh * a }, 300);
     });
 
-    // 휠 이벤트 처리 함수
+    // 휠 이벤트 설정 함수
     function setWheelEvent() {
+      wh = $(window).height();
+      wv = $(window).width(); 
+      const area_n = $('.area').length;
+
       if (wv >= 1200) {
-        $(".area").on("wheel", function (event) {
-          const delta =
-            event.originalEvent.deltaY / Math.abs(event.originalEvent.deltaY);
-          if (wheel) {
-            let n = $(this).index() - 2;
-            if (delta < 0) {
-              // 휠을 위로 돌렸다면
-              a = n - 2;
-            } else {
-              // 휠을 아래로 돌렸다면
-              a = n;
-            }
+        $('.area')
+          .off('wheel')
+          .on('wheel', function (event) {
+            const delta =
+              event.originalEvent.deltaY / Math.abs(event.originalEvent.deltaY);
+            const n = $(this).index() - 2;
 
-            // 스크롤 범위 제한
-            if (a < 0) {
-              a = 0;
-            }
-            if (a >= area_n - 1) {
-              a = area_n - 1;
-            }
+            if (wheel) {
+              if (delta < 0) {
+                a = n - 2;
+              } else {
+                a = n;
+              }
 
-            // 애니메이션 스크롤
-            $("html,body")
-              .stop()
-              .animate({ scrollTop: wh * a }, 100);
-          }
-        });
+              if (a < 0) a = 0;
+              if (a >= area_n - 1) a = area_n - 1;
+
+              $('html, body')
+                .stop()
+                .animate({ scrollTop: wh * a }, 300);
+            }
+          });
       } else {
-        // console.log("풀페이지 적용 해제");
-        $(".area").off("wheel"); // 휠 이벤트 제거
+        $('.area').off('wheel');
       }
     }
 
-    // 초기 실행
     setWheelEvent();
 
-    // 윈도우 크기 변경 시 화면 크기 정보 업데이트
-    $(window).on("resize", function () {
-      let wh = $(window).height();
-      wv = $(window).width(); // 현재 창 너비 업데이트
-      setWheelEvent(); // 휠 이벤트 재설정
-      /*브라우저 창 사이즈 변경___________ */
-      $("html,body")
-        .stop()
-        .animate({ scrollTop: wh * a }, 100);
+    $(window).on('resize', function () {
+      wh = $(window).height(); // ✅ 업데이트
+      wv = $(window).width(); // ✅ 업데이트
+
+      setWheelEvent();
+
+      if (wv >= 1200) {
+        $('html, body')
+          .stop()
+          .animate({ scrollTop: wh * a }, 300);
+      }
     });
 
-    //🎈스크롤 레이아웃 변화 이벤트
+    // 🎈스크롤 레이아웃 변화 이벤트
     $(window).scroll(function () {
       let sc = $(document).scrollTop();
 
-      //한영역 높이가 wh임
       if (sc >= 0 && sc < wh) {
         a = 1;
-        title = "메인페이지";
-        titleEng = "Main Page";
-        $(".left .page-title").text(title);
-        $(".right .page-title").text(titleEng);
-        $(".page").text(`${a} | 6`);
-        $("header .top ul.pc-menu li").removeClass("active");
-        $("header, #layout").css({ color: "#000" });
+        title = '메인페이지';
+        titleEng = 'Main Page';
+        $('.left .page-title').text(title);
+        $('.right .page-title').text(titleEng);
+        $('.page').text(`${a} | 6`);
+        $('header .top ul.pc-menu li').removeClass('active');
+        $('header, #layout').css({ color: '#000' });
       }
       if (sc >= wh && sc < wh * 2 - 1) {
         a = 2;
-        title = "프로필";
-        titleEng = "About";
+        title = '프로필';
+        titleEng = 'About';
         menuSelect();
-        $("header, #layout").css({ color: "#fff" });
-        $(".subNav .inner li").css({ color: "#000" });
+        $('header, #layout').css({ color: '#fff' });
+        $('.subNav .inner li').css({ color: '#000' });
       }
       if (sc >= wh * 2 - 1 && sc < wh * 3) {
         a = 3;
-        title = "웹 퍼블리싱";
-        titleEng = "Web Publishing";
+        title = '웹 퍼블리싱';
+        titleEng = 'Web Publishing';
         menuSelect();
-        $("header, #layout").css({ color: "#000" });
+        $('header, #layout').css({ color: '#000' });
       }
       if (sc >= wh * 3 && sc < wh * 4) {
         a = 4;
-        title = "웹디자인";
-        titleEng = "Web Design";
+        title = '웹디자인';
+        titleEng = 'Web Design';
         menuSelect();
       }
       if (sc >= wh * 4 && sc < wh * 5 - 1) {
         a = 5;
-        title = "웹기획";
-        titleEng = "Web Planning";
+        title = '웹기획';
+        titleEng = 'Web Planning';
         menuSelect();
-        $("footer .bottom").removeClass("active");
-        if ($(window).width() <= 1200) {
-          $("footer .bottom").css({ display: "none" });
+        $('footer .bottom').removeClass('active');
+        if (wv <= 1200) {
+          $('footer .bottom').css({ display: 'none' });
         }
       }
       if (sc > wh * 5 - 1) {
         a = 6;
-        title = "연락처";
-        titleEng = "Contact";
+        title = '연락처';
+        titleEng = 'Contact';
         menuSelect();
-        if ($(window).width() <= 1200) {
-          $("footer .bottom").css({ display: "flex" });
+        if (wv <= 1200) {
+          $('footer .bottom').css({ display: 'flex' });
         }
 
-        $("footer .bottom").addClass("active");
+        $('footer .bottom').addClass('active');
       }
     });
 
     function menuSelect() {
-      $(".left .page-title").text(title);
-      $(".right .page-title").text(titleEng);
-      $(".page").text(`${a} | 6`);
-      $("header .top ul.pc-menu li")
+      $('.left .page-title').text(title);
+      $('.right .page-title').text(titleEng);
+      $('.page').text(`${a} | 6`);
+      $('header .top ul.pc-menu li')
         .eq(a - 2)
-        .addClass("active");
-      $("header .top ul.pc-menu li")
-        .eq(a - 2)
+        .addClass('active')
         .siblings()
-        .removeClass("active");
+        .removeClass('active');
     }
   });
 })();
